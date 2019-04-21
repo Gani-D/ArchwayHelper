@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ArchwayHelper
 {
     public partial class FormMain
@@ -16,41 +17,17 @@ namespace ArchwayHelper
         public GlobalHotkey globalHotkey; // to close GlobalHotkey form
         private static FormMain formMain; // allowing access to FormMain to static methods
 
-  
-        public static void ChangeFirstTimer(string time, string description, bool isActive)
+        public static void ChangeTimer(int id, string time, string description, bool isActive)
         {
-            formMain.timebox1.Text = time;
-            formMain.timetext1.Text = description;
-            formMain.checktime1.Checked = isActive;
+            string timebox = "timebox" + id.ToString();
+            
+            string timetext = "timetext" + id.ToString();
+            string checktime = "checktime" + id.ToString();
+            formMain.Controls.Find(timebox, true)[0].Text=time;
+            formMain.Controls.Find(timetext, true)[0].Text = description;
+            ((CheckBox)(formMain.Controls.Find(checktime, true)[0])).Checked = isActive;
+            
         }
-        public static void ChangeSecondTimer(string time, string description, bool isActive)
-        {
-            formMain.timebox2.Text = time;
-            formMain.timetext2.Text = description;
-            formMain.checktime2.Checked = isActive;
-        }
-        public static void ChangeThirdTimer(string time, string description, bool isActive)
-        {
-            formMain.timebox3.Text = time;
-            formMain.timetext3.Text = description;
-            formMain.checktime3.Checked = isActive;
-        }
-        public static void ChangeFourthTimer(string time, string description, bool isActive)
-        {
-            formMain.timebox4.Text = time;
-            formMain.timetext4.Text = description;
-            formMain.checktime4.Checked = isActive;
-        }
-        public static void ChangeFifthTimer(string time, string description, bool isActive)
-        {
-            formMain.timebox5.Text = time;
-            formMain.timetext5.Text = description;
-            formMain.checktime5.Checked = isActive;
-        }
-
-
-        public bool checkalarm = false;
-
-
+       
     }
 }

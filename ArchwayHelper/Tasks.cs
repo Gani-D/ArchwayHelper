@@ -8,12 +8,21 @@ namespace ArchwayHelper
 {
     class Tasks
     {
+        /// <summary>
+        /// Needed to keep the time and text of the current tasks, so it doesn't sort and checks every 10 seconds
+        /// </summary>
         static string[] tasksTimeText; // keeps the time, so it doesn't need to sort and check the time
         
         #region TimeBoxLeave // triggered when Timebox is left
+        /// <summary>
+        /// Checks if the time is correct when you leaving the textbox. Displays a message if time is wrong.
+        /// </summary>
+        /// <param name="time">The entered time</param>
+        /// <param name="position">Textbox position</param>
+        /// <returns>The formatted time</returns>
         public static string TimeBoxLeave(string[] time, int position)
         {
-
+            //trying to normalize the time, converting 000 to 00:00 or 0234 to 02:34, etc.
             time[position] = CorrectTime(time[position]);
             if (time[position].Length > 0)
             {
@@ -30,9 +39,12 @@ namespace ArchwayHelper
 
             }
             return time[position];
-
         }
-
+        /// <summary>
+        /// Checks if the time has the right format
+        /// </summary>
+        /// <param name="time">Time</param>
+        /// <returns>True if time format is right</returns>
         private static bool CheckTime(string time) //checks if the time has the right format
         {
             if (time.Length < 3) return false;
@@ -103,9 +115,7 @@ namespace ArchwayHelper
                     tasks.Add(time[i], text[i]); count++;
                 }
             }
-           // System.Windows.Forms.MessageBox.Show(count.ToString() );
-            
-             if (count > 0)
+            if (count > 0)
             {
                 Array.Sort(time);
                 
@@ -117,13 +127,12 @@ namespace ArchwayHelper
                     {
                         string tempDescription = tasks[time[i]];
                         tasksTimeText[count*2] = time[i]; //adding time to a static field
-                       // System.Windows.Forms.MessageBox.Show("Adding to tasksTimeText "+ time[i]+ tempDescription);
+                       
                         tasksTimeText[count * 2+1] = tempDescription; // adding task description to a static field
-                        SetTimerFields(count, time[i], tempDescription);
+                        SetTimerFields(count+1, time[i], tempDescription); // +1 is for SetTimerFields method, it needs numbers from 1 to 5.
                         count++;
                     }
                 }
-                
             }
             else
             {
@@ -134,21 +143,18 @@ namespace ArchwayHelper
 
         private void SetTimerFields (int position, string time, string description)
         {
-            bool isActive = (time.Length > 0) ? true : false;
-            switch (position)
+            if (position == 6)
             {
-                case 0: FormMain.ChangeFirstTimer(time, description, isActive); break;
-                case 1: FormMain.ChangeSecondTimer(time, description, isActive); break;
-                case 2: FormMain.ChangeThirdTimer(time, description, isActive); break;
-                case 3: FormMain.ChangeFourthTimer(time, description, isActive); break;
-                case 4: FormMain.ChangeFifthTimer(time, description, isActive); break;
-                case 6:
-                    FormMain.ChangeFirstTimer("", "", false);
-                    FormMain.ChangeSecondTimer("", "", false);
-                    FormMain.ChangeThirdTimer("", "", false);
-                    FormMain.ChangeFourthTimer("", "", false);
-                    FormMain.ChangeFifthTimer("", "", false);
-                    break;
+                FormMain.ChangeTimer(1, "", "", false);
+                FormMain.ChangeTimer(2, "", "", false);
+                FormMain.ChangeTimer(3, "", "", false);
+                FormMain.ChangeTimer(4, "", "", false);
+                FormMain.ChangeTimer(5, "", "", false);
+            }
+            else
+            {
+                bool isActive = (time.Length > 0) ? true : false;
+                FormMain.ChangeTimer(position, time, description, isActive);
             }
         }
         #endregion  
@@ -157,14 +163,14 @@ namespace ArchwayHelper
         {
             if (tasksTimeText == null) { return false; }
             string time = DateTime.Now.ToString("HH:mm");
-            //System.Windows.Forms.MessageBox.Show(time);
+            
             for (int i=0; i<10; i+=2)
             {
-               // System.Windows.Forms.MessageBox.Show(tasksTimeText[i]);
+               
                 if (tasksTimeText[i] == null||tasksTimeText[i].Length < 4) continue;
                 else if (time==tasksTimeText[i])
                 {
-                   // System.Windows.Forms.MessageBox.Show("2");
+                   
                     Popup popup = new Popup(i / 2, tasksTimeText[i], tasksTimeText[i + 1], mute);
                     popup.Show();
 
@@ -176,18 +182,16 @@ namespace ArchwayHelper
 
         public void SnoozeTask(int taskNumber, int interval = 10)
         {
-            //string time = DateTime.Now.AddMinutes(interval).ToString("HH:mm");
+            
             tasksTimeText[taskNumber * 2] = DateTime.Now.AddMinutes(interval).ToString("HH:mm");
             if (!TimeIsUnique(new string[] { tasksTimeText[0], tasksTimeText[2], tasksTimeText[4], tasksTimeText[6], tasksTimeText[8] }, taskNumber))
             {
-                //MessageBox.Show("Time is not unique");
                 do
                 {
                     interval += 3;
                     tasksTimeText[taskNumber * 2] =  DateTime.Now.AddMinutes(interval).ToString("HH:mm"); 
                 }
                 while (!TimeIsUnique(new string[] { tasksTimeText[0], tasksTimeText[2], tasksTimeText[4], tasksTimeText[6], tasksTimeText[8] }, taskNumber));
-                
             }
 
             string[] timeTemp = { tasksTimeText[0], tasksTimeText[2], tasksTimeText[4], tasksTimeText[6], tasksTimeText[8]};
@@ -199,7 +203,6 @@ namespace ArchwayHelper
                     isActive[i / 2] = true;
             }
             SortTasks(timeTemp, description, isActive);
-
         }
 
       

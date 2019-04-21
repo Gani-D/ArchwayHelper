@@ -70,6 +70,8 @@ namespace ArchwayHelper
         {
             Tasks tasks = new Tasks();
             tasks.SnoozeTask(position);
+            
+
             this.Close();
         }
     }

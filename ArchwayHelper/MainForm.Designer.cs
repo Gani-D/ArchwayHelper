@@ -35,7 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxDomainName = new System.Windows.Forms.ComboBox();
             this.tabControlMain = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.MX = new System.Windows.Forms.TabPage();
             this.groupBoxUpcEvents = new System.Windows.Forms.GroupBox();
             this.labelUpcEventTwo = new System.Windows.Forms.Label();
             this.labelUpcEvent = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.labelCSTTime = new System.Windows.Forms.Label();
             this.buttonCopyTClose = new System.Windows.Forms.Button();
             this.buttonCopyTPerm = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Timer = new System.Windows.Forms.TabPage();
             this.checkBoxMute = new System.Windows.Forms.CheckBox();
             this.checkBoxHideUpcEvents = new System.Windows.Forms.CheckBox();
             this.groupBoxTimeAndText = new System.Windows.Forms.GroupBox();
@@ -65,7 +65,7 @@
             this.checktime1 = new System.Windows.Forms.CheckBox();
             this.timetext1 = new System.Windows.Forms.TextBox();
             this.timebox1 = new System.Windows.Forms.TextBox();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.CopyText = new System.Windows.Forms.TabPage();
             this.textBoxOwnTextTwo = new System.Windows.Forms.TextBox();
             this.textBoxOwnText = new System.Windows.Forms.TextBox();
             this.buttonCopyOwnTextTwo = new System.Windows.Forms.Button();
@@ -89,11 +89,63 @@
             this.labelCurrentLine = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textToCopy = new System.Windows.Forms.RichTextBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.MailExt = new System.Windows.Forms.TabPage();
+            this.checkBoxExtRemoveDup = new System.Windows.Forms.CheckBox();
+            this.labelExtractor = new System.Windows.Forms.Label();
+            this.buttonCopyToCopyPaste = new System.Windows.Forms.Button();
+            this.buttonExtract = new System.Windows.Forms.Button();
+            this.radioBtnExtDomain = new System.Windows.Forms.RadioButton();
+            this.radioBtnExtEmail = new System.Windows.Forms.RadioButton();
+            this.richTextExtractEmails = new System.Windows.Forms.RichTextBox();
+            this.PassGen = new System.Windows.Forms.TabPage();
+            this.buttonPGStart = new System.Windows.Forms.Button();
+            this.labelPassGenQuantity = new System.Windows.Forms.Label();
+            this.textBoxPGQuantity = new System.Windows.Forms.TextBox();
+            this.richTextBoxPassGen = new System.Windows.Forms.RichTextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.groupBoxPassGen = new System.Windows.Forms.GroupBox();
+            this.labelPassGenLength = new System.Windows.Forms.Label();
+            this.comboBoxPGLen = new System.Windows.Forms.ComboBox();
+            this.checkBoxPGUpperCase = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGUpperCaseStart = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGExclChars = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGExclO = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGLowerCase = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGNum = new System.Windows.Forms.CheckBox();
+            this.checkBoxPGSym = new System.Windows.Forms.CheckBox();
+            this.radioButtonPGStan = new System.Windows.Forms.RadioButton();
+            this.MailSender = new System.Windows.Forms.TabPage();
+            this.buttonSmtpRemove = new System.Windows.Forms.Button();
+            this.buttonSmtpSend = new System.Windows.Forms.Button();
+            this.buttonSmtpWrite = new System.Windows.Forms.Button();
+            this.buttonSmtpReadSet = new System.Windows.Forms.Button();
+            this.labelSmtpInfo = new System.Windows.Forms.Label();
+            this.labelSmtpPort = new System.Windows.Forms.Label();
+            this.textBoxSmtpPort = new System.Windows.Forms.TextBox();
+            this.checkBoxSmtpAuth = new System.Windows.Forms.CheckBox();
+            this.richTextBoxSmtpMess = new System.Windows.Forms.RichTextBox();
+            this.labelSmtpMessage = new System.Windows.Forms.Label();
+            this.labelSmtpSubj = new System.Windows.Forms.Label();
+            this.labelSmtpTo = new System.Windows.Forms.Label();
+            this.labelSmtpFrom = new System.Windows.Forms.Label();
+            this.textBoxSmtpSubj = new System.Windows.Forms.TextBox();
+            this.textBoxSmtpTo = new System.Windows.Forms.TextBox();
+            this.textBoxSmtpFrom = new System.Windows.Forms.TextBox();
+            this.labelSmtpServer = new System.Windows.Forms.Label();
+            this.comboBoxSmtpServer = new System.Windows.Forms.ComboBox();
+            this.groupBoxSmtpEnableAuth = new System.Windows.Forms.GroupBox();
+            this.textBoxSmtpPass = new System.Windows.Forms.TextBox();
+            this.textBoxSmtpUser = new System.Windows.Forms.TextBox();
+            this.Whois = new System.Windows.Forms.TabPage();
+            this.richTextBoxWhoisResult = new System.Windows.Forms.RichTextBox();
+            this.buttonWhoisGet = new System.Windows.Forms.Button();
+            this.labelWhois = new System.Windows.Forms.Label();
+            this.textBoxWhoisDomain = new System.Windows.Forms.TextBox();
+            this.Settings = new System.Windows.Forms.TabPage();
             this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
             this.buttonChangeFont = new System.Windows.Forms.Button();
             this.labelFontSize = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.Help = new System.Windows.Forms.TabPage();
             this.groupBoxCopy = new System.Windows.Forms.GroupBox();
             this.richTextBoxHelpCopy = new System.Windows.Forms.RichTextBox();
             this.groupBoxTimer = new System.Windows.Forms.GroupBox();
@@ -107,14 +159,20 @@
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.MX.SuspendLayout();
             this.groupBoxUpcEvents.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.Timer.SuspendLayout();
             this.groupBoxTimeAndText.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.CopyText.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.MailExt.SuspendLayout();
+            this.PassGen.SuspendLayout();
+            this.groupBoxPassGen.SuspendLayout();
+            this.MailSender.SuspendLayout();
+            this.groupBoxSmtpEnableAuth.SuspendLayout();
+            this.Whois.SuspendLayout();
+            this.Settings.SuspendLayout();
+            this.Help.SuspendLayout();
             this.groupBoxCopy.SuspendLayout();
             this.groupBoxTimer.SuspendLayout();
             this.groupBoxMXQuery.SuspendLayout();
@@ -124,7 +182,7 @@
             // buttonAccept
             // 
             this.buttonAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAccept.Location = new System.Drawing.Point(678, 456);
+            this.buttonAccept.Location = new System.Drawing.Point(699, 456);
             this.buttonAccept.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(100, 38);
@@ -139,11 +197,12 @@
             this.richTextBoxResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxResult.Location = new System.Drawing.Point(8, 50);
+            this.richTextBoxResult.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.richTextBoxResult.Location = new System.Drawing.Point(4, 51);
             this.richTextBoxResult.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxResult.Name = "richTextBoxResult";
             this.richTextBoxResult.ReadOnly = true;
-            this.richTextBoxResult.Size = new System.Drawing.Size(770, 332);
+            this.richTextBoxResult.Size = new System.Drawing.Size(795, 332);
             this.richTextBoxResult.TabIndex = 4;
             this.richTextBoxResult.Text = "You will get results of autodiscover.domain ping, MX records here";
             // 
@@ -160,7 +219,7 @@
             // 
             this.comboBoxDomainName.AccessibleDescription = "";
             this.comboBoxDomainName.FormattingEnabled = true;
-            this.comboBoxDomainName.Location = new System.Drawing.Point(8, 18);
+            this.comboBoxDomainName.Location = new System.Drawing.Point(4, 16);
             this.comboBoxDomainName.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDomainName.Name = "comboBoxDomainName";
             this.comboBoxDomainName.Size = new System.Drawing.Size(380, 27);
@@ -172,11 +231,15 @@
             // 
             // tabControlMain
             // 
-            this.tabControlMain.Controls.Add(this.tabPage1);
-            this.tabControlMain.Controls.Add(this.tabPage2);
-            this.tabControlMain.Controls.Add(this.tabPage5);
-            this.tabControlMain.Controls.Add(this.tabPage3);
-            this.tabControlMain.Controls.Add(this.tabPage4);
+            this.tabControlMain.Controls.Add(this.MX);
+            this.tabControlMain.Controls.Add(this.Timer);
+            this.tabControlMain.Controls.Add(this.CopyText);
+            this.tabControlMain.Controls.Add(this.MailExt);
+            this.tabControlMain.Controls.Add(this.PassGen);
+            this.tabControlMain.Controls.Add(this.MailSender);
+            this.tabControlMain.Controls.Add(this.Whois);
+            this.tabControlMain.Controls.Add(this.Settings);
+            this.tabControlMain.Controls.Add(this.Help);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
@@ -187,26 +250,26 @@
             this.tabControlMain.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControlMain.TabIndex = 7;
             // 
-            // tabPage1
+            // MX
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage1.Controls.Add(this.groupBoxUpcEvents);
-            this.tabPage1.Controls.Add(this.labelESTTime);
-            this.tabPage1.Controls.Add(this.labelPSTTime);
-            this.tabPage1.Controls.Add(this.labelCSTTime);
-            this.tabPage1.Controls.Add(this.buttonCopyTClose);
-            this.tabPage1.Controls.Add(this.buttonCopyTPerm);
-            this.tabPage1.Controls.Add(this.richTextBoxResult);
-            this.tabPage1.Controls.Add(this.comboBoxDomainName);
-            this.tabPage1.Controls.Add(this.buttonAccept);
-            this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(808, 544);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "MX query";
+            this.MX.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MX.Controls.Add(this.groupBoxUpcEvents);
+            this.MX.Controls.Add(this.labelESTTime);
+            this.MX.Controls.Add(this.labelPSTTime);
+            this.MX.Controls.Add(this.labelCSTTime);
+            this.MX.Controls.Add(this.buttonCopyTClose);
+            this.MX.Controls.Add(this.buttonCopyTPerm);
+            this.MX.Controls.Add(this.richTextBoxResult);
+            this.MX.Controls.Add(this.comboBoxDomainName);
+            this.MX.Controls.Add(this.buttonAccept);
+            this.MX.Controls.Add(this.label1);
+            this.MX.Location = new System.Drawing.Point(4, 28);
+            this.MX.Margin = new System.Windows.Forms.Padding(2);
+            this.MX.Name = "MX";
+            this.MX.Padding = new System.Windows.Forms.Padding(2);
+            this.MX.Size = new System.Drawing.Size(808, 544);
+            this.MX.TabIndex = 0;
+            this.MX.Text = "MX query";
             // 
             // groupBoxUpcEvents
             // 
@@ -214,11 +277,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxUpcEvents.Controls.Add(this.labelUpcEventTwo);
             this.groupBoxUpcEvents.Controls.Add(this.labelUpcEvent);
-            this.groupBoxUpcEvents.Location = new System.Drawing.Point(8, 389);
+            this.groupBoxUpcEvents.Location = new System.Drawing.Point(4, 389);
             this.groupBoxUpcEvents.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxUpcEvents.Name = "groupBoxUpcEvents";
             this.groupBoxUpcEvents.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxUpcEvents.Size = new System.Drawing.Size(770, 62);
+            this.groupBoxUpcEvents.Size = new System.Drawing.Size(795, 62);
             this.groupBoxUpcEvents.TabIndex = 13;
             this.groupBoxUpcEvents.TabStop = false;
             this.groupBoxUpcEvents.Text = "Upcoming events";
@@ -227,7 +290,7 @@
             // 
             this.labelUpcEventTwo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelUpcEventTwo.AutoSize = true;
-            this.labelUpcEventTwo.Location = new System.Drawing.Point(384, 24);
+            this.labelUpcEventTwo.Location = new System.Drawing.Point(396, 24);
             this.labelUpcEventTwo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUpcEventTwo.MaximumSize = new System.Drawing.Size(379, 20);
             this.labelUpcEventTwo.Name = "labelUpcEventTwo";
@@ -264,7 +327,7 @@
             this.labelPSTTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPSTTime.AutoSize = true;
             this.labelPSTTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPSTTime.Location = new System.Drawing.Point(8, 514);
+            this.labelPSTTime.Location = new System.Drawing.Point(4, 514);
             this.labelPSTTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPSTTime.Name = "labelPSTTime";
             this.labelPSTTime.Size = new System.Drawing.Size(41, 26);
@@ -300,7 +363,7 @@
             // buttonCopyTPerm
             // 
             this.buttonCopyTPerm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCopyTPerm.Location = new System.Drawing.Point(8, 456);
+            this.buttonCopyTPerm.Location = new System.Drawing.Point(4, 455);
             this.buttonCopyTPerm.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyTPerm.Name = "buttonCopyTPerm";
             this.buttonCopyTPerm.Size = new System.Drawing.Size(110, 38);
@@ -311,18 +374,18 @@
             this.buttonCopyTPerm.UseVisualStyleBackColor = true;
             this.buttonCopyTPerm.Click += new System.EventHandler(this.buttonCopyTPerm_Click);
             // 
-            // tabPage2
+            // Timer
             // 
-            this.tabPage2.Controls.Add(this.checkBoxMute);
-            this.tabPage2.Controls.Add(this.checkBoxHideUpcEvents);
-            this.tabPage2.Controls.Add(this.groupBoxTimeAndText);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(808, 544);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "Timer";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.Timer.Controls.Add(this.checkBoxMute);
+            this.Timer.Controls.Add(this.checkBoxHideUpcEvents);
+            this.Timer.Controls.Add(this.groupBoxTimeAndText);
+            this.Timer.Location = new System.Drawing.Point(4, 28);
+            this.Timer.Margin = new System.Windows.Forms.Padding(2);
+            this.Timer.Name = "Timer";
+            this.Timer.Size = new System.Drawing.Size(808, 544);
+            this.Timer.TabIndex = 3;
+            this.Timer.Text = "Timer";
+            this.Timer.UseVisualStyleBackColor = true;
             // 
             // checkBoxMute
             // 
@@ -585,42 +648,42 @@
             this.timebox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox1.Leave += new System.EventHandler(this.timebox1_Leave);
             // 
-            // tabPage5
+            // CopyText
             // 
-            this.tabPage5.Controls.Add(this.textBoxOwnTextTwo);
-            this.tabPage5.Controls.Add(this.textBoxOwnText);
-            this.tabPage5.Controls.Add(this.buttonCopyOwnTextTwo);
-            this.tabPage5.Controls.Add(this.buttonCopyOwnText);
-            this.tabPage5.Controls.Add(this.checkBoxRemoveTabs);
-            this.tabPage5.Controls.Add(this.checkBoxChangeTabs);
-            this.tabPage5.Controls.Add(this.buttonCopy);
-            this.tabPage5.Controls.Add(this.labelCopyStatus);
-            this.tabPage5.Controls.Add(this.checkBoxEnableCopy);
-            this.tabPage5.Controls.Add(this.checkBoxRemovLines);
-            this.tabPage5.Controls.Add(this.labelRemChar);
-            this.tabPage5.Controls.Add(this.textRemChar);
-            this.tabPage5.Controls.Add(this.buttonRemoveChar);
-            this.tabPage5.Controls.Add(this.checkBoxWordWrap);
-            this.tabPage5.Controls.Add(this.buttonCNextLine);
-            this.tabPage5.Controls.Add(this.buttonCPrevLine);
-            this.tabPage5.Controls.Add(this.buttonLineAccept);
-            this.tabPage5.Controls.Add(this.textBoxLineChange);
-            this.tabPage5.Controls.Add(this.labelCurrLine);
-            this.tabPage5.Controls.Add(this.labelCurrentLineNum);
-            this.tabPage5.Controls.Add(this.labelCurrentLine);
-            this.tabPage5.Controls.Add(this.groupBox3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 28);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(808, 544);
-            this.tabPage5.TabIndex = 5;
-            this.tabPage5.Text = "Copy-Paste";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.CopyText.Controls.Add(this.textBoxOwnTextTwo);
+            this.CopyText.Controls.Add(this.textBoxOwnText);
+            this.CopyText.Controls.Add(this.buttonCopyOwnTextTwo);
+            this.CopyText.Controls.Add(this.buttonCopyOwnText);
+            this.CopyText.Controls.Add(this.checkBoxRemoveTabs);
+            this.CopyText.Controls.Add(this.checkBoxChangeTabs);
+            this.CopyText.Controls.Add(this.buttonCopy);
+            this.CopyText.Controls.Add(this.labelCopyStatus);
+            this.CopyText.Controls.Add(this.checkBoxEnableCopy);
+            this.CopyText.Controls.Add(this.checkBoxRemovLines);
+            this.CopyText.Controls.Add(this.labelRemChar);
+            this.CopyText.Controls.Add(this.textRemChar);
+            this.CopyText.Controls.Add(this.buttonRemoveChar);
+            this.CopyText.Controls.Add(this.checkBoxWordWrap);
+            this.CopyText.Controls.Add(this.buttonCNextLine);
+            this.CopyText.Controls.Add(this.buttonCPrevLine);
+            this.CopyText.Controls.Add(this.buttonLineAccept);
+            this.CopyText.Controls.Add(this.textBoxLineChange);
+            this.CopyText.Controls.Add(this.labelCurrLine);
+            this.CopyText.Controls.Add(this.labelCurrentLineNum);
+            this.CopyText.Controls.Add(this.labelCurrentLine);
+            this.CopyText.Controls.Add(this.groupBox3);
+            this.CopyText.Location = new System.Drawing.Point(4, 28);
+            this.CopyText.Margin = new System.Windows.Forms.Padding(2);
+            this.CopyText.Name = "CopyText";
+            this.CopyText.Size = new System.Drawing.Size(808, 544);
+            this.CopyText.TabIndex = 5;
+            this.CopyText.Text = "Copy-Paste";
+            this.CopyText.UseVisualStyleBackColor = true;
             // 
             // textBoxOwnTextTwo
             // 
             this.textBoxOwnTextTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOwnTextTwo.Location = new System.Drawing.Point(468, 408);
+            this.textBoxOwnTextTwo.Location = new System.Drawing.Point(467, 408);
             this.textBoxOwnTextTwo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOwnTextTwo.Name = "textBoxOwnTextTwo";
             this.textBoxOwnTextTwo.Size = new System.Drawing.Size(220, 27);
@@ -629,7 +692,7 @@
             // textBoxOwnText
             // 
             this.textBoxOwnText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxOwnText.Location = new System.Drawing.Point(8, 408);
+            this.textBoxOwnText.Location = new System.Drawing.Point(8, 406);
             this.textBoxOwnText.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOwnText.Name = "textBoxOwnText";
             this.textBoxOwnText.Size = new System.Drawing.Size(220, 27);
@@ -638,7 +701,7 @@
             // buttonCopyOwnTextTwo
             // 
             this.buttonCopyOwnTextTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCopyOwnTextTwo.Location = new System.Drawing.Point(694, 406);
+            this.buttonCopyOwnTextTwo.Location = new System.Drawing.Point(693, 406);
             this.buttonCopyOwnTextTwo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyOwnTextTwo.Name = "buttonCopyOwnTextTwo";
             this.buttonCopyOwnTextTwo.Size = new System.Drawing.Size(106, 31);
@@ -712,7 +775,7 @@
             // 
             this.checkBoxEnableCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxEnableCopy.AutoSize = true;
-            this.checkBoxEnableCopy.Location = new System.Drawing.Point(8, 460);
+            this.checkBoxEnableCopy.Location = new System.Drawing.Point(12, 460);
             this.checkBoxEnableCopy.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnableCopy.Name = "checkBoxEnableCopy";
             this.checkBoxEnableCopy.Size = new System.Drawing.Size(196, 23);
@@ -725,7 +788,7 @@
             // 
             this.checkBoxRemovLines.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxRemovLines.AutoSize = true;
-            this.checkBoxRemovLines.Location = new System.Drawing.Point(8, 515);
+            this.checkBoxRemovLines.Location = new System.Drawing.Point(12, 515);
             this.checkBoxRemovLines.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRemovLines.Name = "checkBoxRemovLines";
             this.checkBoxRemovLines.Size = new System.Drawing.Size(177, 23);
@@ -770,7 +833,7 @@
             // 
             this.checkBoxWordWrap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxWordWrap.AutoSize = true;
-            this.checkBoxWordWrap.Location = new System.Drawing.Point(8, 487);
+            this.checkBoxWordWrap.Location = new System.Drawing.Point(12, 487);
             this.checkBoxWordWrap.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxWordWrap.Name = "checkBoxWordWrap";
             this.checkBoxWordWrap.Size = new System.Drawing.Size(109, 23);
@@ -824,7 +887,7 @@
             this.textBoxLineChange.Name = "textBoxLineChange";
             this.textBoxLineChange.Size = new System.Drawing.Size(76, 27);
             this.textBoxLineChange.TabIndex = 5;
-            this.textBoxLineChange.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textBoxLineChange.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DigitsOnly);
             // 
             // labelCurrLine
             // 
@@ -880,28 +943,646 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textToCopy.EnableAutoDragDrop = true;
-            this.textToCopy.Location = new System.Drawing.Point(6, 26);
+            this.textToCopy.Location = new System.Drawing.Point(4, 24);
             this.textToCopy.Margin = new System.Windows.Forms.Padding(2);
             this.textToCopy.Name = "textToCopy";
-            this.textToCopy.Size = new System.Drawing.Size(785, 266);
+            this.textToCopy.Size = new System.Drawing.Size(787, 266);
             this.textToCopy.TabIndex = 0;
             this.textToCopy.Text = "";
             this.textToCopy.WordWrap = false;
             this.textToCopy.TextChanged += new System.EventHandler(this.textToCopy_TextChanged);
             // 
-            // tabPage3
+            // MailExt
             // 
-            this.tabPage3.Controls.Add(this.checkBoxAlwaysOnTop);
-            this.tabPage3.Controls.Add(this.buttonChangeFont);
-            this.tabPage3.Controls.Add(this.labelFontSize);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(808, 544);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Settings";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.MailExt.Controls.Add(this.checkBoxExtRemoveDup);
+            this.MailExt.Controls.Add(this.labelExtractor);
+            this.MailExt.Controls.Add(this.buttonCopyToCopyPaste);
+            this.MailExt.Controls.Add(this.buttonExtract);
+            this.MailExt.Controls.Add(this.radioBtnExtDomain);
+            this.MailExt.Controls.Add(this.radioBtnExtEmail);
+            this.MailExt.Controls.Add(this.richTextExtractEmails);
+            this.MailExt.Location = new System.Drawing.Point(4, 28);
+            this.MailExt.Name = "MailExt";
+            this.MailExt.Size = new System.Drawing.Size(808, 544);
+            this.MailExt.TabIndex = 6;
+            this.MailExt.Text = "Email extractor";
+            this.MailExt.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxExtRemoveDup
+            // 
+            this.checkBoxExtRemoveDup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.checkBoxExtRemoveDup.AutoSize = true;
+            this.checkBoxExtRemoveDup.Location = new System.Drawing.Point(8, 453);
+            this.checkBoxExtRemoveDup.Name = "checkBoxExtRemoveDup";
+            this.checkBoxExtRemoveDup.Size = new System.Drawing.Size(160, 23);
+            this.checkBoxExtRemoveDup.TabIndex = 6;
+            this.checkBoxExtRemoveDup.Text = "Remove duplicates";
+            this.checkBoxExtRemoveDup.UseVisualStyleBackColor = true;
+            // 
+            // labelExtractor
+            // 
+            this.labelExtractor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelExtractor.AutoSize = true;
+            this.labelExtractor.Location = new System.Drawing.Point(599, 399);
+            this.labelExtractor.Name = "labelExtractor";
+            this.labelExtractor.Size = new System.Drawing.Size(201, 19);
+            this.labelExtractor.TabIndex = 5;
+            this.labelExtractor.Text = "Copy the text to Copy-Paste";
+            // 
+            // buttonCopyToCopyPaste
+            // 
+            this.buttonCopyToCopyPaste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonCopyToCopyPaste.Location = new System.Drawing.Point(668, 424);
+            this.buttonCopyToCopyPaste.Name = "buttonCopyToCopyPaste";
+            this.buttonCopyToCopyPaste.Size = new System.Drawing.Size(75, 32);
+            this.buttonCopyToCopyPaste.TabIndex = 4;
+            this.buttonCopyToCopyPaste.Text = "Copy";
+            this.buttonCopyToCopyPaste.UseVisualStyleBackColor = true;
+            this.buttonCopyToCopyPaste.Click += new System.EventHandler(this.buttonCopyToCopyPaste_Click_1);
+            // 
+            // buttonExtract
+            // 
+            this.buttonExtract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonExtract.Location = new System.Drawing.Point(8, 504);
+            this.buttonExtract.Name = "buttonExtract";
+            this.buttonExtract.Size = new System.Drawing.Size(75, 32);
+            this.buttonExtract.TabIndex = 3;
+            this.buttonExtract.Text = "Start";
+            this.buttonExtract.UseVisualStyleBackColor = true;
+            this.buttonExtract.Click += new System.EventHandler(this.buttonExtract_Click);
+            // 
+            // radioBtnExtDomain
+            // 
+            this.radioBtnExtDomain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioBtnExtDomain.AutoSize = true;
+            this.radioBtnExtDomain.Location = new System.Drawing.Point(8, 424);
+            this.radioBtnExtDomain.Name = "radioBtnExtDomain";
+            this.radioBtnExtDomain.Size = new System.Drawing.Size(144, 23);
+            this.radioBtnExtDomain.TabIndex = 2;
+            this.radioBtnExtDomain.Text = "Extract Domains";
+            this.radioBtnExtDomain.UseVisualStyleBackColor = true;
+            // 
+            // radioBtnExtEmail
+            // 
+            this.radioBtnExtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.radioBtnExtEmail.AutoSize = true;
+            this.radioBtnExtEmail.Checked = true;
+            this.radioBtnExtEmail.Location = new System.Drawing.Point(8, 395);
+            this.radioBtnExtEmail.Name = "radioBtnExtEmail";
+            this.radioBtnExtEmail.Size = new System.Drawing.Size(130, 23);
+            this.radioBtnExtEmail.TabIndex = 1;
+            this.radioBtnExtEmail.TabStop = true;
+            this.radioBtnExtEmail.Text = "Extract Emails";
+            this.radioBtnExtEmail.UseVisualStyleBackColor = true;
+            // 
+            // richTextExtractEmails
+            // 
+            this.richTextExtractEmails.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextExtractEmails.Location = new System.Drawing.Point(8, 3);
+            this.richTextExtractEmails.Name = "richTextExtractEmails";
+            this.richTextExtractEmails.Size = new System.Drawing.Size(797, 386);
+            this.richTextExtractEmails.TabIndex = 0;
+            this.richTextExtractEmails.Text = "";
+            // 
+            // PassGen
+            // 
+            this.PassGen.Controls.Add(this.buttonPGStart);
+            this.PassGen.Controls.Add(this.labelPassGenQuantity);
+            this.PassGen.Controls.Add(this.textBoxPGQuantity);
+            this.PassGen.Controls.Add(this.richTextBoxPassGen);
+            this.PassGen.Controls.Add(this.radioButton1);
+            this.PassGen.Controls.Add(this.groupBoxPassGen);
+            this.PassGen.Controls.Add(this.radioButtonPGStan);
+            this.PassGen.Location = new System.Drawing.Point(4, 28);
+            this.PassGen.Name = "PassGen";
+            this.PassGen.Size = new System.Drawing.Size(808, 544);
+            this.PassGen.TabIndex = 8;
+            this.PassGen.Text = "PassGen";
+            this.PassGen.UseVisualStyleBackColor = true;
+            // 
+            // buttonPGStart
+            // 
+            this.buttonPGStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonPGStart.Location = new System.Drawing.Point(670, 490);
+            this.buttonPGStart.Name = "buttonPGStart";
+            this.buttonPGStart.Size = new System.Drawing.Size(130, 37);
+            this.buttonPGStart.TabIndex = 6;
+            this.buttonPGStart.Text = "Generate";
+            this.buttonPGStart.UseVisualStyleBackColor = true;
+            this.buttonPGStart.Click += new System.EventHandler(this.buttonPGStart_Click);
+            // 
+            // labelPassGenQuantity
+            // 
+            this.labelPassGenQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelPassGenQuantity.AutoSize = true;
+            this.labelPassGenQuantity.Location = new System.Drawing.Point(487, 499);
+            this.labelPassGenQuantity.Name = "labelPassGenQuantity";
+            this.labelPassGenQuantity.Size = new System.Drawing.Size(67, 19);
+            this.labelPassGenQuantity.TabIndex = 5;
+            this.labelPassGenQuantity.Text = "Quantity";
+            // 
+            // textBoxPGQuantity
+            // 
+            this.textBoxPGQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxPGQuantity.Location = new System.Drawing.Point(560, 496);
+            this.textBoxPGQuantity.MaxLength = 3;
+            this.textBoxPGQuantity.Name = "textBoxPGQuantity";
+            this.textBoxPGQuantity.Size = new System.Drawing.Size(73, 27);
+            this.textBoxPGQuantity.TabIndex = 4;
+            this.textBoxPGQuantity.Text = "2";
+            this.textBoxPGQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DigitsOnly);
+            // 
+            // richTextBoxPassGen
+            // 
+            this.richTextBoxPassGen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxPassGen.Location = new System.Drawing.Point(8, 248);
+            this.richTextBoxPassGen.Name = "richTextBoxPassGen";
+            this.richTextBoxPassGen.Size = new System.Drawing.Size(792, 232);
+            this.richTextBoxPassGen.TabIndex = 3;
+            this.richTextBoxPassGen.Text = "";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(8, 51);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(162, 23);
+            this.radioButton1.TabIndex = 2;
+            this.radioButton1.Text = "Enhanced password";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // groupBoxPassGen
+            // 
+            this.groupBoxPassGen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxPassGen.Controls.Add(this.labelPassGenLength);
+            this.groupBoxPassGen.Controls.Add(this.comboBoxPGLen);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGUpperCase);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGUpperCaseStart);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGExclChars);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGExclO);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGLowerCase);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGNum);
+            this.groupBoxPassGen.Controls.Add(this.checkBoxPGSym);
+            this.groupBoxPassGen.Enabled = false;
+            this.groupBoxPassGen.Location = new System.Drawing.Point(8, 80);
+            this.groupBoxPassGen.Name = "groupBoxPassGen";
+            this.groupBoxPassGen.Size = new System.Drawing.Size(792, 151);
+            this.groupBoxPassGen.TabIndex = 0;
+            this.groupBoxPassGen.TabStop = false;
+            this.groupBoxPassGen.Text = "Password Complexity";
+            // 
+            // labelPassGenLength
+            // 
+            this.labelPassGenLength.AutoSize = true;
+            this.labelPassGenLength.Location = new System.Drawing.Point(402, 114);
+            this.labelPassGenLength.Name = "labelPassGenLength";
+            this.labelPassGenLength.Size = new System.Drawing.Size(61, 19);
+            this.labelPassGenLength.TabIndex = 8;
+            this.labelPassGenLength.Text = "Length:";
+            // 
+            // comboBoxPGLen
+            // 
+            this.comboBoxPGLen.FormattingEnabled = true;
+            this.comboBoxPGLen.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.comboBoxPGLen.Items.AddRange(new object[] {
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15"});
+            this.comboBoxPGLen.Location = new System.Drawing.Point(490, 109);
+            this.comboBoxPGLen.MaxLength = 2;
+            this.comboBoxPGLen.Name = "comboBoxPGLen";
+            this.comboBoxPGLen.Size = new System.Drawing.Size(148, 27);
+            this.comboBoxPGLen.TabIndex = 7;
+            this.comboBoxPGLen.Text = "8";
+            this.comboBoxPGLen.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DigitsOnly);
+            // 
+            // checkBoxPGUpperCase
+            // 
+            this.checkBoxPGUpperCase.AutoSize = true;
+            this.checkBoxPGUpperCase.Checked = true;
+            this.checkBoxPGUpperCase.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGUpperCase.Location = new System.Drawing.Point(6, 26);
+            this.checkBoxPGUpperCase.Name = "checkBoxPGUpperCase";
+            this.checkBoxPGUpperCase.Size = new System.Drawing.Size(277, 23);
+            this.checkBoxPGUpperCase.TabIndex = 6;
+            this.checkBoxPGUpperCase.Text = "Include Uppercase Characters (A-Z)";
+            this.checkBoxPGUpperCase.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGUpperCaseStart
+            // 
+            this.checkBoxPGUpperCaseStart.AutoSize = true;
+            this.checkBoxPGUpperCaseStart.Checked = true;
+            this.checkBoxPGUpperCaseStart.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGUpperCaseStart.Location = new System.Drawing.Point(406, 84);
+            this.checkBoxPGUpperCaseStart.Name = "checkBoxPGUpperCaseStart";
+            this.checkBoxPGUpperCaseStart.Size = new System.Drawing.Size(242, 23);
+            this.checkBoxPGUpperCaseStart.TabIndex = 5;
+            this.checkBoxPGUpperCaseStart.Text = "Start with Uppercase Character";
+            this.checkBoxPGUpperCaseStart.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGExclChars
+            // 
+            this.checkBoxPGExclChars.AutoSize = true;
+            this.checkBoxPGExclChars.Checked = true;
+            this.checkBoxPGExclChars.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGExclChars.Location = new System.Drawing.Point(406, 26);
+            this.checkBoxPGExclChars.Name = "checkBoxPGExclChars";
+            this.checkBoxPGExclChars.Size = new System.Drawing.Size(355, 23);
+            this.checkBoxPGExclChars.TabIndex = 4;
+            this.checkBoxPGExclChars.Text = "Exclude Characters ({ } [ ] ( ) / \\ \' \" ` ~ , ; : . < >)";
+            this.checkBoxPGExclChars.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGExclO
+            // 
+            this.checkBoxPGExclO.AutoSize = true;
+            this.checkBoxPGExclO.Checked = true;
+            this.checkBoxPGExclO.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGExclO.Location = new System.Drawing.Point(406, 55);
+            this.checkBoxPGExclO.Name = "checkBoxPGExclO";
+            this.checkBoxPGExclO.Size = new System.Drawing.Size(299, 23);
+            this.checkBoxPGExclO.TabIndex = 3;
+            this.checkBoxPGExclO.Text = "Exclude Characters (I, i, 1, L, l, 0, O, o)";
+            this.checkBoxPGExclO.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGLowerCase
+            // 
+            this.checkBoxPGLowerCase.AutoSize = true;
+            this.checkBoxPGLowerCase.Checked = true;
+            this.checkBoxPGLowerCase.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGLowerCase.Location = new System.Drawing.Point(6, 55);
+            this.checkBoxPGLowerCase.Name = "checkBoxPGLowerCase";
+            this.checkBoxPGLowerCase.Size = new System.Drawing.Size(272, 23);
+            this.checkBoxPGLowerCase.TabIndex = 2;
+            this.checkBoxPGLowerCase.Text = "Include Lowercase Characters (a-z)";
+            this.checkBoxPGLowerCase.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGNum
+            // 
+            this.checkBoxPGNum.AutoSize = true;
+            this.checkBoxPGNum.Checked = true;
+            this.checkBoxPGNum.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGNum.Location = new System.Drawing.Point(6, 84);
+            this.checkBoxPGNum.Name = "checkBoxPGNum";
+            this.checkBoxPGNum.Size = new System.Drawing.Size(187, 23);
+            this.checkBoxPGNum.TabIndex = 1;
+            this.checkBoxPGNum.Text = "Include Numbers (0-9)";
+            this.checkBoxPGNum.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPGSym
+            // 
+            this.checkBoxPGSym.AutoSize = true;
+            this.checkBoxPGSym.Checked = true;
+            this.checkBoxPGSym.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxPGSym.Location = new System.Drawing.Point(6, 114);
+            this.checkBoxPGSym.Name = "checkBoxPGSym";
+            this.checkBoxPGSym.Size = new System.Drawing.Size(281, 23);
+            this.checkBoxPGSym.TabIndex = 0;
+            this.checkBoxPGSym.Text = "Include Symbols (! @ # $ % ^ & * + -)";
+            this.checkBoxPGSym.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonPGStan
+            // 
+            this.radioButtonPGStan.AutoSize = true;
+            this.radioButtonPGStan.Checked = true;
+            this.radioButtonPGStan.Location = new System.Drawing.Point(8, 22);
+            this.radioButtonPGStan.Name = "radioButtonPGStan";
+            this.radioButtonPGStan.Size = new System.Drawing.Size(269, 23);
+            this.radioButtonPGStan.TabIndex = 1;
+            this.radioButtonPGStan.TabStop = true;
+            this.radioButtonPGStan.Text = "Standard Password (ex. Mobix581)";
+            this.radioButtonPGStan.UseVisualStyleBackColor = true;
+            this.radioButtonPGStan.CheckedChanged += new System.EventHandler(this.radioButtonPGStan_CheckedChanged);
+            // 
+            // MailSender
+            // 
+            this.MailSender.Controls.Add(this.buttonSmtpRemove);
+            this.MailSender.Controls.Add(this.buttonSmtpSend);
+            this.MailSender.Controls.Add(this.buttonSmtpWrite);
+            this.MailSender.Controls.Add(this.buttonSmtpReadSet);
+            this.MailSender.Controls.Add(this.labelSmtpInfo);
+            this.MailSender.Controls.Add(this.labelSmtpPort);
+            this.MailSender.Controls.Add(this.textBoxSmtpPort);
+            this.MailSender.Controls.Add(this.checkBoxSmtpAuth);
+            this.MailSender.Controls.Add(this.richTextBoxSmtpMess);
+            this.MailSender.Controls.Add(this.labelSmtpMessage);
+            this.MailSender.Controls.Add(this.labelSmtpSubj);
+            this.MailSender.Controls.Add(this.labelSmtpTo);
+            this.MailSender.Controls.Add(this.labelSmtpFrom);
+            this.MailSender.Controls.Add(this.textBoxSmtpSubj);
+            this.MailSender.Controls.Add(this.textBoxSmtpTo);
+            this.MailSender.Controls.Add(this.textBoxSmtpFrom);
+            this.MailSender.Controls.Add(this.labelSmtpServer);
+            this.MailSender.Controls.Add(this.comboBoxSmtpServer);
+            this.MailSender.Controls.Add(this.groupBoxSmtpEnableAuth);
+            this.MailSender.Location = new System.Drawing.Point(4, 28);
+            this.MailSender.Name = "MailSender";
+            this.MailSender.Size = new System.Drawing.Size(808, 544);
+            this.MailSender.TabIndex = 7;
+            this.MailSender.Text = "SMTP Client";
+            this.MailSender.UseVisualStyleBackColor = true;
+            // 
+            // buttonSmtpRemove
+            // 
+            this.buttonSmtpRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSmtpRemove.Location = new System.Drawing.Point(426, 503);
+            this.buttonSmtpRemove.Name = "buttonSmtpRemove";
+            this.buttonSmtpRemove.Size = new System.Drawing.Size(151, 33);
+            this.buttonSmtpRemove.TabIndex = 18;
+            this.buttonSmtpRemove.Text = "Remove Settings";
+            this.buttonSmtpRemove.UseVisualStyleBackColor = true;
+            this.buttonSmtpRemove.Click += new System.EventHandler(this.buttonSmtpRemove_Click);
+            // 
+            // buttonSmtpSend
+            // 
+            this.buttonSmtpSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSmtpSend.Location = new System.Drawing.Point(673, 450);
+            this.buttonSmtpSend.Name = "buttonSmtpSend";
+            this.buttonSmtpSend.Size = new System.Drawing.Size(118, 33);
+            this.buttonSmtpSend.TabIndex = 7;
+            this.buttonSmtpSend.Text = "Send";
+            this.buttonSmtpSend.UseVisualStyleBackColor = true;
+            this.buttonSmtpSend.Click += new System.EventHandler(this.buttonSmtpSend_Click);
+            // 
+            // buttonSmtpWrite
+            // 
+            this.buttonSmtpWrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSmtpWrite.Location = new System.Drawing.Point(132, 503);
+            this.buttonSmtpWrite.Name = "buttonSmtpWrite";
+            this.buttonSmtpWrite.Size = new System.Drawing.Size(241, 33);
+            this.buttonSmtpWrite.TabIndex = 17;
+            this.buttonSmtpWrite.Text = "Write settings to registry";
+            this.buttonSmtpWrite.UseVisualStyleBackColor = true;
+            this.buttonSmtpWrite.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // buttonSmtpReadSet
+            // 
+            this.buttonSmtpReadSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonSmtpReadSet.Location = new System.Drawing.Point(8, 503);
+            this.buttonSmtpReadSet.Name = "buttonSmtpReadSet";
+            this.buttonSmtpReadSet.Size = new System.Drawing.Size(118, 33);
+            this.buttonSmtpReadSet.TabIndex = 16;
+            this.buttonSmtpReadSet.Text = "Read settings";
+            this.buttonSmtpReadSet.UseVisualStyleBackColor = true;
+            this.buttonSmtpReadSet.Click += new System.EventHandler(this.buttonSmtpReadSet_Click);
+            // 
+            // labelSmtpInfo
+            // 
+            this.labelSmtpInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelSmtpInfo.AutoSize = true;
+            this.labelSmtpInfo.Location = new System.Drawing.Point(3, 447);
+            this.labelSmtpInfo.MaximumSize = new System.Drawing.Size(652, 50);
+            this.labelSmtpInfo.Name = "labelSmtpInfo";
+            this.labelSmtpInfo.Size = new System.Drawing.Size(0, 19);
+            this.labelSmtpInfo.TabIndex = 15;
+            // 
+            // labelSmtpPort
+            // 
+            this.labelSmtpPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpPort.AutoSize = true;
+            this.labelSmtpPort.Location = new System.Drawing.Point(3, 50);
+            this.labelSmtpPort.Name = "labelSmtpPort";
+            this.labelSmtpPort.Size = new System.Drawing.Size(39, 19);
+            this.labelSmtpPort.TabIndex = 14;
+            this.labelSmtpPort.Text = "Port";
+            // 
+            // textBoxSmtpPort
+            // 
+            this.textBoxSmtpPort.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSmtpPort.Location = new System.Drawing.Point(114, 47);
+            this.textBoxSmtpPort.Name = "textBoxSmtpPort";
+            this.textBoxSmtpPort.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpPort.TabIndex = 2;
+            this.textBoxSmtpPort.Text = "25";
+            this.textBoxSmtpPort.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // checkBoxSmtpAuth
+            // 
+            this.checkBoxSmtpAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkBoxSmtpAuth.AutoSize = true;
+            this.checkBoxSmtpAuth.Location = new System.Drawing.Point(467, 42);
+            this.checkBoxSmtpAuth.Name = "checkBoxSmtpAuth";
+            this.checkBoxSmtpAuth.Size = new System.Drawing.Size(188, 23);
+            this.checkBoxSmtpAuth.TabIndex = 8;
+            this.checkBoxSmtpAuth.Text = "Enable authentification";
+            this.checkBoxSmtpAuth.UseVisualStyleBackColor = true;
+            this.checkBoxSmtpAuth.CheckedChanged += new System.EventHandler(this.checkBoxSmtpAuth_CheckedChanged);
+            // 
+            // richTextBoxSmtpMess
+            // 
+            this.richTextBoxSmtpMess.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxSmtpMess.Location = new System.Drawing.Point(3, 213);
+            this.richTextBoxSmtpMess.Name = "richTextBoxSmtpMess";
+            this.richTextBoxSmtpMess.Size = new System.Drawing.Size(802, 231);
+            this.richTextBoxSmtpMess.TabIndex = 6;
+            this.richTextBoxSmtpMess.Text = "";
+            // 
+            // labelSmtpMessage
+            // 
+            this.labelSmtpMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpMessage.AutoSize = true;
+            this.labelSmtpMessage.Location = new System.Drawing.Point(3, 191);
+            this.labelSmtpMessage.Name = "labelSmtpMessage";
+            this.labelSmtpMessage.Size = new System.Drawing.Size(69, 19);
+            this.labelSmtpMessage.TabIndex = 10;
+            this.labelSmtpMessage.Text = "Message";
+            // 
+            // labelSmtpSubj
+            // 
+            this.labelSmtpSubj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpSubj.AutoSize = true;
+            this.labelSmtpSubj.Location = new System.Drawing.Point(3, 149);
+            this.labelSmtpSubj.Name = "labelSmtpSubj";
+            this.labelSmtpSubj.Size = new System.Drawing.Size(60, 19);
+            this.labelSmtpSubj.TabIndex = 9;
+            this.labelSmtpSubj.Text = "Subject";
+            // 
+            // labelSmtpTo
+            // 
+            this.labelSmtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpTo.AutoSize = true;
+            this.labelSmtpTo.Location = new System.Drawing.Point(3, 116);
+            this.labelSmtpTo.Name = "labelSmtpTo";
+            this.labelSmtpTo.Size = new System.Drawing.Size(26, 19);
+            this.labelSmtpTo.TabIndex = 8;
+            this.labelSmtpTo.Text = "To";
+            // 
+            // labelSmtpFrom
+            // 
+            this.labelSmtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpFrom.AutoSize = true;
+            this.labelSmtpFrom.Location = new System.Drawing.Point(3, 83);
+            this.labelSmtpFrom.Name = "labelSmtpFrom";
+            this.labelSmtpFrom.Size = new System.Drawing.Size(46, 19);
+            this.labelSmtpFrom.TabIndex = 7;
+            this.labelSmtpFrom.Text = "From";
+            // 
+            // textBoxSmtpSubj
+            // 
+            this.textBoxSmtpSubj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSmtpSubj.Location = new System.Drawing.Point(114, 146);
+            this.textBoxSmtpSubj.Name = "textBoxSmtpSubj";
+            this.textBoxSmtpSubj.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpSubj.TabIndex = 5;
+            this.textBoxSmtpSubj.Text = "Test email";
+            // 
+            // textBoxSmtpTo
+            // 
+            this.textBoxSmtpTo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSmtpTo.Location = new System.Drawing.Point(114, 113);
+            this.textBoxSmtpTo.Name = "textBoxSmtpTo";
+            this.textBoxSmtpTo.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpTo.TabIndex = 4;
+            // 
+            // textBoxSmtpFrom
+            // 
+            this.textBoxSmtpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSmtpFrom.Location = new System.Drawing.Point(114, 80);
+            this.textBoxSmtpFrom.Name = "textBoxSmtpFrom";
+            this.textBoxSmtpFrom.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpFrom.TabIndex = 3;
+            // 
+            // labelSmtpServer
+            // 
+            this.labelSmtpServer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSmtpServer.AutoSize = true;
+            this.labelSmtpServer.Location = new System.Drawing.Point(3, 17);
+            this.labelSmtpServer.Name = "labelSmtpServer";
+            this.labelSmtpServer.Size = new System.Drawing.Size(97, 19);
+            this.labelSmtpServer.TabIndex = 2;
+            this.labelSmtpServer.Text = "SMTP server";
+            // 
+            // comboBoxSmtpServer
+            // 
+            this.comboBoxSmtpServer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxSmtpServer.FormattingEnabled = true;
+            this.comboBoxSmtpServer.Items.AddRange(new object[] {
+            "mailgw.myarchway.com",
+            "relay.appriver.com",
+            "smtp.gmail.com"});
+            this.comboBoxSmtpServer.Location = new System.Drawing.Point(114, 14);
+            this.comboBoxSmtpServer.Name = "comboBoxSmtpServer";
+            this.comboBoxSmtpServer.Size = new System.Drawing.Size(275, 27);
+            this.comboBoxSmtpServer.TabIndex = 1;
+            this.comboBoxSmtpServer.Text = "relay.appriver.com";
+            // 
+            // groupBoxSmtpEnableAuth
+            // 
+            this.groupBoxSmtpEnableAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxSmtpEnableAuth.Controls.Add(this.textBoxSmtpPass);
+            this.groupBoxSmtpEnableAuth.Controls.Add(this.textBoxSmtpUser);
+            this.groupBoxSmtpEnableAuth.Location = new System.Drawing.Point(467, 77);
+            this.groupBoxSmtpEnableAuth.Name = "groupBoxSmtpEnableAuth";
+            this.groupBoxSmtpEnableAuth.Size = new System.Drawing.Size(291, 118);
+            this.groupBoxSmtpEnableAuth.TabIndex = 0;
+            this.groupBoxSmtpEnableAuth.TabStop = false;
+            this.groupBoxSmtpEnableAuth.Text = "Username and password";
+            this.groupBoxSmtpEnableAuth.Visible = false;
+            // 
+            // textBoxSmtpPass
+            // 
+            this.textBoxSmtpPass.Location = new System.Drawing.Point(6, 63);
+            this.textBoxSmtpPass.Name = "textBoxSmtpPass";
+            this.textBoxSmtpPass.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpPass.TabIndex = 10;
+            // 
+            // textBoxSmtpUser
+            // 
+            this.textBoxSmtpUser.Location = new System.Drawing.Point(6, 30);
+            this.textBoxSmtpUser.Name = "textBoxSmtpUser";
+            this.textBoxSmtpUser.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpUser.TabIndex = 9;
+            // 
+            // Whois
+            // 
+            this.Whois.Controls.Add(this.richTextBoxWhoisResult);
+            this.Whois.Controls.Add(this.buttonWhoisGet);
+            this.Whois.Controls.Add(this.labelWhois);
+            this.Whois.Controls.Add(this.textBoxWhoisDomain);
+            this.Whois.Location = new System.Drawing.Point(4, 28);
+            this.Whois.Name = "Whois";
+            this.Whois.Size = new System.Drawing.Size(808, 544);
+            this.Whois.TabIndex = 9;
+            this.Whois.Text = "WHOIS";
+            this.Whois.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxWhoisResult
+            // 
+            this.richTextBoxWhoisResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxWhoisResult.Location = new System.Drawing.Point(0, 75);
+            this.richTextBoxWhoisResult.Name = "richTextBoxWhoisResult";
+            this.richTextBoxWhoisResult.Size = new System.Drawing.Size(800, 466);
+            this.richTextBoxWhoisResult.TabIndex = 3;
+            this.richTextBoxWhoisResult.Text = "";
+            // 
+            // buttonWhoisGet
+            // 
+            this.buttonWhoisGet.Location = new System.Drawing.Point(245, 40);
+            this.buttonWhoisGet.Name = "buttonWhoisGet";
+            this.buttonWhoisGet.Size = new System.Drawing.Size(102, 31);
+            this.buttonWhoisGet.TabIndex = 2;
+            this.buttonWhoisGet.Text = "Get";
+            this.buttonWhoisGet.UseVisualStyleBackColor = true;
+            this.buttonWhoisGet.Click += new System.EventHandler(this.buttonWhoisGet_Click);
+            // 
+            // labelWhois
+            // 
+            this.labelWhois.AutoSize = true;
+            this.labelWhois.Location = new System.Drawing.Point(3, 16);
+            this.labelWhois.Name = "labelWhois";
+            this.labelWhois.Size = new System.Drawing.Size(344, 19);
+            this.labelWhois.TabIndex = 1;
+            this.labelWhois.Text = "Please type the domain name (org, com, net, edu)";
+            // 
+            // textBoxWhoisDomain
+            // 
+            this.textBoxWhoisDomain.Location = new System.Drawing.Point(3, 42);
+            this.textBoxWhoisDomain.Name = "textBoxWhoisDomain";
+            this.textBoxWhoisDomain.Size = new System.Drawing.Size(218, 27);
+            this.textBoxWhoisDomain.TabIndex = 0;
+            this.textBoxWhoisDomain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxWhoisDomain_KeyDown);
+            // 
+            // Settings
+            // 
+            this.Settings.Controls.Add(this.checkBoxAlwaysOnTop);
+            this.Settings.Controls.Add(this.buttonChangeFont);
+            this.Settings.Controls.Add(this.labelFontSize);
+            this.Settings.Location = new System.Drawing.Point(4, 28);
+            this.Settings.Margin = new System.Windows.Forms.Padding(2);
+            this.Settings.Name = "Settings";
+            this.Settings.Padding = new System.Windows.Forms.Padding(2);
+            this.Settings.Size = new System.Drawing.Size(808, 544);
+            this.Settings.TabIndex = 2;
+            this.Settings.Text = "Settings";
+            this.Settings.UseVisualStyleBackColor = true;
             // 
             // checkBoxAlwaysOnTop
             // 
@@ -936,18 +1617,18 @@
             this.labelFontSize.TabIndex = 0;
             this.labelFontSize.Text = "Select Font Size";
             // 
-            // tabPage4
+            // Help
             // 
-            this.tabPage4.Controls.Add(this.groupBoxCopy);
-            this.tabPage4.Controls.Add(this.groupBoxTimer);
-            this.tabPage4.Controls.Add(this.groupBoxMXQuery);
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(808, 544);
-            this.tabPage4.TabIndex = 4;
-            this.tabPage4.Text = "Help";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.Help.Controls.Add(this.groupBoxCopy);
+            this.Help.Controls.Add(this.groupBoxTimer);
+            this.Help.Controls.Add(this.groupBoxMXQuery);
+            this.Help.Location = new System.Drawing.Point(4, 28);
+            this.Help.Margin = new System.Windows.Forms.Padding(2);
+            this.Help.Name = "Help";
+            this.Help.Size = new System.Drawing.Size(808, 544);
+            this.Help.TabIndex = 4;
+            this.Help.Text = "Help";
+            this.Help.UseVisualStyleBackColor = true;
             // 
             // groupBoxCopy
             // 
@@ -1060,6 +1741,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.buttonCopyTClose;
             this.ClientSize = new System.Drawing.Size(816, 576);
             this.Controls.Add(this.tabControlMain);
@@ -1068,23 +1750,35 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(832, 607);
             this.Name = "FormMain";
-            this.Text = "Archway Helper v2.2";
+            this.Text = "Archway Helper v2.5";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControlMain.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.MX.ResumeLayout(false);
+            this.MX.PerformLayout();
             this.groupBoxUpcEvents.ResumeLayout(false);
             this.groupBoxUpcEvents.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
+            this.Timer.ResumeLayout(false);
+            this.Timer.PerformLayout();
             this.groupBoxTimeAndText.ResumeLayout(false);
             this.groupBoxTimeAndText.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage5.PerformLayout();
+            this.CopyText.ResumeLayout(false);
+            this.CopyText.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.MailExt.ResumeLayout(false);
+            this.MailExt.PerformLayout();
+            this.PassGen.ResumeLayout(false);
+            this.PassGen.PerformLayout();
+            this.groupBoxPassGen.ResumeLayout(false);
+            this.groupBoxPassGen.PerformLayout();
+            this.MailSender.ResumeLayout(false);
+            this.MailSender.PerformLayout();
+            this.groupBoxSmtpEnableAuth.ResumeLayout(false);
+            this.groupBoxSmtpEnableAuth.PerformLayout();
+            this.Whois.ResumeLayout(false);
+            this.Whois.PerformLayout();
+            this.Settings.ResumeLayout(false);
+            this.Settings.PerformLayout();
+            this.Help.ResumeLayout(false);
             this.groupBoxCopy.ResumeLayout(false);
             this.groupBoxTimer.ResumeLayout(false);
             this.groupBoxMXQuery.ResumeLayout(false);
@@ -1098,12 +1792,12 @@
         private System.Windows.Forms.Button buttonAccept;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControlMain;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage MX;
         private System.Windows.Forms.Label labelESTTime;
         private System.Windows.Forms.Label labelPSTTime;
         private System.Windows.Forms.Label labelCSTTime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage Settings;
         private System.Windows.Forms.Button buttonChangeFont;
         private System.Windows.Forms.Label labelFontSize;
         private System.Windows.Forms.FontDialog fontDialog1;
@@ -1115,7 +1809,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage Timer;
         private System.Windows.Forms.TextBox timebox1;
         private System.Windows.Forms.GroupBox groupBoxTimeAndText;
         private System.Windows.Forms.CheckBox checktime1;
@@ -1123,8 +1817,8 @@
         private System.Windows.Forms.GroupBox groupBoxUpcEvents;
         private System.Windows.Forms.Label labelUpcEventTwo;
         private System.Windows.Forms.Label labelUpcEvent;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage Help;
+        private System.Windows.Forms.TabPage CopyText;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.RichTextBox textToCopy;
         private System.Windows.Forms.Label labelCurrentLineNum;
@@ -1171,6 +1865,58 @@
         private System.Windows.Forms.Button buttonCopyOwnText;
         private System.Windows.Forms.TextBox textBoxOwnTextTwo;
         private System.Windows.Forms.TextBox textBoxOwnText;
+        private System.Windows.Forms.TabPage MailExt;
+        private System.Windows.Forms.RadioButton radioBtnExtDomain;
+        private System.Windows.Forms.RadioButton radioBtnExtEmail;
+        private System.Windows.Forms.RichTextBox richTextExtractEmails;
+        private System.Windows.Forms.Button buttonExtract;
+        private System.Windows.Forms.Button buttonCopyToCopyPaste;
+        private System.Windows.Forms.Label labelExtractor;
+        private System.Windows.Forms.CheckBox checkBoxExtRemoveDup;
+        private System.Windows.Forms.TabPage MailSender;
+        private System.Windows.Forms.CheckBox checkBoxSmtpAuth;
+        private System.Windows.Forms.RichTextBox richTextBoxSmtpMess;
+        private System.Windows.Forms.Label labelSmtpMessage;
+        private System.Windows.Forms.Label labelSmtpSubj;
+        private System.Windows.Forms.Label labelSmtpTo;
+        private System.Windows.Forms.Label labelSmtpFrom;
+        private System.Windows.Forms.TextBox textBoxSmtpSubj;
+        private System.Windows.Forms.TextBox textBoxSmtpTo;
+        private System.Windows.Forms.TextBox textBoxSmtpFrom;
+        private System.Windows.Forms.Label labelSmtpServer;
+        private System.Windows.Forms.ComboBox comboBoxSmtpServer;
+        private System.Windows.Forms.GroupBox groupBoxSmtpEnableAuth;
+        private System.Windows.Forms.TextBox textBoxSmtpPass;
+        private System.Windows.Forms.TextBox textBoxSmtpUser;
+        private System.Windows.Forms.Label labelSmtpPort;
+        private System.Windows.Forms.TextBox textBoxSmtpPort;
+        private System.Windows.Forms.Label labelSmtpInfo;
+        private System.Windows.Forms.Button buttonSmtpSend;
+        private System.Windows.Forms.Button buttonSmtpWrite;
+        private System.Windows.Forms.Button buttonSmtpReadSet;
+        private System.Windows.Forms.Button buttonSmtpRemove;
+        private System.Windows.Forms.TabPage PassGen;
+        private System.Windows.Forms.RichTextBox richTextBoxPassGen;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox groupBoxPassGen;
+        private System.Windows.Forms.ComboBox comboBoxPGLen;
+        private System.Windows.Forms.CheckBox checkBoxPGUpperCase;
+        private System.Windows.Forms.CheckBox checkBoxPGUpperCaseStart;
+        private System.Windows.Forms.CheckBox checkBoxPGExclChars;
+        private System.Windows.Forms.CheckBox checkBoxPGExclO;
+        private System.Windows.Forms.CheckBox checkBoxPGLowerCase;
+        private System.Windows.Forms.CheckBox checkBoxPGNum;
+        private System.Windows.Forms.CheckBox checkBoxPGSym;
+        private System.Windows.Forms.RadioButton radioButtonPGStan;
+        private System.Windows.Forms.Label labelPassGenLength;
+        private System.Windows.Forms.Button buttonPGStart;
+        private System.Windows.Forms.Label labelPassGenQuantity;
+        private System.Windows.Forms.TextBox textBoxPGQuantity;
+        private System.Windows.Forms.TabPage Whois;
+        private System.Windows.Forms.RichTextBox richTextBoxWhoisResult;
+        private System.Windows.Forms.Button buttonWhoisGet;
+        private System.Windows.Forms.Label labelWhois;
+        private System.Windows.Forms.TextBox textBoxWhoisDomain;
     }
 }
 

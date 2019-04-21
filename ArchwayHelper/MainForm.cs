@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
+
 using System.Drawing;
 using System.Linq;
-using System.Text;
+
 using System.Windows.Forms;
-using System.Diagnostics;
-using System.Runtime.InteropServices;
-using System.Media;
+
 using System.Threading;
 
 namespace ArchwayHelper
@@ -45,8 +43,11 @@ namespace ArchwayHelper
 
         private void QueryResult ()
         {
+            if (comboBoxDomainName.Text.Contains('@')) { comboBoxDomainName.Text = comboBoxDomainName.Text.Split('@')[1]; }
+            if (!comboBoxDomainName.Items.Contains(comboBoxDomainName.Text)) comboBoxDomainName.Items.Add(comboBoxDomainName.Text);
             richTextBoxResult.Text="Please wait...";
             Query temp = new Query();
+            
             richTextBoxResult.Text = temp.GetMXQuery(comboBoxDomainName.Text);
         }
         
@@ -81,9 +82,16 @@ namespace ArchwayHelper
             if (result == DialogResult.OK)
             {
                 Font font = fontDialog1.Font;
-                this.richTextBoxResult.Font = font;
+                richTextBoxResult.Font = font;
+                textToCopy.Font = font;
+                richTextExtractEmails.Font = font;
+                richTextBoxPassGen.Font = font;
+                richTextBoxSmtpMess.Font = font;
+                richTextBoxWhoisResult.Font = font;
             }
         }
+
+        
 
         private void buttonCopyTPerm_Click(object sender, EventArgs e)
         {
@@ -240,7 +248,7 @@ namespace ArchwayHelper
         {
             TextCopy remTab = new TextCopy();
             textToCopy.Text = remTab.RemoveTabs(textToCopy.Text);
-            checkBoxChangeTabs.Checked = true;
+            checkBoxRemoveTabs.Checked = true;
         }
 
         private void checkBoxChangeTabs_CheckedChanged(object sender, EventArgs e)
@@ -285,12 +293,14 @@ namespace ArchwayHelper
 
         private void buttonSortSave_Click(object sender, EventArgs e)
         {
+            
             Tasks tasks = new Tasks();
             tasks.SortTasks(new string[] { timebox1.Text, timebox2.Text, timebox3.Text, timebox4.Text, timebox5.Text},
                 new string[] { timetext1.Text, timetext2.Text, timetext3.Text, timetext4.Text, timetext5.Text},
                 new bool[] { checktime1.Checked, checktime2.Checked, checktime3.Checked, checktime4.Checked, checktime5.Checked }
                 );
             
+
         }
 
         private void timebox2_Leave(object sender, EventArgs e)
@@ -336,5 +346,133 @@ namespace ArchwayHelper
             
         }
 
+        private void buttonExtract_Click(object sender, EventArgs e)
+        {
+            EmailExtractor extract = new EmailExtractor();
+            richTextExtractEmails.Text = extract.Extract(radioBtnExtEmail.Checked, richTextExtractEmails.Text, checkBoxExtRemoveDup.Checked);
+        }
+
+        private void buttonCopyToCopyPaste_Click(object sender, EventArgs e)
+        {
+            textToCopy.Text = richTextExtractEmails.Text;
+            TextCopy textCopy = new TextCopy();
+
+            string[] ret = textCopy.LinNumChange(textToCopy.Text, textBoxLineChange.Text);
+            textBoxLineChange.Text = "";
+            labelCurrentLineNum.Text = ret[0];
+            labelCopyStatus.Text = ret[1];
+        }
+
+        private void checkBoxSmtpAuth_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBoxSmtpEnableAuth.Visible = checkBoxSmtpAuth.Checked;
+        }
+
+        private void buttonSmtpReadSet_Click(object sender, EventArgs e)
+        {
+            SaveSettings readSettings = new SaveSettings();
+            string [] result =  readSettings.GetSettings();
+            if (result != null)
+            {
+                labelSmtpInfo.Text = result[0];
+                comboBoxSmtpServer.Text = result[1];
+                textBoxSmtpPort.Text = result[2];
+                textBoxSmtpFrom.Text = result[3];
+                textBoxSmtpTo.Text = result[4];
+                checkBoxSmtpAuth.Checked = result[5].Length < 5;
+                textBoxSmtpUser.Text = result[6];
+            }
+            else
+            {
+                labelSmtpInfo.Text = "No settings were detected";
+            }
+
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SaveSettings writeSettings = new SaveSettings();
+            writeSettings.SetSettings(comboBoxSmtpServer.Text, textBoxSmtpPort.Text, textBoxSmtpFrom.Text, textBoxSmtpTo.Text, checkBoxSmtpAuth.Checked, textBoxSmtpUser.Text);
+            labelSmtpInfo.Text = "The settings were saved to HKCU\\Software\\ArchwayHelper";
+        }
+
+        
+        private void DigitsOnly(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            if (!Char.IsDigit(ch) && ch != 8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBoxPassGen.Enabled = true;
+        }
+
+        private void radioButtonPGStan_CheckedChanged(object sender, EventArgs e)
+        {
+            groupBoxPassGen.Enabled = false;
+        }
+
+        private void buttonPGStart_Click(object sender, EventArgs e)
+        {
+            //public string PassGen(string quantity, bool upperCase, bool lowerCase, bool inclNumbers, bool inclSymbols,   
+           // bool exclCharsDot, bool exclSimilarChars, bool startWithUpper, string length)
+            //
+            PasswordGenerator passGen = new PasswordGenerator();
+            if (radioButtonPGStan.Checked) { richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text); }
+            else richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text, checkBoxPGUpperCase.Checked, checkBoxPGLowerCase.Checked, checkBoxPGNum.Checked,
+               checkBoxPGSym.Checked, checkBoxPGExclChars.Checked, checkBoxPGExclO.Checked, checkBoxPGUpperCaseStart.Checked, comboBoxPGLen.Text);
+        }
+
+        private void buttonWhoisGet_Click(object sender, EventArgs e)
+        {
+            Whois whois = new Whois();
+
+            richTextBoxWhoisResult.Text = whois.GetWhoisData(textBoxWhoisDomain.Text);
+        }
+
+        private void buttonCopyToCopyPaste_Click_1(object sender, EventArgs e)
+        {
+            textToCopy.Text = richTextExtractEmails.Text;
+        }
+
+        private void buttonSmtpSend_Click(object sender, EventArgs e)
+        {
+            labelSmtpInfo.Text = "";
+            SmtpSender sendEmail = new SmtpSender();
+            labelSmtpInfo.Text = sendEmail.SendEmail(comboBoxSmtpServer.Text, textBoxSmtpPort.Text, textBoxSmtpFrom.Text, 
+                textBoxSmtpTo.Text, textBoxSmtpSubj.Text, richTextBoxSmtpMess.Text, 
+                checkBoxSmtpAuth.Checked, textBoxSmtpUser.Text, textBoxSmtpPass.Text);
+        }
+
+        
+        private void textBoxWhoisDomain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+               buttonWhoisGet_Click(this, new EventArgs());
+            }
+        }
+
+        private void buttonSmtpRemove_Click(object sender, EventArgs e)
+        {
+            SaveSettings deleteSettings = new SaveSettings();
+            labelSmtpInfo.Text = deleteSettings.RemoveSettings();
+        }
+
+        private void checkBoxSettingsDark_CheckedChanged(object sender, EventArgs e)
+        {
+            this.BackColor = Color.Red;
+            richTextBoxResult.BackColor = Color.Gray;
+            richTextBoxResult.ForeColor = Color.Wheat;
+
+            MX.BackColor = Color.DarkSlateGray;
+        }
     }
 }

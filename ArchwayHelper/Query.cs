@@ -9,6 +9,11 @@ namespace ArchwayHelper
 {
     class Query
     {
+        /// <summary>
+        /// Gets string and pastes them to cmd.exe
+        /// </summary>
+        /// <param name="queries"></param>
+        /// <returns>Result of the commands sent to cmd.exe</returns>
         private String[] Cmd(String[] queries)  //gets command to run in CMD session
         {
             List<String> output = new List<string>();
@@ -35,7 +40,11 @@ namespace ArchwayHelper
                 output.Add(cmdMX.StandardOutput.ReadLine());
             return output.ToArray();
         }
-
+        /// <summary>
+        /// Gets a domain name to check its MX, autodiscover and TXT records
+        /// </summary>
+        /// <param name="domainName"></param>
+        /// <returns>A formatted text from cmd.exe</returns>
         public string GetMXQuery (string domainName)
         {
             StringBuilder result = new StringBuilder();

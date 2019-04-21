@@ -23,7 +23,8 @@ namespace ArchwayHelper
 
         protected override void WndProc(ref Message m)
         {
-            // 5. Catch when a HotKey is pressed !
+            
+            // Catch when a HotKey is pressed
             if (m.Msg == 0x0312)
             {
                 int id = m.WParam.ToInt32();
