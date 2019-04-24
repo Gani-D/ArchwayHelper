@@ -57,7 +57,11 @@ namespace ArchwayHelper
 
             return true;
         }
-
+        /// <summary>
+        /// Tries to get a time from numbers, like 444 to 04:44, 4:12 to 04:12, etc.
+        /// </summary>
+        /// <param name="time">Data converting to a time</param>
+        /// <returns></returns>
         public static string CorrectTime(string time) //corrects time from 815 to 08:15 or 
         {
             if (time.Length < 3) return time;
@@ -81,7 +85,12 @@ namespace ArchwayHelper
             }
             return time;
         }
-
+        /// <summary>
+        /// Checks if the time is unique, you can't have 2 appointments at the same time
+        /// </summary>
+        /// <param name="time">Getting an array of time from all textboxes</param>
+        /// <param name="position">Position of the checking time</param>
+        /// <returns></returns>
         public static bool TimeIsUnique (string[] time, int position) //if the time unique
         {
             int timeCount = 0;
@@ -99,6 +108,13 @@ namespace ArchwayHelper
         #endregion
 
         #region SortTasks // sorts the tasks by time 
+
+        /// <summary>
+        /// Sorting tasks by time
+        /// </summary>
+        /// <param name="timeTemp">Array of tasks' time</param>
+        /// <param name="text">Array of upcoming task's description</param>
+        /// <param name="isActive">Array of upcoming task's active status</param>
         public void SortTasks(string [] timeTemp, string [] text, bool [] isActive)
         {
             string[] time = { "", "", "", "", ""};
@@ -140,10 +156,15 @@ namespace ArchwayHelper
                 tasksTimeText = null;
             }
         } //sorts the tasks by time
-
+        /// <summary>
+        /// Updating the position of sorted tasks
+        /// </summary>
+        /// <param name="position">The position of the time and text needed to update</param>
+        /// <param name="time">The time of the task</param>
+        /// <param name="description">The description of the task</param>
         private void SetTimerFields (int position, string time, string description)
         {
-            if (position == 6)
+            if (position == 6) // purges all information from the textboxes
             {
                 FormMain.ChangeTimer(1, "", "", false);
                 FormMain.ChangeTimer(2, "", "", false);
@@ -158,7 +179,11 @@ namespace ArchwayHelper
             }
         }
         #endregion  
-
+        /// <summary>
+        /// Checks the static array if it has any entries and checks if the current time equals to the time of any appointments
+        /// </summary>
+        /// <param name="mute">Disable sound</param>
+        /// <returns></returns>
         public static bool CheckTasks(bool mute)
         {
             if (tasksTimeText == null) { return false; }
@@ -179,7 +204,11 @@ namespace ArchwayHelper
             }
             return false;
         }
-
+        /// <summary>
+        /// Adds 5 or 10 mins to the active task.
+        /// </summary>
+        /// <param name="taskNumber">The number of the task</param>
+        /// <param name="interval">Adding the minutes to the task</param>
         public void SnoozeTask(int taskNumber, int interval = 10)
         {
             
@@ -206,7 +235,10 @@ namespace ArchwayHelper
         }
 
       
-
+        /// <summary>
+        /// Remove the task from the list
+        /// </summary>
+        /// <param name="taskNumber">The number of the taks</param>
         public void CancelTask(int taskNumber)
         {
             
@@ -225,7 +257,10 @@ namespace ArchwayHelper
             
             SortTasks(timeTemp, description, isActive);
         }
-
+        /// <summary>
+        /// Getting a first task in the list
+        /// </summary>
+        /// <returns>The time and text of the first task</returns>
         public static string GetFirstTask ()
         {
             if (tasksTimeText == null) return "No upcoming events";

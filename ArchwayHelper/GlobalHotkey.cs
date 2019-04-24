@@ -30,7 +30,7 @@ namespace ArchwayHelper
                 int id = m.WParam.ToInt32();
                 // MessageBox.Show(string.Format("Hotkey #{0} pressed", id));
 
-                // 6. Handle what will happen once a respective hotkey is pressed
+                // Handle what will happen once a respective hotkey is pressed
                 switch (id)
                 {
                     case 1:

@@ -103,7 +103,11 @@ namespace ArchwayHelper
             }
             return 'a';
         }
-
+        /// <summary>
+        /// Generates a lower char
+        /// </summary>
+        /// <param name="excludeSimilar">Exclude o, i, l?</param>
+        /// <returns></returns>
         private char GenLowerChar (bool excludeSimilar)
         {
             
@@ -114,7 +118,11 @@ namespace ArchwayHelper
             } while (excludeSimilar && (rand == 105 || rand == 108 || rand == 111)); //avoiding i,l,o
             return (char)rand;
         }
-
+        /// <summary>
+        /// Generates an upper case letter
+        /// </summary>
+        /// <param name="excludeSimilar">Exclude o, i, l?</param>
+        /// <returns></returns>
         private char GenUpperChar (bool excludeSimilar)
         {
             
@@ -125,7 +133,11 @@ namespace ArchwayHelper
             } while (excludeSimilar && (rand == 73 || rand == 76 || rand == 79)); //avoiding I, L and O
             return (char) rand;
         }
-
+        /// <summary>
+        /// Generates a number
+        /// </summary>
+        /// <param name="excludeSimilar">Exclude 1, 0?</param>
+        /// <returns></returns>
         private char GenNumber (bool excludeSimilar)
         {
             int rand;

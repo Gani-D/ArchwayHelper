@@ -36,6 +36,7 @@
             this.comboBoxDomainName = new System.Windows.Forms.ComboBox();
             this.tabControlMain = new System.Windows.Forms.TabControl();
             this.MX = new System.Windows.Forms.TabPage();
+            this.buttonCopyTCall = new System.Windows.Forms.Button();
             this.groupBoxUpcEvents = new System.Windows.Forms.GroupBox();
             this.labelUpcEventTwo = new System.Windows.Forms.Label();
             this.labelUpcEvent = new System.Windows.Forms.Label();
@@ -44,6 +45,17 @@
             this.labelCSTTime = new System.Windows.Forms.Label();
             this.buttonCopyTClose = new System.Windows.Forms.Button();
             this.buttonCopyTPerm = new System.Windows.Forms.Button();
+            this.Whois = new System.Windows.Forms.TabPage();
+            this.richTextBoxWhoisResult = new System.Windows.Forms.RichTextBox();
+            this.buttonWhoisGet = new System.Windows.Forms.Button();
+            this.labelWhois = new System.Windows.Forms.Label();
+            this.textBoxWhoisDomain = new System.Windows.Forms.TextBox();
+            this.GeoIpTab = new System.Windows.Forms.TabPage();
+            this.linkLabelGeoIp = new System.Windows.Forms.LinkLabel();
+            this.richTextBoxGeoIp = new System.Windows.Forms.RichTextBox();
+            this.labelGeoIp = new System.Windows.Forms.Label();
+            this.textBoxGeoIp = new System.Windows.Forms.TextBox();
+            this.buttonGeoQuery = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.TabPage();
             this.checkBoxMute = new System.Windows.Forms.CheckBox();
             this.checkBoxHideUpcEvents = new System.Windows.Forms.CheckBox();
@@ -136,11 +148,98 @@
             this.groupBoxSmtpEnableAuth = new System.Windows.Forms.GroupBox();
             this.textBoxSmtpPass = new System.Windows.Forms.TextBox();
             this.textBoxSmtpUser = new System.Windows.Forms.TextBox();
-            this.Whois = new System.Windows.Forms.TabPage();
-            this.richTextBoxWhoisResult = new System.Windows.Forms.RichTextBox();
-            this.buttonWhoisGet = new System.Windows.Forms.Button();
-            this.labelWhois = new System.Windows.Forms.Label();
-            this.textBoxWhoisDomain = new System.Windows.Forms.TextBox();
+            this.Sort = new System.Windows.Forms.TabPage();
+            this.buttonSortTabToEnter = new System.Windows.Forms.Button();
+            this.buttonSortRemoveLines = new System.Windows.Forms.Button();
+            this.buttonSort = new System.Windows.Forms.Button();
+            this.richTextBoxSort = new System.Windows.Forms.RichTextBox();
+            this.Office365 = new System.Windows.Forms.TabPage();
+            this.tabControlOffice = new System.Windows.Forms.TabControl();
+            this.Config = new System.Windows.Forms.TabPage();
+            this.buttonOfficeDispose = new System.Windows.Forms.Button();
+            this.buttonOfficeUpdate = new System.Windows.Forms.Button();
+            this.labelOfficeBasicInfo = new System.Windows.Forms.Label();
+            this.labelOfficeConfig = new System.Windows.Forms.Label();
+            this.textBoxOfficePass = new System.Windows.Forms.TextBox();
+            this.labelOfficePassword = new System.Windows.Forms.Label();
+            this.LabelOfficeLogin = new System.Windows.Forms.Label();
+            this.textBoxOfficeLogin = new System.Windows.Forms.TextBox();
+            this.buttonOfficeAccept = new System.Windows.Forms.Button();
+            this.Permissions = new System.Windows.Forms.TabPage();
+            this.comboBoxOfficeDelegates = new System.Windows.Forms.ComboBox();
+            this.comboBoxOfficeOwners = new System.Windows.Forms.ComboBox();
+            this.checkBoxOfficeAutoMap = new System.Windows.Forms.CheckBox();
+            this.richTextBoxOfficeResult = new System.Windows.Forms.RichTextBox();
+            this.groupBoxOfficeAccessLvl = new System.Windows.Forms.GroupBox();
+            this.comboBoxAccessLevel = new System.Windows.Forms.ComboBox();
+            this.labelOfficeAccessLevel = new System.Windows.Forms.Label();
+            this.checkBoxOfficeRemovPermissions = new System.Windows.Forms.CheckBox();
+            this.radioButtonOfficeContact = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeCalendar = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeSendAs = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeFullAccess = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.buttonOfficeSetPermissions = new System.Windows.Forms.Button();
+            this.Mailbox = new System.Windows.Forms.TabPage();
+            this.labelOfficeMailboxSettingResult = new System.Windows.Forms.Label();
+            this.checkBoxOfficeForwardingAddDG = new System.Windows.Forms.CheckBox();
+            this.radioButtonOfficeRemoveForwarding = new System.Windows.Forms.RadioButton();
+            this.checkBoxOfficeForwardKeepCopy = new System.Windows.Forms.CheckBox();
+            this.comboBoxOfficeGroups = new System.Windows.Forms.ComboBox();
+            this.radioButtonOfficeGroups = new System.Windows.Forms.RadioButton();
+            this.buttonOfficeForwarding = new System.Windows.Forms.Button();
+            this.comboBoxOfficeForward = new System.Windows.Forms.ComboBox();
+            this.radioButtonOfficeForward = new System.Windows.Forms.RadioButton();
+            this.comboBoxOfficeMailboxSettings = new System.Windows.Forms.ComboBox();
+            this.labelOfficeMailboxOwner = new System.Windows.Forms.Label();
+            this.Alias = new System.Windows.Forms.TabPage();
+            this.richTextBoxOfficeAliasOwner = new System.Windows.Forms.RichTextBox();
+            this.textBoxOfficeAlias = new System.Windows.Forms.TextBox();
+            this.labelOfficeAlias = new System.Windows.Forms.Label();
+            this.buttonOfficeAlias = new System.Windows.Forms.Button();
+            this.Info = new System.Windows.Forms.TabPage();
+            this.tabControlOfficeInfo = new System.Windows.Forms.TabControl();
+            this.Information = new System.Windows.Forms.TabPage();
+            this.richTextBoxOfficeInformation = new System.Windows.Forms.RichTextBox();
+            this.RemoveRules = new System.Windows.Forms.TabPage();
+            this.labelOfficeOOOInboxRuleLog = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonOfficeRemoveRule = new System.Windows.Forms.Button();
+            this.checkedListBoxOfficeRuleToDelete = new System.Windows.Forms.CheckedListBox();
+            this.labelOfficeInformation = new System.Windows.Forms.Label();
+            this.comboBoxOfficeInformation = new System.Windows.Forms.ComboBox();
+            this.buttonOfficeInfo = new System.Windows.Forms.Button();
+            this.OOO = new System.Windows.Forms.TabPage();
+            this.label6 = new System.Windows.Forms.Label();
+            this.richTextBoxOfficeOOOText = new System.Windows.Forms.RichTextBox();
+            this.labelOfficeOOOLog = new System.Windows.Forms.Label();
+            this.groupBoxOfficeOOOSchedule = new System.Windows.Forms.GroupBox();
+            this.dateTimePickerOfficeOOOEndDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerOfficeOOOStartDate = new System.Windows.Forms.DateTimePicker();
+            this.radioButtonOfficeOOOSchedule = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeOOOEnableNow = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeOOODisable = new System.Windows.Forms.RadioButton();
+            this.labelOfficeOOOConf = new System.Windows.Forms.Label();
+            this.labelOfficeOOOMailbox = new System.Windows.Forms.Label();
+            this.comboBoxOfficeOOOMailbox = new System.Windows.Forms.ComboBox();
+            this.buttonOfficeOOO = new System.Windows.Forms.Button();
+            this.Logs = new System.Windows.Forms.TabPage();
+            this.labelOfficeLogsAudit = new System.Windows.Forms.Label();
+            this.comboBoxOfficeLogsAudit = new System.Windows.Forms.ComboBox();
+            this.radioButtonOfficeLogsStat = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.labelOfficeLogsFromIP = new System.Windows.Forms.Label();
+            this.textBoxOfficeLogsIP = new System.Windows.Forms.TextBox();
+            this.buttonOfficeLogStart = new System.Windows.Forms.Button();
+            this.labelOfficeLogsRecipient = new System.Windows.Forms.Label();
+            this.labelOfficeLogsSender = new System.Windows.Forms.Label();
+            this.textBoxOfficeLogsSender = new System.Windows.Forms.TextBox();
+            this.textBoxOfficeLogsRecipient = new System.Windows.Forms.TextBox();
+            this.radioButtonOfficeLogsForwarding = new System.Windows.Forms.RadioButton();
+            this.radioButtonOfficeLogMailTrace = new System.Windows.Forms.RadioButton();
+            this.labelOfficeLogs = new System.Windows.Forms.Label();
+            this.dataGridViewLogs = new System.Windows.Forms.DataGridView();
             this.Settings = new System.Windows.Forms.TabPage();
             this.checkBoxAlwaysOnTop = new System.Windows.Forms.CheckBox();
             this.buttonChangeFont = new System.Windows.Forms.Button();
@@ -154,13 +253,15 @@
             this.richTextBoxHelpMX = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolTips = new System.Windows.Forms.ToolTip(this.components);
+            this.contextMenuStripInfo = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.testToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlMain.SuspendLayout();
             this.MX.SuspendLayout();
             this.groupBoxUpcEvents.SuspendLayout();
+            this.Whois.SuspendLayout();
+            this.GeoIpTab.SuspendLayout();
             this.Timer.SuspendLayout();
             this.groupBoxTimeAndText.SuspendLayout();
             this.CopyText.SuspendLayout();
@@ -170,25 +271,40 @@
             this.groupBoxPassGen.SuspendLayout();
             this.MailSender.SuspendLayout();
             this.groupBoxSmtpEnableAuth.SuspendLayout();
-            this.Whois.SuspendLayout();
+            this.Sort.SuspendLayout();
+            this.Office365.SuspendLayout();
+            this.tabControlOffice.SuspendLayout();
+            this.Config.SuspendLayout();
+            this.Permissions.SuspendLayout();
+            this.groupBoxOfficeAccessLvl.SuspendLayout();
+            this.Mailbox.SuspendLayout();
+            this.Alias.SuspendLayout();
+            this.Info.SuspendLayout();
+            this.tabControlOfficeInfo.SuspendLayout();
+            this.Information.SuspendLayout();
+            this.RemoveRules.SuspendLayout();
+            this.OOO.SuspendLayout();
+            this.groupBoxOfficeOOOSchedule.SuspendLayout();
+            this.Logs.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLogs)).BeginInit();
             this.Settings.SuspendLayout();
             this.Help.SuspendLayout();
             this.groupBoxCopy.SuspendLayout();
             this.groupBoxTimer.SuspendLayout();
             this.groupBoxMXQuery.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStripInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonAccept
             // 
             this.buttonAccept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAccept.Location = new System.Drawing.Point(699, 456);
+            this.buttonAccept.Location = new System.Drawing.Point(733, 432);
             this.buttonAccept.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(100, 38);
             this.buttonAccept.TabIndex = 3;
             this.buttonAccept.Text = "Start";
-            this.toolTip1.SetToolTip(this.buttonAccept, "Starts the process of gertting information");
+            this.toolTips.SetToolTip(this.buttonAccept, "Starts the process of gertting information");
             this.buttonAccept.UseVisualStyleBackColor = true;
             this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
             // 
@@ -202,7 +318,7 @@
             this.richTextBoxResult.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBoxResult.Name = "richTextBoxResult";
             this.richTextBoxResult.ReadOnly = true;
-            this.richTextBoxResult.Size = new System.Drawing.Size(795, 332);
+            this.richTextBoxResult.Size = new System.Drawing.Size(829, 308);
             this.richTextBoxResult.TabIndex = 4;
             this.richTextBoxResult.Text = "You will get results of autodiscover.domain ping, MX records here";
             // 
@@ -225,34 +341,40 @@
             this.comboBoxDomainName.Size = new System.Drawing.Size(380, 27);
             this.comboBoxDomainName.TabIndex = 6;
             this.comboBoxDomainName.Text = "Please type the domain name";
-            this.toolTip1.SetToolTip(this.comboBoxDomainName, "You can add either domain name or email address");
+            this.toolTips.SetToolTip(this.comboBoxDomainName, "You can add either domain name or email address");
             this.comboBoxDomainName.Click += new System.EventHandler(this.comboBoxDomainName_Click);
             this.comboBoxDomainName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.comboBoxDomainName_KeyDown);
             // 
             // tabControlMain
             // 
             this.tabControlMain.Controls.Add(this.MX);
+            this.tabControlMain.Controls.Add(this.Whois);
+            this.tabControlMain.Controls.Add(this.GeoIpTab);
             this.tabControlMain.Controls.Add(this.Timer);
             this.tabControlMain.Controls.Add(this.CopyText);
             this.tabControlMain.Controls.Add(this.MailExt);
             this.tabControlMain.Controls.Add(this.PassGen);
             this.tabControlMain.Controls.Add(this.MailSender);
-            this.tabControlMain.Controls.Add(this.Whois);
+            this.tabControlMain.Controls.Add(this.Sort);
+            this.tabControlMain.Controls.Add(this.Office365);
             this.tabControlMain.Controls.Add(this.Settings);
             this.tabControlMain.Controls.Add(this.Help);
             this.tabControlMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlMain.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tabControlMain.Location = new System.Drawing.Point(0, 0);
             this.tabControlMain.Margin = new System.Windows.Forms.Padding(2);
+            this.tabControlMain.Multiline = true;
             this.tabControlMain.Name = "tabControlMain";
+            this.tabControlMain.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControlMain.SelectedIndex = 0;
-            this.tabControlMain.Size = new System.Drawing.Size(816, 576);
+            this.tabControlMain.Size = new System.Drawing.Size(850, 576);
             this.tabControlMain.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControlMain.TabIndex = 7;
             // 
             // MX
             // 
             this.MX.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.MX.Controls.Add(this.buttonCopyTCall);
             this.MX.Controls.Add(this.groupBoxUpcEvents);
             this.MX.Controls.Add(this.labelESTTime);
             this.MX.Controls.Add(this.labelPSTTime);
@@ -263,13 +385,27 @@
             this.MX.Controls.Add(this.comboBoxDomainName);
             this.MX.Controls.Add(this.buttonAccept);
             this.MX.Controls.Add(this.label1);
-            this.MX.Location = new System.Drawing.Point(4, 28);
+            this.MX.Location = new System.Drawing.Point(4, 52);
             this.MX.Margin = new System.Windows.Forms.Padding(2);
             this.MX.Name = "MX";
             this.MX.Padding = new System.Windows.Forms.Padding(2);
-            this.MX.Size = new System.Drawing.Size(808, 544);
+            this.MX.Size = new System.Drawing.Size(842, 520);
             this.MX.TabIndex = 0;
             this.MX.Text = "MX query";
+            // 
+            // buttonCopyTCall
+            // 
+            this.buttonCopyTCall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonCopyTCall.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCopyTCall.Location = new System.Drawing.Point(316, 432);
+            this.buttonCopyTCall.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonCopyTCall.Name = "buttonCopyTCall";
+            this.buttonCopyTCall.Size = new System.Drawing.Size(138, 38);
+            this.buttonCopyTCall.TabIndex = 14;
+            this.buttonCopyTCall.Text = "Call permission";
+            this.toolTips.SetToolTip(this.buttonCopyTCall, "Copies a text to the clipboard");
+            this.buttonCopyTCall.UseVisualStyleBackColor = true;
+            this.buttonCopyTCall.Click += new System.EventHandler(this.buttonCopyTCall_Click);
             // 
             // groupBoxUpcEvents
             // 
@@ -277,11 +413,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxUpcEvents.Controls.Add(this.labelUpcEventTwo);
             this.groupBoxUpcEvents.Controls.Add(this.labelUpcEvent);
-            this.groupBoxUpcEvents.Location = new System.Drawing.Point(4, 389);
+            this.groupBoxUpcEvents.Location = new System.Drawing.Point(4, 365);
             this.groupBoxUpcEvents.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxUpcEvents.Name = "groupBoxUpcEvents";
             this.groupBoxUpcEvents.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxUpcEvents.Size = new System.Drawing.Size(795, 62);
+            this.groupBoxUpcEvents.Size = new System.Drawing.Size(829, 62);
             this.groupBoxUpcEvents.TabIndex = 13;
             this.groupBoxUpcEvents.TabStop = false;
             this.groupBoxUpcEvents.Text = "Upcoming events";
@@ -290,7 +426,7 @@
             // 
             this.labelUpcEventTwo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelUpcEventTwo.AutoSize = true;
-            this.labelUpcEventTwo.Location = new System.Drawing.Point(396, 24);
+            this.labelUpcEventTwo.Location = new System.Drawing.Point(413, 24);
             this.labelUpcEventTwo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUpcEventTwo.MaximumSize = new System.Drawing.Size(379, 20);
             this.labelUpcEventTwo.Name = "labelUpcEventTwo";
@@ -315,7 +451,7 @@
             this.labelESTTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelESTTime.AutoSize = true;
             this.labelESTTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelESTTime.Location = new System.Drawing.Point(635, 514);
+            this.labelESTTime.Location = new System.Drawing.Point(669, 490);
             this.labelESTTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelESTTime.Name = "labelESTTime";
             this.labelESTTime.Size = new System.Drawing.Size(41, 26);
@@ -327,7 +463,7 @@
             this.labelPSTTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelPSTTime.AutoSize = true;
             this.labelPSTTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPSTTime.Location = new System.Drawing.Point(4, 514);
+            this.labelPSTTime.Location = new System.Drawing.Point(4, 490);
             this.labelPSTTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPSTTime.Name = "labelPSTTime";
             this.labelPSTTime.Size = new System.Drawing.Size(41, 26);
@@ -339,7 +475,7 @@
             this.labelCSTTime.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.labelCSTTime.AutoSize = true;
             this.labelCSTTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCSTTime.Location = new System.Drawing.Point(329, 514);
+            this.labelCSTTime.Location = new System.Drawing.Point(346, 490);
             this.labelCSTTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCSTTime.Name = "labelCSTTime";
             this.labelCSTTime.Size = new System.Drawing.Size(40, 26);
@@ -350,39 +486,156 @@
             // 
             this.buttonCopyTClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonCopyTClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.buttonCopyTClose.Location = new System.Drawing.Point(164, 456);
+            this.buttonCopyTClose.Location = new System.Drawing.Point(164, 432);
             this.buttonCopyTClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyTClose.Name = "buttonCopyTClose";
             this.buttonCopyTClose.Size = new System.Drawing.Size(106, 38);
             this.buttonCopyTClose.TabIndex = 8;
             this.buttonCopyTClose.Text = "Close ticket";
-            this.toolTip1.SetToolTip(this.buttonCopyTClose, "Copies a text to the clipboard");
+            this.toolTips.SetToolTip(this.buttonCopyTClose, "Copies a text to the clipboard");
             this.buttonCopyTClose.UseVisualStyleBackColor = true;
             this.buttonCopyTClose.Click += new System.EventHandler(this.buttonCopyTClose_Click);
             // 
             // buttonCopyTPerm
             // 
             this.buttonCopyTPerm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonCopyTPerm.Location = new System.Drawing.Point(4, 455);
+            this.buttonCopyTPerm.Location = new System.Drawing.Point(4, 431);
             this.buttonCopyTPerm.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyTPerm.Name = "buttonCopyTPerm";
             this.buttonCopyTPerm.Size = new System.Drawing.Size(110, 38);
             this.buttonCopyTPerm.TabIndex = 7;
             this.buttonCopyTPerm.Tag = "";
             this.buttonCopyTPerm.Text = "Permission";
-            this.toolTip1.SetToolTip(this.buttonCopyTPerm, "Copies a text to the clipboard");
+            this.toolTips.SetToolTip(this.buttonCopyTPerm, "Copies a text to the clipboard");
             this.buttonCopyTPerm.UseVisualStyleBackColor = true;
             this.buttonCopyTPerm.Click += new System.EventHandler(this.buttonCopyTPerm_Click);
+            // 
+            // Whois
+            // 
+            this.Whois.Controls.Add(this.richTextBoxWhoisResult);
+            this.Whois.Controls.Add(this.buttonWhoisGet);
+            this.Whois.Controls.Add(this.labelWhois);
+            this.Whois.Controls.Add(this.textBoxWhoisDomain);
+            this.Whois.Location = new System.Drawing.Point(4, 52);
+            this.Whois.Name = "Whois";
+            this.Whois.Size = new System.Drawing.Size(842, 520);
+            this.Whois.TabIndex = 9;
+            this.Whois.Text = "WHOIS";
+            this.Whois.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxWhoisResult
+            // 
+            this.richTextBoxWhoisResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxWhoisResult.Location = new System.Drawing.Point(3, 75);
+            this.richTextBoxWhoisResult.Name = "richTextBoxWhoisResult";
+            this.richTextBoxWhoisResult.Size = new System.Drawing.Size(831, 437);
+            this.richTextBoxWhoisResult.TabIndex = 3;
+            this.richTextBoxWhoisResult.Text = "";
+            // 
+            // buttonWhoisGet
+            // 
+            this.buttonWhoisGet.Location = new System.Drawing.Point(245, 40);
+            this.buttonWhoisGet.Name = "buttonWhoisGet";
+            this.buttonWhoisGet.Size = new System.Drawing.Size(102, 32);
+            this.buttonWhoisGet.TabIndex = 2;
+            this.buttonWhoisGet.Text = "Get";
+            this.buttonWhoisGet.UseVisualStyleBackColor = true;
+            this.buttonWhoisGet.Click += new System.EventHandler(this.buttonWhoisGet_Click);
+            // 
+            // labelWhois
+            // 
+            this.labelWhois.AutoSize = true;
+            this.labelWhois.Location = new System.Drawing.Point(3, 16);
+            this.labelWhois.Name = "labelWhois";
+            this.labelWhois.Size = new System.Drawing.Size(344, 19);
+            this.labelWhois.TabIndex = 1;
+            this.labelWhois.Text = "Please type the domain name (org, com, net, edu)";
+            // 
+            // textBoxWhoisDomain
+            // 
+            this.textBoxWhoisDomain.Location = new System.Drawing.Point(3, 42);
+            this.textBoxWhoisDomain.Name = "textBoxWhoisDomain";
+            this.textBoxWhoisDomain.Size = new System.Drawing.Size(218, 27);
+            this.textBoxWhoisDomain.TabIndex = 0;
+            this.textBoxWhoisDomain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxWhoisDomain_KeyDown);
+            // 
+            // GeoIpTab
+            // 
+            this.GeoIpTab.Controls.Add(this.linkLabelGeoIp);
+            this.GeoIpTab.Controls.Add(this.richTextBoxGeoIp);
+            this.GeoIpTab.Controls.Add(this.labelGeoIp);
+            this.GeoIpTab.Controls.Add(this.textBoxGeoIp);
+            this.GeoIpTab.Controls.Add(this.buttonGeoQuery);
+            this.GeoIpTab.Location = new System.Drawing.Point(4, 52);
+            this.GeoIpTab.Name = "GeoIpTab";
+            this.GeoIpTab.Size = new System.Drawing.Size(842, 520);
+            this.GeoIpTab.TabIndex = 11;
+            this.GeoIpTab.Text = "Geo IP";
+            this.GeoIpTab.UseVisualStyleBackColor = true;
+            // 
+            // linkLabelGeoIp
+            // 
+            this.linkLabelGeoIp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.linkLabelGeoIp.AutoSize = true;
+            this.linkLabelGeoIp.Location = new System.Drawing.Point(8, 496);
+            this.linkLabelGeoIp.Name = "linkLabelGeoIp";
+            this.linkLabelGeoIp.Size = new System.Drawing.Size(389, 19);
+            this.linkLabelGeoIp.TabIndex = 4;
+            this.linkLabelGeoIp.TabStop = true;
+            this.linkLabelGeoIp.Text = "https://mxtoolbox.com/SuperTool.aspx?action=arin%3a";
+            this.linkLabelGeoIp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelGeoIp_LinkClicked);
+            // 
+            // richTextBoxGeoIp
+            // 
+            this.richTextBoxGeoIp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxGeoIp.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.richTextBoxGeoIp.Location = new System.Drawing.Point(3, 75);
+            this.richTextBoxGeoIp.Name = "richTextBoxGeoIp";
+            this.richTextBoxGeoIp.Size = new System.Drawing.Size(836, 418);
+            this.richTextBoxGeoIp.TabIndex = 3;
+            this.richTextBoxGeoIp.Text = "";
+            // 
+            // labelGeoIp
+            // 
+            this.labelGeoIp.AutoSize = true;
+            this.labelGeoIp.Location = new System.Drawing.Point(3, 16);
+            this.labelGeoIp.Name = "labelGeoIp";
+            this.labelGeoIp.Size = new System.Drawing.Size(185, 19);
+            this.labelGeoIp.TabIndex = 2;
+            this.labelGeoIp.Text = "Please type the IP address";
+            // 
+            // textBoxGeoIp
+            // 
+            this.textBoxGeoIp.Location = new System.Drawing.Point(3, 42);
+            this.textBoxGeoIp.Name = "textBoxGeoIp";
+            this.textBoxGeoIp.Size = new System.Drawing.Size(218, 27);
+            this.textBoxGeoIp.TabIndex = 1;
+            this.textBoxGeoIp.Text = "10.0.0.1";
+            this.toolTips.SetToolTip(this.textBoxGeoIp, "Please type the IP address");
+            // 
+            // buttonGeoQuery
+            // 
+            this.buttonGeoQuery.Location = new System.Drawing.Point(245, 40);
+            this.buttonGeoQuery.Name = "buttonGeoQuery";
+            this.buttonGeoQuery.Size = new System.Drawing.Size(97, 32);
+            this.buttonGeoQuery.TabIndex = 0;
+            this.buttonGeoQuery.Text = "Start";
+            this.buttonGeoQuery.UseVisualStyleBackColor = true;
+            this.buttonGeoQuery.Click += new System.EventHandler(this.buttonGeoQuery_Click);
             // 
             // Timer
             // 
             this.Timer.Controls.Add(this.checkBoxMute);
             this.Timer.Controls.Add(this.checkBoxHideUpcEvents);
             this.Timer.Controls.Add(this.groupBoxTimeAndText);
-            this.Timer.Location = new System.Drawing.Point(4, 28);
+            this.Timer.Location = new System.Drawing.Point(4, 52);
             this.Timer.Margin = new System.Windows.Forms.Padding(2);
             this.Timer.Name = "Timer";
-            this.Timer.Size = new System.Drawing.Size(808, 544);
+            this.Timer.Size = new System.Drawing.Size(842, 520);
             this.Timer.TabIndex = 3;
             this.Timer.Text = "Timer";
             this.Timer.UseVisualStyleBackColor = true;
@@ -435,7 +688,7 @@
             this.groupBoxTimeAndText.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTimeAndText.Name = "groupBoxTimeAndText";
             this.groupBoxTimeAndText.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxTimeAndText.Size = new System.Drawing.Size(792, 279);
+            this.groupBoxTimeAndText.Size = new System.Drawing.Size(826, 279);
             this.groupBoxTimeAndText.TabIndex = 1;
             this.groupBoxTimeAndText.TabStop = false;
             this.groupBoxTimeAndText.Text = "Time and description";
@@ -443,7 +696,7 @@
             // buttonSortSave
             // 
             this.buttonSortSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSortSave.Location = new System.Drawing.Point(601, 212);
+            this.buttonSortSave.Location = new System.Drawing.Point(635, 212);
             this.buttonSortSave.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSortSave.Name = "buttonSortSave";
             this.buttonSortSave.Size = new System.Drawing.Size(162, 30);
@@ -456,13 +709,13 @@
             // 
             this.checktime5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checktime5.AutoSize = true;
-            this.checktime5.Location = new System.Drawing.Point(688, 172);
+            this.checktime5.Location = new System.Drawing.Point(722, 172);
             this.checktime5.Margin = new System.Windows.Forms.Padding(2);
             this.checktime5.Name = "checktime5";
             this.checktime5.Size = new System.Drawing.Size(75, 23);
             this.checktime5.TabIndex = 14;
             this.checktime5.Text = "Active";
-            this.toolTip1.SetToolTip(this.checktime5, "Is the event active. Removes time and text when unchecked");
+            this.toolTips.SetToolTip(this.checktime5, "Is the event active. Removes time and text when unchecked");
             this.checktime5.UseVisualStyleBackColor = true;
             this.checktime5.Click += new System.EventHandler(this.checktime5_Click);
             // 
@@ -484,7 +737,7 @@
             this.timetext5.Location = new System.Drawing.Point(75, 170);
             this.timetext5.Margin = new System.Windows.Forms.Padding(2);
             this.timetext5.Name = "timetext5";
-            this.timetext5.Size = new System.Drawing.Size(596, 27);
+            this.timetext5.Size = new System.Drawing.Size(630, 27);
             this.timetext5.TabIndex = 13;
             // 
             // timebox5
@@ -496,7 +749,7 @@
             this.timebox5.Name = "timebox5";
             this.timebox5.Size = new System.Drawing.Size(63, 27);
             this.timebox5.TabIndex = 12;
-            this.toolTip1.SetToolTip(this.timebox5, "Time in 24f format. 1435 is accptable and stand for 14:35");
+            this.toolTips.SetToolTip(this.timebox5, "Time in 24f format. 1435 is accptable and stand for 14:35");
             this.timebox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox5.Leave += new System.EventHandler(this.timebox5_Leave);
             // 
@@ -504,13 +757,13 @@
             // 
             this.checktime4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checktime4.AutoSize = true;
-            this.checktime4.Location = new System.Drawing.Point(688, 139);
+            this.checktime4.Location = new System.Drawing.Point(722, 139);
             this.checktime4.Margin = new System.Windows.Forms.Padding(2);
             this.checktime4.Name = "checktime4";
             this.checktime4.Size = new System.Drawing.Size(75, 23);
             this.checktime4.TabIndex = 11;
             this.checktime4.Text = "Active";
-            this.toolTip1.SetToolTip(this.checktime4, "Is the event active. Removes time and text when unchecked");
+            this.toolTips.SetToolTip(this.checktime4, "Is the event active. Removes time and text when unchecked");
             this.checktime4.UseVisualStyleBackColor = true;
             this.checktime4.Click += new System.EventHandler(this.checktime4_Click);
             // 
@@ -521,7 +774,7 @@
             this.timetext4.Location = new System.Drawing.Point(75, 138);
             this.timetext4.Margin = new System.Windows.Forms.Padding(2);
             this.timetext4.Name = "timetext4";
-            this.timetext4.Size = new System.Drawing.Size(596, 27);
+            this.timetext4.Size = new System.Drawing.Size(630, 27);
             this.timetext4.TabIndex = 10;
             // 
             // timebox4
@@ -533,7 +786,7 @@
             this.timebox4.Name = "timebox4";
             this.timebox4.Size = new System.Drawing.Size(63, 27);
             this.timebox4.TabIndex = 9;
-            this.toolTip1.SetToolTip(this.timebox4, "Time in 24f format. 1435 is accptable and stand for 14:35");
+            this.toolTips.SetToolTip(this.timebox4, "Time in 24f format. 1435 is accptable and stand for 14:35");
             this.timebox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox4.Leave += new System.EventHandler(this.timebox4_Leave);
             // 
@@ -541,13 +794,13 @@
             // 
             this.checktime3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checktime3.AutoSize = true;
-            this.checktime3.Location = new System.Drawing.Point(688, 106);
+            this.checktime3.Location = new System.Drawing.Point(722, 106);
             this.checktime3.Margin = new System.Windows.Forms.Padding(2);
             this.checktime3.Name = "checktime3";
             this.checktime3.Size = new System.Drawing.Size(75, 23);
             this.checktime3.TabIndex = 8;
             this.checktime3.Text = "Active";
-            this.toolTip1.SetToolTip(this.checktime3, "Is the event active. Removes time and text when unchecked");
+            this.toolTips.SetToolTip(this.checktime3, "Is the event active. Removes time and text when unchecked");
             this.checktime3.UseVisualStyleBackColor = true;
             this.checktime3.Click += new System.EventHandler(this.checktime3_Click);
             // 
@@ -558,7 +811,7 @@
             this.timetext3.Location = new System.Drawing.Point(75, 104);
             this.timetext3.Margin = new System.Windows.Forms.Padding(2);
             this.timetext3.Name = "timetext3";
-            this.timetext3.Size = new System.Drawing.Size(596, 27);
+            this.timetext3.Size = new System.Drawing.Size(630, 27);
             this.timetext3.TabIndex = 7;
             // 
             // timebox3
@@ -570,7 +823,7 @@
             this.timebox3.Name = "timebox3";
             this.timebox3.Size = new System.Drawing.Size(63, 27);
             this.timebox3.TabIndex = 6;
-            this.toolTip1.SetToolTip(this.timebox3, "Time in 24f format. 1435 is accptable and stand for 14:35");
+            this.toolTips.SetToolTip(this.timebox3, "Time in 24f format. 1435 is accptable and stand for 14:35");
             this.timebox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox3.Leave += new System.EventHandler(this.timebox3_Leave);
             // 
@@ -578,13 +831,13 @@
             // 
             this.checktime2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checktime2.AutoSize = true;
-            this.checktime2.Location = new System.Drawing.Point(688, 72);
+            this.checktime2.Location = new System.Drawing.Point(722, 72);
             this.checktime2.Margin = new System.Windows.Forms.Padding(2);
             this.checktime2.Name = "checktime2";
             this.checktime2.Size = new System.Drawing.Size(75, 23);
             this.checktime2.TabIndex = 5;
             this.checktime2.Text = "Active";
-            this.toolTip1.SetToolTip(this.checktime2, "Is the event active. Removes time and text when unchecked");
+            this.toolTips.SetToolTip(this.checktime2, "Is the event active. Removes time and text when unchecked");
             this.checktime2.UseVisualStyleBackColor = true;
             this.checktime2.Click += new System.EventHandler(this.checktime2_Click);
             // 
@@ -595,7 +848,7 @@
             this.timetext2.Location = new System.Drawing.Point(75, 71);
             this.timetext2.Margin = new System.Windows.Forms.Padding(2);
             this.timetext2.Name = "timetext2";
-            this.timetext2.Size = new System.Drawing.Size(596, 27);
+            this.timetext2.Size = new System.Drawing.Size(630, 27);
             this.timetext2.TabIndex = 4;
             // 
             // timebox2
@@ -607,7 +860,7 @@
             this.timebox2.Name = "timebox2";
             this.timebox2.Size = new System.Drawing.Size(63, 27);
             this.timebox2.TabIndex = 3;
-            this.toolTip1.SetToolTip(this.timebox2, "Time in 24f format. 1435 is accptable and stand for 14:35");
+            this.toolTips.SetToolTip(this.timebox2, "Time in 24f format. 1435 is accptable and stand for 14:35");
             this.timebox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox2.Leave += new System.EventHandler(this.timebox2_Leave);
             // 
@@ -615,13 +868,13 @@
             // 
             this.checktime1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checktime1.AutoSize = true;
-            this.checktime1.Location = new System.Drawing.Point(688, 40);
+            this.checktime1.Location = new System.Drawing.Point(722, 40);
             this.checktime1.Margin = new System.Windows.Forms.Padding(2);
             this.checktime1.Name = "checktime1";
             this.checktime1.Size = new System.Drawing.Size(75, 23);
             this.checktime1.TabIndex = 2;
             this.checktime1.Text = "Active";
-            this.toolTip1.SetToolTip(this.checktime1, "Is the event active. Removes time and text when unchecked");
+            this.toolTips.SetToolTip(this.checktime1, "Is the event active. Removes time and text when unchecked");
             this.checktime1.UseVisualStyleBackColor = true;
             this.checktime1.Click += new System.EventHandler(this.checktime1_Click);
             // 
@@ -632,7 +885,7 @@
             this.timetext1.Location = new System.Drawing.Point(75, 38);
             this.timetext1.Margin = new System.Windows.Forms.Padding(2);
             this.timetext1.Name = "timetext1";
-            this.timetext1.Size = new System.Drawing.Size(596, 27);
+            this.timetext1.Size = new System.Drawing.Size(630, 27);
             this.timetext1.TabIndex = 1;
             // 
             // timebox1
@@ -644,7 +897,7 @@
             this.timebox1.Name = "timebox1";
             this.timebox1.Size = new System.Drawing.Size(63, 27);
             this.timebox1.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.timebox1, "Time in 24f format. 1435 is accptable and stand for 14:35");
+            this.toolTips.SetToolTip(this.timebox1, "Time in 24f format. 1435 is accptable and stand for 14:35");
             this.timebox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             this.timebox1.Leave += new System.EventHandler(this.timebox1_Leave);
             // 
@@ -672,10 +925,10 @@
             this.CopyText.Controls.Add(this.labelCurrentLineNum);
             this.CopyText.Controls.Add(this.labelCurrentLine);
             this.CopyText.Controls.Add(this.groupBox3);
-            this.CopyText.Location = new System.Drawing.Point(4, 28);
+            this.CopyText.Location = new System.Drawing.Point(4, 52);
             this.CopyText.Margin = new System.Windows.Forms.Padding(2);
             this.CopyText.Name = "CopyText";
-            this.CopyText.Size = new System.Drawing.Size(808, 544);
+            this.CopyText.Size = new System.Drawing.Size(842, 520);
             this.CopyText.TabIndex = 5;
             this.CopyText.Text = "Copy-Paste";
             this.CopyText.UseVisualStyleBackColor = true;
@@ -683,7 +936,7 @@
             // textBoxOwnTextTwo
             // 
             this.textBoxOwnTextTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOwnTextTwo.Location = new System.Drawing.Point(467, 408);
+            this.textBoxOwnTextTwo.Location = new System.Drawing.Point(502, 387);
             this.textBoxOwnTextTwo.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOwnTextTwo.Name = "textBoxOwnTextTwo";
             this.textBoxOwnTextTwo.Size = new System.Drawing.Size(220, 27);
@@ -692,7 +945,7 @@
             // textBoxOwnText
             // 
             this.textBoxOwnText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxOwnText.Location = new System.Drawing.Point(8, 406);
+            this.textBoxOwnText.Location = new System.Drawing.Point(9, 385);
             this.textBoxOwnText.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxOwnText.Name = "textBoxOwnText";
             this.textBoxOwnText.Size = new System.Drawing.Size(220, 27);
@@ -701,7 +954,7 @@
             // buttonCopyOwnTextTwo
             // 
             this.buttonCopyOwnTextTwo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCopyOwnTextTwo.Location = new System.Drawing.Point(693, 406);
+            this.buttonCopyOwnTextTwo.Location = new System.Drawing.Point(728, 385);
             this.buttonCopyOwnTextTwo.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyOwnTextTwo.Name = "buttonCopyOwnTextTwo";
             this.buttonCopyOwnTextTwo.Size = new System.Drawing.Size(106, 31);
@@ -714,7 +967,7 @@
             // 
             this.buttonCopyOwnText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonCopyOwnText.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonCopyOwnText.Location = new System.Drawing.Point(234, 406);
+            this.buttonCopyOwnText.Location = new System.Drawing.Point(235, 385);
             this.buttonCopyOwnText.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopyOwnText.Name = "buttonCopyOwnText";
             this.buttonCopyOwnText.Size = new System.Drawing.Size(98, 31);
@@ -727,7 +980,7 @@
             // 
             this.checkBoxRemoveTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxRemoveTabs.AutoSize = true;
-            this.checkBoxRemoveTabs.Location = new System.Drawing.Point(256, 515);
+            this.checkBoxRemoveTabs.Location = new System.Drawing.Point(257, 494);
             this.checkBoxRemoveTabs.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRemoveTabs.Name = "checkBoxRemoveTabs";
             this.checkBoxRemoveTabs.Size = new System.Drawing.Size(121, 23);
@@ -740,7 +993,7 @@
             // 
             this.checkBoxChangeTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxChangeTabs.AutoSize = true;
-            this.checkBoxChangeTabs.Location = new System.Drawing.Point(256, 487);
+            this.checkBoxChangeTabs.Location = new System.Drawing.Point(257, 466);
             this.checkBoxChangeTabs.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxChangeTabs.Name = "checkBoxChangeTabs";
             this.checkBoxChangeTabs.Size = new System.Drawing.Size(167, 23);
@@ -752,7 +1005,7 @@
             // buttonCopy
             // 
             this.buttonCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCopy.Location = new System.Drawing.Point(534, 328);
+            this.buttonCopy.Location = new System.Drawing.Point(568, 328);
             this.buttonCopy.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCopy.Name = "buttonCopy";
             this.buttonCopy.Size = new System.Drawing.Size(94, 31);
@@ -765,7 +1018,7 @@
             // 
             this.labelCopyStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCopyStatus.AutoSize = true;
-            this.labelCopyStatus.Location = new System.Drawing.Point(351, 366);
+            this.labelCopyStatus.Location = new System.Drawing.Point(385, 366);
             this.labelCopyStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCopyStatus.Name = "labelCopyStatus";
             this.labelCopyStatus.Size = new System.Drawing.Size(0, 19);
@@ -775,7 +1028,7 @@
             // 
             this.checkBoxEnableCopy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxEnableCopy.AutoSize = true;
-            this.checkBoxEnableCopy.Location = new System.Drawing.Point(12, 460);
+            this.checkBoxEnableCopy.Location = new System.Drawing.Point(13, 439);
             this.checkBoxEnableCopy.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxEnableCopy.Name = "checkBoxEnableCopy";
             this.checkBoxEnableCopy.Size = new System.Drawing.Size(196, 23);
@@ -788,7 +1041,7 @@
             // 
             this.checkBoxRemovLines.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxRemovLines.AutoSize = true;
-            this.checkBoxRemovLines.Location = new System.Drawing.Point(12, 515);
+            this.checkBoxRemovLines.Location = new System.Drawing.Point(13, 494);
             this.checkBoxRemovLines.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxRemovLines.Name = "checkBoxRemovLines";
             this.checkBoxRemovLines.Size = new System.Drawing.Size(177, 23);
@@ -801,7 +1054,7 @@
             // 
             this.labelRemChar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.labelRemChar.AutoSize = true;
-            this.labelRemChar.Location = new System.Drawing.Point(520, 473);
+            this.labelRemChar.Location = new System.Drawing.Point(521, 452);
             this.labelRemChar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelRemChar.Name = "labelRemChar";
             this.labelRemChar.Size = new System.Drawing.Size(0, 19);
@@ -810,7 +1063,7 @@
             // textRemChar
             // 
             this.textRemChar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textRemChar.Location = new System.Drawing.Point(524, 500);
+            this.textRemChar.Location = new System.Drawing.Point(559, 479);
             this.textRemChar.Margin = new System.Windows.Forms.Padding(2);
             this.textRemChar.MaxLength = 1;
             this.textRemChar.Name = "textRemChar";
@@ -820,7 +1073,7 @@
             // buttonRemoveChar
             // 
             this.buttonRemoveChar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonRemoveChar.Location = new System.Drawing.Point(634, 498);
+            this.buttonRemoveChar.Location = new System.Drawing.Point(669, 477);
             this.buttonRemoveChar.Margin = new System.Windows.Forms.Padding(2);
             this.buttonRemoveChar.Name = "buttonRemoveChar";
             this.buttonRemoveChar.Size = new System.Drawing.Size(165, 31);
@@ -833,7 +1086,7 @@
             // 
             this.checkBoxWordWrap.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.checkBoxWordWrap.AutoSize = true;
-            this.checkBoxWordWrap.Location = new System.Drawing.Point(12, 487);
+            this.checkBoxWordWrap.Location = new System.Drawing.Point(13, 466);
             this.checkBoxWordWrap.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxWordWrap.Name = "checkBoxWordWrap";
             this.checkBoxWordWrap.Size = new System.Drawing.Size(109, 23);
@@ -845,7 +1098,7 @@
             // buttonCNextLine
             // 
             this.buttonCNextLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCNextLine.Location = new System.Drawing.Point(634, 328);
+            this.buttonCNextLine.Location = new System.Drawing.Point(668, 328);
             this.buttonCNextLine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCNextLine.Name = "buttonCNextLine";
             this.buttonCNextLine.Size = new System.Drawing.Size(165, 31);
@@ -857,7 +1110,7 @@
             // buttonCPrevLine
             // 
             this.buttonCPrevLine.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCPrevLine.Location = new System.Drawing.Point(346, 328);
+            this.buttonCPrevLine.Location = new System.Drawing.Point(380, 328);
             this.buttonCPrevLine.Margin = new System.Windows.Forms.Padding(2);
             this.buttonCPrevLine.Name = "buttonCPrevLine";
             this.buttonCPrevLine.Size = new System.Drawing.Size(182, 31);
@@ -932,7 +1185,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(798, 298);
+            this.groupBox3.Size = new System.Drawing.Size(832, 298);
             this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Text to copy (copies text to the clipboard line by line)";
@@ -946,7 +1199,7 @@
             this.textToCopy.Location = new System.Drawing.Point(4, 24);
             this.textToCopy.Margin = new System.Windows.Forms.Padding(2);
             this.textToCopy.Name = "textToCopy";
-            this.textToCopy.Size = new System.Drawing.Size(787, 266);
+            this.textToCopy.Size = new System.Drawing.Size(821, 266);
             this.textToCopy.TabIndex = 0;
             this.textToCopy.Text = "";
             this.textToCopy.WordWrap = false;
@@ -961,9 +1214,9 @@
             this.MailExt.Controls.Add(this.radioBtnExtDomain);
             this.MailExt.Controls.Add(this.radioBtnExtEmail);
             this.MailExt.Controls.Add(this.richTextExtractEmails);
-            this.MailExt.Location = new System.Drawing.Point(4, 28);
+            this.MailExt.Location = new System.Drawing.Point(4, 52);
             this.MailExt.Name = "MailExt";
-            this.MailExt.Size = new System.Drawing.Size(808, 544);
+            this.MailExt.Size = new System.Drawing.Size(842, 520);
             this.MailExt.TabIndex = 6;
             this.MailExt.Text = "Email extractor";
             this.MailExt.UseVisualStyleBackColor = true;
@@ -983,7 +1236,7 @@
             // 
             this.labelExtractor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelExtractor.AutoSize = true;
-            this.labelExtractor.Location = new System.Drawing.Point(599, 399);
+            this.labelExtractor.Location = new System.Drawing.Point(633, 399);
             this.labelExtractor.Name = "labelExtractor";
             this.labelExtractor.Size = new System.Drawing.Size(201, 19);
             this.labelExtractor.TabIndex = 5;
@@ -992,7 +1245,7 @@
             // buttonCopyToCopyPaste
             // 
             this.buttonCopyToCopyPaste.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCopyToCopyPaste.Location = new System.Drawing.Point(668, 424);
+            this.buttonCopyToCopyPaste.Location = new System.Drawing.Point(702, 424);
             this.buttonCopyToCopyPaste.Name = "buttonCopyToCopyPaste";
             this.buttonCopyToCopyPaste.Size = new System.Drawing.Size(75, 32);
             this.buttonCopyToCopyPaste.TabIndex = 4;
@@ -1003,7 +1256,7 @@
             // buttonExtract
             // 
             this.buttonExtract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonExtract.Location = new System.Drawing.Point(8, 504);
+            this.buttonExtract.Location = new System.Drawing.Point(8, 480);
             this.buttonExtract.Name = "buttonExtract";
             this.buttonExtract.Size = new System.Drawing.Size(75, 32);
             this.buttonExtract.TabIndex = 3;
@@ -1042,9 +1295,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextExtractEmails.Location = new System.Drawing.Point(8, 3);
             this.richTextExtractEmails.Name = "richTextExtractEmails";
-            this.richTextExtractEmails.Size = new System.Drawing.Size(797, 386);
+            this.richTextExtractEmails.Size = new System.Drawing.Size(831, 386);
             this.richTextExtractEmails.TabIndex = 0;
             this.richTextExtractEmails.Text = "";
+            this.toolTips.SetToolTip(this.richTextExtractEmails, "Please put the text with email addresses here");
             // 
             // PassGen
             // 
@@ -1055,17 +1309,17 @@
             this.PassGen.Controls.Add(this.radioButton1);
             this.PassGen.Controls.Add(this.groupBoxPassGen);
             this.PassGen.Controls.Add(this.radioButtonPGStan);
-            this.PassGen.Location = new System.Drawing.Point(4, 28);
+            this.PassGen.Location = new System.Drawing.Point(4, 52);
             this.PassGen.Name = "PassGen";
-            this.PassGen.Size = new System.Drawing.Size(808, 544);
+            this.PassGen.Size = new System.Drawing.Size(842, 520);
             this.PassGen.TabIndex = 8;
-            this.PassGen.Text = "PassGen";
+            this.PassGen.Text = "Password Generator";
             this.PassGen.UseVisualStyleBackColor = true;
             // 
             // buttonPGStart
             // 
             this.buttonPGStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonPGStart.Location = new System.Drawing.Point(670, 490);
+            this.buttonPGStart.Location = new System.Drawing.Point(704, 480);
             this.buttonPGStart.Name = "buttonPGStart";
             this.buttonPGStart.Size = new System.Drawing.Size(130, 37);
             this.buttonPGStart.TabIndex = 6;
@@ -1077,7 +1331,7 @@
             // 
             this.labelPassGenQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelPassGenQuantity.AutoSize = true;
-            this.labelPassGenQuantity.Location = new System.Drawing.Point(487, 499);
+            this.labelPassGenQuantity.Location = new System.Drawing.Point(521, 489);
             this.labelPassGenQuantity.Name = "labelPassGenQuantity";
             this.labelPassGenQuantity.Size = new System.Drawing.Size(67, 19);
             this.labelPassGenQuantity.TabIndex = 5;
@@ -1086,7 +1340,7 @@
             // textBoxPGQuantity
             // 
             this.textBoxPGQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxPGQuantity.Location = new System.Drawing.Point(560, 496);
+            this.textBoxPGQuantity.Location = new System.Drawing.Point(594, 486);
             this.textBoxPGQuantity.MaxLength = 3;
             this.textBoxPGQuantity.Name = "textBoxPGQuantity";
             this.textBoxPGQuantity.Size = new System.Drawing.Size(73, 27);
@@ -1101,7 +1355,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxPassGen.Location = new System.Drawing.Point(8, 248);
             this.richTextBoxPassGen.Name = "richTextBoxPassGen";
-            this.richTextBoxPassGen.Size = new System.Drawing.Size(792, 232);
+            this.richTextBoxPassGen.Size = new System.Drawing.Size(826, 232);
             this.richTextBoxPassGen.TabIndex = 3;
             this.richTextBoxPassGen.Text = "";
             // 
@@ -1132,7 +1386,7 @@
             this.groupBoxPassGen.Enabled = false;
             this.groupBoxPassGen.Location = new System.Drawing.Point(8, 80);
             this.groupBoxPassGen.Name = "groupBoxPassGen";
-            this.groupBoxPassGen.Size = new System.Drawing.Size(792, 151);
+            this.groupBoxPassGen.Size = new System.Drawing.Size(826, 151);
             this.groupBoxPassGen.TabIndex = 0;
             this.groupBoxPassGen.TabStop = false;
             this.groupBoxPassGen.Text = "Password Complexity";
@@ -1287,9 +1541,9 @@
             this.MailSender.Controls.Add(this.labelSmtpServer);
             this.MailSender.Controls.Add(this.comboBoxSmtpServer);
             this.MailSender.Controls.Add(this.groupBoxSmtpEnableAuth);
-            this.MailSender.Location = new System.Drawing.Point(4, 28);
+            this.MailSender.Location = new System.Drawing.Point(4, 52);
             this.MailSender.Name = "MailSender";
-            this.MailSender.Size = new System.Drawing.Size(808, 544);
+            this.MailSender.Size = new System.Drawing.Size(842, 520);
             this.MailSender.TabIndex = 7;
             this.MailSender.Text = "SMTP Client";
             this.MailSender.UseVisualStyleBackColor = true;
@@ -1297,7 +1551,7 @@
             // buttonSmtpRemove
             // 
             this.buttonSmtpRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSmtpRemove.Location = new System.Drawing.Point(426, 503);
+            this.buttonSmtpRemove.Location = new System.Drawing.Point(426, 479);
             this.buttonSmtpRemove.Name = "buttonSmtpRemove";
             this.buttonSmtpRemove.Size = new System.Drawing.Size(151, 33);
             this.buttonSmtpRemove.TabIndex = 18;
@@ -1308,7 +1562,7 @@
             // buttonSmtpSend
             // 
             this.buttonSmtpSend.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSmtpSend.Location = new System.Drawing.Point(673, 450);
+            this.buttonSmtpSend.Location = new System.Drawing.Point(707, 450);
             this.buttonSmtpSend.Name = "buttonSmtpSend";
             this.buttonSmtpSend.Size = new System.Drawing.Size(118, 33);
             this.buttonSmtpSend.TabIndex = 7;
@@ -1319,18 +1573,18 @@
             // buttonSmtpWrite
             // 
             this.buttonSmtpWrite.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSmtpWrite.Location = new System.Drawing.Point(132, 503);
+            this.buttonSmtpWrite.Location = new System.Drawing.Point(132, 479);
             this.buttonSmtpWrite.Name = "buttonSmtpWrite";
-            this.buttonSmtpWrite.Size = new System.Drawing.Size(241, 33);
+            this.buttonSmtpWrite.Size = new System.Drawing.Size(144, 33);
             this.buttonSmtpWrite.TabIndex = 17;
-            this.buttonSmtpWrite.Text = "Write settings to registry";
+            this.buttonSmtpWrite.Text = "Save settings";
             this.buttonSmtpWrite.UseVisualStyleBackColor = true;
             this.buttonSmtpWrite.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonSmtpReadSet
             // 
             this.buttonSmtpReadSet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.buttonSmtpReadSet.Location = new System.Drawing.Point(8, 503);
+            this.buttonSmtpReadSet.Location = new System.Drawing.Point(8, 479);
             this.buttonSmtpReadSet.Name = "buttonSmtpReadSet";
             this.buttonSmtpReadSet.Size = new System.Drawing.Size(118, 33);
             this.buttonSmtpReadSet.TabIndex = 16;
@@ -1365,7 +1619,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSmtpPort.Location = new System.Drawing.Point(114, 47);
             this.textBoxSmtpPort.Name = "textBoxSmtpPort";
-            this.textBoxSmtpPort.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpPort.Size = new System.Drawing.Size(309, 27);
             this.textBoxSmtpPort.TabIndex = 2;
             this.textBoxSmtpPort.Text = "25";
             this.textBoxSmtpPort.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -1374,7 +1628,7 @@
             // 
             this.checkBoxSmtpAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.checkBoxSmtpAuth.AutoSize = true;
-            this.checkBoxSmtpAuth.Location = new System.Drawing.Point(467, 42);
+            this.checkBoxSmtpAuth.Location = new System.Drawing.Point(501, 42);
             this.checkBoxSmtpAuth.Name = "checkBoxSmtpAuth";
             this.checkBoxSmtpAuth.Size = new System.Drawing.Size(188, 23);
             this.checkBoxSmtpAuth.TabIndex = 8;
@@ -1389,7 +1643,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.richTextBoxSmtpMess.Location = new System.Drawing.Point(3, 213);
             this.richTextBoxSmtpMess.Name = "richTextBoxSmtpMess";
-            this.richTextBoxSmtpMess.Size = new System.Drawing.Size(802, 231);
+            this.richTextBoxSmtpMess.Size = new System.Drawing.Size(836, 231);
             this.richTextBoxSmtpMess.TabIndex = 6;
             this.richTextBoxSmtpMess.Text = "";
             // 
@@ -1444,7 +1698,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSmtpSubj.Location = new System.Drawing.Point(114, 146);
             this.textBoxSmtpSubj.Name = "textBoxSmtpSubj";
-            this.textBoxSmtpSubj.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpSubj.Size = new System.Drawing.Size(309, 27);
             this.textBoxSmtpSubj.TabIndex = 5;
             this.textBoxSmtpSubj.Text = "Test email";
             // 
@@ -1454,7 +1708,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSmtpTo.Location = new System.Drawing.Point(114, 113);
             this.textBoxSmtpTo.Name = "textBoxSmtpTo";
-            this.textBoxSmtpTo.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpTo.Size = new System.Drawing.Size(309, 27);
             this.textBoxSmtpTo.TabIndex = 4;
             // 
             // textBoxSmtpFrom
@@ -1463,7 +1717,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxSmtpFrom.Location = new System.Drawing.Point(114, 80);
             this.textBoxSmtpFrom.Name = "textBoxSmtpFrom";
-            this.textBoxSmtpFrom.Size = new System.Drawing.Size(275, 27);
+            this.textBoxSmtpFrom.Size = new System.Drawing.Size(309, 27);
             this.textBoxSmtpFrom.TabIndex = 3;
             // 
             // labelSmtpServer
@@ -1488,7 +1742,7 @@
             "smtp.gmail.com"});
             this.comboBoxSmtpServer.Location = new System.Drawing.Point(114, 14);
             this.comboBoxSmtpServer.Name = "comboBoxSmtpServer";
-            this.comboBoxSmtpServer.Size = new System.Drawing.Size(275, 27);
+            this.comboBoxSmtpServer.Size = new System.Drawing.Size(309, 27);
             this.comboBoxSmtpServer.TabIndex = 1;
             this.comboBoxSmtpServer.Text = "relay.appriver.com";
             // 
@@ -1497,9 +1751,9 @@
             this.groupBoxSmtpEnableAuth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxSmtpEnableAuth.Controls.Add(this.textBoxSmtpPass);
             this.groupBoxSmtpEnableAuth.Controls.Add(this.textBoxSmtpUser);
-            this.groupBoxSmtpEnableAuth.Location = new System.Drawing.Point(467, 77);
+            this.groupBoxSmtpEnableAuth.Location = new System.Drawing.Point(501, 71);
             this.groupBoxSmtpEnableAuth.Name = "groupBoxSmtpEnableAuth";
-            this.groupBoxSmtpEnableAuth.Size = new System.Drawing.Size(291, 118);
+            this.groupBoxSmtpEnableAuth.Size = new System.Drawing.Size(291, 97);
             this.groupBoxSmtpEnableAuth.TabIndex = 0;
             this.groupBoxSmtpEnableAuth.TabStop = false;
             this.groupBoxSmtpEnableAuth.Text = "Username and password";
@@ -1514,72 +1768,1032 @@
             // 
             // textBoxSmtpUser
             // 
-            this.textBoxSmtpUser.Location = new System.Drawing.Point(6, 30);
+            this.textBoxSmtpUser.Location = new System.Drawing.Point(6, 26);
             this.textBoxSmtpUser.Name = "textBoxSmtpUser";
             this.textBoxSmtpUser.Size = new System.Drawing.Size(275, 27);
             this.textBoxSmtpUser.TabIndex = 9;
             // 
-            // Whois
+            // Sort
             // 
-            this.Whois.Controls.Add(this.richTextBoxWhoisResult);
-            this.Whois.Controls.Add(this.buttonWhoisGet);
-            this.Whois.Controls.Add(this.labelWhois);
-            this.Whois.Controls.Add(this.textBoxWhoisDomain);
-            this.Whois.Location = new System.Drawing.Point(4, 28);
-            this.Whois.Name = "Whois";
-            this.Whois.Size = new System.Drawing.Size(808, 544);
-            this.Whois.TabIndex = 9;
-            this.Whois.Text = "WHOIS";
-            this.Whois.UseVisualStyleBackColor = true;
+            this.Sort.Controls.Add(this.buttonSortTabToEnter);
+            this.Sort.Controls.Add(this.buttonSortRemoveLines);
+            this.Sort.Controls.Add(this.buttonSort);
+            this.Sort.Controls.Add(this.richTextBoxSort);
+            this.Sort.Location = new System.Drawing.Point(4, 52);
+            this.Sort.Name = "Sort";
+            this.Sort.Size = new System.Drawing.Size(842, 520);
+            this.Sort.TabIndex = 10;
+            this.Sort.Text = "Sort";
+            this.Sort.UseVisualStyleBackColor = true;
             // 
-            // richTextBoxWhoisResult
+            // buttonSortTabToEnter
             // 
-            this.richTextBoxWhoisResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.buttonSortTabToEnter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSortTabToEnter.Location = new System.Drawing.Point(377, 481);
+            this.buttonSortTabToEnter.Name = "buttonSortTabToEnter";
+            this.buttonSortTabToEnter.Size = new System.Drawing.Size(198, 31);
+            this.buttonSortTabToEnter.TabIndex = 3;
+            this.buttonSortTabToEnter.Text = "Tab to Enter";
+            this.buttonSortTabToEnter.UseVisualStyleBackColor = true;
+            this.buttonSortTabToEnter.Click += new System.EventHandler(this.buttonTabToEnter_Click);
+            // 
+            // buttonSortRemoveLines
+            // 
+            this.buttonSortRemoveLines.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSortRemoveLines.Location = new System.Drawing.Point(8, 481);
+            this.buttonSortRemoveLines.Name = "buttonSortRemoveLines";
+            this.buttonSortRemoveLines.Size = new System.Drawing.Size(198, 31);
+            this.buttonSortRemoveLines.TabIndex = 2;
+            this.buttonSortRemoveLines.Text = "Remove Empty Lines";
+            this.buttonSortRemoveLines.UseVisualStyleBackColor = true;
+            this.buttonSortRemoveLines.Click += new System.EventHandler(this.buttonSortRemoveLines_Click);
+            // 
+            // buttonSort
+            // 
+            this.buttonSort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonSort.Location = new System.Drawing.Point(735, 481);
+            this.buttonSort.Name = "buttonSort";
+            this.buttonSort.Size = new System.Drawing.Size(99, 31);
+            this.buttonSort.TabIndex = 1;
+            this.buttonSort.Text = "Sort";
+            this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
+            // 
+            // richTextBoxSort
+            // 
+            this.richTextBoxSort.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBoxWhoisResult.Location = new System.Drawing.Point(0, 75);
-            this.richTextBoxWhoisResult.Name = "richTextBoxWhoisResult";
-            this.richTextBoxWhoisResult.Size = new System.Drawing.Size(800, 466);
-            this.richTextBoxWhoisResult.TabIndex = 3;
-            this.richTextBoxWhoisResult.Text = "";
+            this.richTextBoxSort.Location = new System.Drawing.Point(8, 3);
+            this.richTextBoxSort.Name = "richTextBoxSort";
+            this.richTextBoxSort.Size = new System.Drawing.Size(826, 472);
+            this.richTextBoxSort.TabIndex = 0;
+            this.richTextBoxSort.Text = "";
             // 
-            // buttonWhoisGet
+            // Office365
             // 
-            this.buttonWhoisGet.Location = new System.Drawing.Point(245, 40);
-            this.buttonWhoisGet.Name = "buttonWhoisGet";
-            this.buttonWhoisGet.Size = new System.Drawing.Size(102, 31);
-            this.buttonWhoisGet.TabIndex = 2;
-            this.buttonWhoisGet.Text = "Get";
-            this.buttonWhoisGet.UseVisualStyleBackColor = true;
-            this.buttonWhoisGet.Click += new System.EventHandler(this.buttonWhoisGet_Click);
+            this.Office365.Controls.Add(this.tabControlOffice);
+            this.Office365.Location = new System.Drawing.Point(4, 52);
+            this.Office365.Name = "Office365";
+            this.Office365.Size = new System.Drawing.Size(842, 520);
+            this.Office365.TabIndex = 12;
+            this.Office365.Text = "Office365";
+            this.Office365.UseVisualStyleBackColor = true;
             // 
-            // labelWhois
+            // tabControlOffice
             // 
-            this.labelWhois.AutoSize = true;
-            this.labelWhois.Location = new System.Drawing.Point(3, 16);
-            this.labelWhois.Name = "labelWhois";
-            this.labelWhois.Size = new System.Drawing.Size(344, 19);
-            this.labelWhois.TabIndex = 1;
-            this.labelWhois.Text = "Please type the domain name (org, com, net, edu)";
+            this.tabControlOffice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlOffice.Controls.Add(this.Config);
+            this.tabControlOffice.Controls.Add(this.Permissions);
+            this.tabControlOffice.Controls.Add(this.Mailbox);
+            this.tabControlOffice.Controls.Add(this.Alias);
+            this.tabControlOffice.Controls.Add(this.Info);
+            this.tabControlOffice.Controls.Add(this.OOO);
+            this.tabControlOffice.Controls.Add(this.Logs);
+            this.tabControlOffice.Location = new System.Drawing.Point(3, 3);
+            this.tabControlOffice.Name = "tabControlOffice";
+            this.tabControlOffice.SelectedIndex = 0;
+            this.tabControlOffice.Size = new System.Drawing.Size(836, 514);
+            this.tabControlOffice.TabIndex = 0;
             // 
-            // textBoxWhoisDomain
+            // Config
             // 
-            this.textBoxWhoisDomain.Location = new System.Drawing.Point(3, 42);
-            this.textBoxWhoisDomain.Name = "textBoxWhoisDomain";
-            this.textBoxWhoisDomain.Size = new System.Drawing.Size(218, 27);
-            this.textBoxWhoisDomain.TabIndex = 0;
-            this.textBoxWhoisDomain.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxWhoisDomain_KeyDown);
+            this.Config.Controls.Add(this.buttonOfficeDispose);
+            this.Config.Controls.Add(this.buttonOfficeUpdate);
+            this.Config.Controls.Add(this.labelOfficeBasicInfo);
+            this.Config.Controls.Add(this.labelOfficeConfig);
+            this.Config.Controls.Add(this.textBoxOfficePass);
+            this.Config.Controls.Add(this.labelOfficePassword);
+            this.Config.Controls.Add(this.LabelOfficeLogin);
+            this.Config.Controls.Add(this.textBoxOfficeLogin);
+            this.Config.Controls.Add(this.buttonOfficeAccept);
+            this.Config.Location = new System.Drawing.Point(4, 28);
+            this.Config.Name = "Config";
+            this.Config.Padding = new System.Windows.Forms.Padding(3);
+            this.Config.Size = new System.Drawing.Size(828, 482);
+            this.Config.TabIndex = 0;
+            this.Config.Text = "Basic Config";
+            this.Config.UseVisualStyleBackColor = true;
+            // 
+            // buttonOfficeDispose
+            // 
+            this.buttonOfficeDispose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeDispose.Location = new System.Drawing.Point(647, 439);
+            this.buttonOfficeDispose.Name = "buttonOfficeDispose";
+            this.buttonOfficeDispose.Size = new System.Drawing.Size(175, 31);
+            this.buttonOfficeDispose.TabIndex = 8;
+            this.buttonOfficeDispose.Text = "Dispose the session";
+            this.buttonOfficeDispose.UseVisualStyleBackColor = true;
+            this.buttonOfficeDispose.Click += new System.EventHandler(this.buttonOfficeDispose_Click);
+            // 
+            // buttonOfficeUpdate
+            // 
+            this.buttonOfficeUpdate.Location = new System.Drawing.Point(672, 52);
+            this.buttonOfficeUpdate.Name = "buttonOfficeUpdate";
+            this.buttonOfficeUpdate.Size = new System.Drawing.Size(150, 31);
+            this.buttonOfficeUpdate.TabIndex = 7;
+            this.buttonOfficeUpdate.Text = "Update mail list";
+            this.buttonOfficeUpdate.UseVisualStyleBackColor = true;
+            this.buttonOfficeUpdate.Click += new System.EventHandler(this.buttonOfficeUpdate_Click);
+            // 
+            // labelOfficeBasicInfo
+            // 
+            this.labelOfficeBasicInfo.AutoSize = true;
+            this.labelOfficeBasicInfo.Location = new System.Drawing.Point(5, 3);
+            this.labelOfficeBasicInfo.Name = "labelOfficeBasicInfo";
+            this.labelOfficeBasicInfo.Size = new System.Drawing.Size(709, 19);
+            this.labelOfficeBasicInfo.TabIndex = 6;
+            this.labelOfficeBasicInfo.Text = "When you click Set credentials, the program will get a list of the users and will" +
+    " be using it in the future.";
+            // 
+            // labelOfficeConfig
+            // 
+            this.labelOfficeConfig.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelOfficeConfig.AutoSize = true;
+            this.labelOfficeConfig.Location = new System.Drawing.Point(15, 451);
+            this.labelOfficeConfig.Name = "labelOfficeConfig";
+            this.labelOfficeConfig.Size = new System.Drawing.Size(323, 19);
+            this.labelOfficeConfig.TabIndex = 5;
+            this.labelOfficeConfig.Text = "Please type credentials to enable functionality";
+            // 
+            // textBoxOfficePass
+            // 
+            this.textBoxOfficePass.Location = new System.Drawing.Point(94, 95);
+            this.textBoxOfficePass.Name = "textBoxOfficePass";
+            this.textBoxOfficePass.PasswordChar = '*';
+            this.textBoxOfficePass.Size = new System.Drawing.Size(175, 27);
+            this.textBoxOfficePass.TabIndex = 4;
+            // 
+            // labelOfficePassword
+            // 
+            this.labelOfficePassword.AutoSize = true;
+            this.labelOfficePassword.Location = new System.Drawing.Point(5, 98);
+            this.labelOfficePassword.Name = "labelOfficePassword";
+            this.labelOfficePassword.Size = new System.Drawing.Size(74, 19);
+            this.labelOfficePassword.TabIndex = 3;
+            this.labelOfficePassword.Text = "Password";
+            // 
+            // LabelOfficeLogin
+            // 
+            this.LabelOfficeLogin.AutoSize = true;
+            this.LabelOfficeLogin.Location = new System.Drawing.Point(5, 55);
+            this.LabelOfficeLogin.Name = "LabelOfficeLogin";
+            this.LabelOfficeLogin.Size = new System.Drawing.Size(49, 19);
+            this.LabelOfficeLogin.TabIndex = 2;
+            this.LabelOfficeLogin.Text = "Login";
+            // 
+            // textBoxOfficeLogin
+            // 
+            this.textBoxOfficeLogin.Location = new System.Drawing.Point(94, 52);
+            this.textBoxOfficeLogin.Name = "textBoxOfficeLogin";
+            this.textBoxOfficeLogin.Size = new System.Drawing.Size(175, 27);
+            this.textBoxOfficeLogin.TabIndex = 1;
+            // 
+            // buttonOfficeAccept
+            // 
+            this.buttonOfficeAccept.Location = new System.Drawing.Point(94, 146);
+            this.buttonOfficeAccept.Name = "buttonOfficeAccept";
+            this.buttonOfficeAccept.Size = new System.Drawing.Size(175, 31);
+            this.buttonOfficeAccept.TabIndex = 0;
+            this.buttonOfficeAccept.Text = "Start the session";
+            this.buttonOfficeAccept.UseVisualStyleBackColor = true;
+            this.buttonOfficeAccept.Click += new System.EventHandler(this.buttonOfficeAccept_Click);
+            // 
+            // Permissions
+            // 
+            this.Permissions.Controls.Add(this.comboBoxOfficeDelegates);
+            this.Permissions.Controls.Add(this.comboBoxOfficeOwners);
+            this.Permissions.Controls.Add(this.checkBoxOfficeAutoMap);
+            this.Permissions.Controls.Add(this.richTextBoxOfficeResult);
+            this.Permissions.Controls.Add(this.groupBoxOfficeAccessLvl);
+            this.Permissions.Controls.Add(this.checkBoxOfficeRemovPermissions);
+            this.Permissions.Controls.Add(this.radioButtonOfficeContact);
+            this.Permissions.Controls.Add(this.radioButtonOfficeCalendar);
+            this.Permissions.Controls.Add(this.radioButtonOfficeSendAs);
+            this.Permissions.Controls.Add(this.radioButtonOfficeFullAccess);
+            this.Permissions.Controls.Add(this.label4);
+            this.Permissions.Controls.Add(this.label3);
+            this.Permissions.Controls.Add(this.buttonOfficeSetPermissions);
+            this.Permissions.Location = new System.Drawing.Point(4, 28);
+            this.Permissions.Name = "Permissions";
+            this.Permissions.Padding = new System.Windows.Forms.Padding(3);
+            this.Permissions.Size = new System.Drawing.Size(828, 482);
+            this.Permissions.TabIndex = 1;
+            this.Permissions.Text = "Permissions";
+            // 
+            // comboBoxOfficeDelegates
+            // 
+            this.comboBoxOfficeDelegates.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeDelegates.FormattingEnabled = true;
+            this.comboBoxOfficeDelegates.Location = new System.Drawing.Point(85, 51);
+            this.comboBoxOfficeDelegates.Name = "comboBoxOfficeDelegates";
+            this.comboBoxOfficeDelegates.Size = new System.Drawing.Size(320, 27);
+            this.comboBoxOfficeDelegates.TabIndex = 18;
+            // 
+            // comboBoxOfficeOwners
+            // 
+            this.comboBoxOfficeOwners.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeOwners.FormattingEnabled = true;
+            this.comboBoxOfficeOwners.Location = new System.Drawing.Point(85, 9);
+            this.comboBoxOfficeOwners.Name = "comboBoxOfficeOwners";
+            this.comboBoxOfficeOwners.Size = new System.Drawing.Size(320, 27);
+            this.comboBoxOfficeOwners.TabIndex = 17;
+            // 
+            // checkBoxOfficeAutoMap
+            // 
+            this.checkBoxOfficeAutoMap.AutoSize = true;
+            this.checkBoxOfficeAutoMap.Checked = true;
+            this.checkBoxOfficeAutoMap.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOfficeAutoMap.Location = new System.Drawing.Point(228, 119);
+            this.checkBoxOfficeAutoMap.Name = "checkBoxOfficeAutoMap";
+            this.checkBoxOfficeAutoMap.Size = new System.Drawing.Size(94, 23);
+            this.checkBoxOfficeAutoMap.TabIndex = 16;
+            this.checkBoxOfficeAutoMap.Text = "AutoMap";
+            this.checkBoxOfficeAutoMap.UseVisualStyleBackColor = true;
+            this.checkBoxOfficeAutoMap.Visible = false;
+            // 
+            // richTextBoxOfficeResult
+            // 
+            this.richTextBoxOfficeResult.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxOfficeResult.Location = new System.Drawing.Point(3, 239);
+            this.richTextBoxOfficeResult.Name = "richTextBoxOfficeResult";
+            this.richTextBoxOfficeResult.Size = new System.Drawing.Size(816, 237);
+            this.richTextBoxOfficeResult.TabIndex = 15;
+            this.richTextBoxOfficeResult.Text = "";
+            // 
+            // groupBoxOfficeAccessLvl
+            // 
+            this.groupBoxOfficeAccessLvl.Controls.Add(this.comboBoxAccessLevel);
+            this.groupBoxOfficeAccessLvl.Controls.Add(this.labelOfficeAccessLevel);
+            this.groupBoxOfficeAccessLvl.Location = new System.Drawing.Point(418, 94);
+            this.groupBoxOfficeAccessLvl.Name = "groupBoxOfficeAccessLvl";
+            this.groupBoxOfficeAccessLvl.Size = new System.Drawing.Size(237, 89);
+            this.groupBoxOfficeAccessLvl.TabIndex = 14;
+            this.groupBoxOfficeAccessLvl.TabStop = false;
+            this.groupBoxOfficeAccessLvl.Text = "Access Level";
+            this.groupBoxOfficeAccessLvl.Visible = false;
+            // 
+            // comboBoxAccessLevel
+            // 
+            this.comboBoxAccessLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxAccessLevel.Items.AddRange(new object[] {
+            "Owner",
+            "Editor",
+            "Reviewer",
+            "None"});
+            this.comboBoxAccessLevel.Location = new System.Drawing.Point(6, 48);
+            this.comboBoxAccessLevel.Name = "comboBoxAccessLevel";
+            this.comboBoxAccessLevel.Size = new System.Drawing.Size(202, 27);
+            this.comboBoxAccessLevel.TabIndex = 12;
+            // 
+            // labelOfficeAccessLevel
+            // 
+            this.labelOfficeAccessLevel.AutoSize = true;
+            this.labelOfficeAccessLevel.Location = new System.Drawing.Point(2, 26);
+            this.labelOfficeAccessLevel.Name = "labelOfficeAccessLevel";
+            this.labelOfficeAccessLevel.Size = new System.Drawing.Size(185, 19);
+            this.labelOfficeAccessLevel.TabIndex = 13;
+            this.labelOfficeAccessLevel.Text = "Please select access level";
+            // 
+            // checkBoxOfficeRemovPermissions
+            // 
+            this.checkBoxOfficeRemovPermissions.AutoSize = true;
+            this.checkBoxOfficeRemovPermissions.Checked = true;
+            this.checkBoxOfficeRemovPermissions.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOfficeRemovPermissions.Location = new System.Drawing.Point(10, 89);
+            this.checkBoxOfficeRemovPermissions.Name = "checkBoxOfficeRemovPermissions";
+            this.checkBoxOfficeRemovPermissions.Size = new System.Drawing.Size(377, 23);
+            this.checkBoxOfficeRemovPermissions.TabIndex = 10;
+            this.checkBoxOfficeRemovPermissions.Text = "Add permissions (uncheck to remove permissions)";
+            this.checkBoxOfficeRemovPermissions.UseVisualStyleBackColor = true;
+            this.checkBoxOfficeRemovPermissions.CheckedChanged += new System.EventHandler(this.checkBoxOfficeRemovPermissions_CheckedChanged);
+            // 
+            // radioButtonOfficeContact
+            // 
+            this.radioButtonOfficeContact.AutoSize = true;
+            this.radioButtonOfficeContact.Location = new System.Drawing.Point(10, 205);
+            this.radioButtonOfficeContact.Name = "radioButtonOfficeContact";
+            this.radioButtonOfficeContact.Size = new System.Drawing.Size(170, 23);
+            this.radioButtonOfficeContact.TabIndex = 9;
+            this.radioButtonOfficeContact.TabStop = true;
+            this.radioButtonOfficeContact.Text = "Contact permissions";
+            this.radioButtonOfficeContact.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeContact.CheckedChanged += new System.EventHandler(this.radioButtonContact_CheckedChanged);
+            // 
+            // radioButtonOfficeCalendar
+            // 
+            this.radioButtonOfficeCalendar.AutoSize = true;
+            this.radioButtonOfficeCalendar.Location = new System.Drawing.Point(10, 176);
+            this.radioButtonOfficeCalendar.Name = "radioButtonOfficeCalendar";
+            this.radioButtonOfficeCalendar.Size = new System.Drawing.Size(177, 23);
+            this.radioButtonOfficeCalendar.TabIndex = 8;
+            this.radioButtonOfficeCalendar.TabStop = true;
+            this.radioButtonOfficeCalendar.Text = "Calendar permissions";
+            this.radioButtonOfficeCalendar.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeCalendar.CheckedChanged += new System.EventHandler(this.radioButtonOfficeCalendar_CheckedChanged);
+            // 
+            // radioButtonOfficeSendAs
+            // 
+            this.radioButtonOfficeSendAs.AutoSize = true;
+            this.radioButtonOfficeSendAs.Location = new System.Drawing.Point(10, 147);
+            this.radioButtonOfficeSendAs.Name = "radioButtonOfficeSendAs";
+            this.radioButtonOfficeSendAs.Size = new System.Drawing.Size(171, 23);
+            this.radioButtonOfficeSendAs.TabIndex = 7;
+            this.radioButtonOfficeSendAs.TabStop = true;
+            this.radioButtonOfficeSendAs.Text = "Send As permissions";
+            this.radioButtonOfficeSendAs.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOfficeFullAccess
+            // 
+            this.radioButtonOfficeFullAccess.AutoSize = true;
+            this.radioButtonOfficeFullAccess.Location = new System.Drawing.Point(10, 118);
+            this.radioButtonOfficeFullAccess.Name = "radioButtonOfficeFullAccess";
+            this.radioButtonOfficeFullAccess.Size = new System.Drawing.Size(196, 23);
+            this.radioButtonOfficeFullAccess.TabIndex = 6;
+            this.radioButtonOfficeFullAccess.TabStop = true;
+            this.radioButtonOfficeFullAccess.Text = "Full Access permissions";
+            this.radioButtonOfficeFullAccess.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeFullAccess.CheckedChanged += new System.EventHandler(this.radioButtonOfficeFullAccess_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Delegate";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Owner";
+            // 
+            // buttonOfficeSetPermissions
+            // 
+            this.buttonOfficeSetPermissions.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeSetPermissions.Location = new System.Drawing.Point(691, 202);
+            this.buttonOfficeSetPermissions.Name = "buttonOfficeSetPermissions";
+            this.buttonOfficeSetPermissions.Size = new System.Drawing.Size(128, 31);
+            this.buttonOfficeSetPermissions.TabIndex = 1;
+            this.buttonOfficeSetPermissions.Text = "Start";
+            this.buttonOfficeSetPermissions.UseVisualStyleBackColor = true;
+            this.buttonOfficeSetPermissions.Click += new System.EventHandler(this.buttonOfficeSetPermissions_Click);
+            // 
+            // Mailbox
+            // 
+            this.Mailbox.Controls.Add(this.labelOfficeMailboxSettingResult);
+            this.Mailbox.Controls.Add(this.checkBoxOfficeForwardingAddDG);
+            this.Mailbox.Controls.Add(this.radioButtonOfficeRemoveForwarding);
+            this.Mailbox.Controls.Add(this.checkBoxOfficeForwardKeepCopy);
+            this.Mailbox.Controls.Add(this.comboBoxOfficeGroups);
+            this.Mailbox.Controls.Add(this.radioButtonOfficeGroups);
+            this.Mailbox.Controls.Add(this.buttonOfficeForwarding);
+            this.Mailbox.Controls.Add(this.comboBoxOfficeForward);
+            this.Mailbox.Controls.Add(this.radioButtonOfficeForward);
+            this.Mailbox.Controls.Add(this.comboBoxOfficeMailboxSettings);
+            this.Mailbox.Controls.Add(this.labelOfficeMailboxOwner);
+            this.Mailbox.Location = new System.Drawing.Point(4, 28);
+            this.Mailbox.Name = "Mailbox";
+            this.Mailbox.Size = new System.Drawing.Size(828, 482);
+            this.Mailbox.TabIndex = 2;
+            this.Mailbox.Text = "Mailbox Settings";
+            this.Mailbox.UseVisualStyleBackColor = true;
+            // 
+            // labelOfficeMailboxSettingResult
+            // 
+            this.labelOfficeMailboxSettingResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelOfficeMailboxSettingResult.AutoSize = true;
+            this.labelOfficeMailboxSettingResult.Location = new System.Drawing.Point(6, 460);
+            this.labelOfficeMailboxSettingResult.Name = "labelOfficeMailboxSettingResult";
+            this.labelOfficeMailboxSettingResult.Size = new System.Drawing.Size(0, 19);
+            this.labelOfficeMailboxSettingResult.TabIndex = 21;
+            // 
+            // checkBoxOfficeForwardingAddDG
+            // 
+            this.checkBoxOfficeForwardingAddDG.AutoSize = true;
+            this.checkBoxOfficeForwardingAddDG.Checked = true;
+            this.checkBoxOfficeForwardingAddDG.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOfficeForwardingAddDG.Location = new System.Drawing.Point(583, 120);
+            this.checkBoxOfficeForwardingAddDG.Name = "checkBoxOfficeForwardingAddDG";
+            this.checkBoxOfficeForwardingAddDG.Size = new System.Drawing.Size(162, 23);
+            this.checkBoxOfficeForwardingAddDG.TabIndex = 20;
+            this.checkBoxOfficeForwardingAddDG.Text = "Add the user to DG";
+            this.checkBoxOfficeForwardingAddDG.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOfficeRemoveForwarding
+            // 
+            this.radioButtonOfficeRemoveForwarding.AutoSize = true;
+            this.radioButtonOfficeRemoveForwarding.Location = new System.Drawing.Point(88, 161);
+            this.radioButtonOfficeRemoveForwarding.Name = "radioButtonOfficeRemoveForwarding";
+            this.radioButtonOfficeRemoveForwarding.Size = new System.Drawing.Size(189, 23);
+            this.radioButtonOfficeRemoveForwarding.TabIndex = 18;
+            this.radioButtonOfficeRemoveForwarding.TabStop = true;
+            this.radioButtonOfficeRemoveForwarding.Text = "Remove the forwarding";
+            this.radioButtonOfficeRemoveForwarding.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxOfficeForwardKeepCopy
+            // 
+            this.checkBoxOfficeForwardKeepCopy.AutoSize = true;
+            this.checkBoxOfficeForwardKeepCopy.Checked = true;
+            this.checkBoxOfficeForwardKeepCopy.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOfficeForwardKeepCopy.Location = new System.Drawing.Point(583, 78);
+            this.checkBoxOfficeForwardKeepCopy.Name = "checkBoxOfficeForwardKeepCopy";
+            this.checkBoxOfficeForwardKeepCopy.Size = new System.Drawing.Size(115, 23);
+            this.checkBoxOfficeForwardKeepCopy.TabIndex = 17;
+            this.checkBoxOfficeForwardKeepCopy.Text = "Keep a copy";
+            this.checkBoxOfficeForwardKeepCopy.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxOfficeGroups
+            // 
+            this.comboBoxOfficeGroups.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeGroups.FormattingEnabled = true;
+            this.comboBoxOfficeGroups.Location = new System.Drawing.Point(280, 118);
+            this.comboBoxOfficeGroups.Name = "comboBoxOfficeGroups";
+            this.comboBoxOfficeGroups.Size = new System.Drawing.Size(297, 27);
+            this.comboBoxOfficeGroups.TabIndex = 16;
+            // 
+            // radioButtonOfficeGroups
+            // 
+            this.radioButtonOfficeGroups.AutoSize = true;
+            this.radioButtonOfficeGroups.Location = new System.Drawing.Point(88, 119);
+            this.radioButtonOfficeGroups.Name = "radioButtonOfficeGroups";
+            this.radioButtonOfficeGroups.Size = new System.Drawing.Size(179, 23);
+            this.radioButtonOfficeGroups.TabIndex = 15;
+            this.radioButtonOfficeGroups.TabStop = true;
+            this.radioButtonOfficeGroups.Text = "Add/remove from DG";
+            this.radioButtonOfficeGroups.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeGroups.CheckedChanged += new System.EventHandler(this.radioButtonOfficeGroups_CheckedChanged);
+            // 
+            // buttonOfficeForwarding
+            // 
+            this.buttonOfficeForwarding.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeForwarding.Location = new System.Drawing.Point(650, 448);
+            this.buttonOfficeForwarding.Name = "buttonOfficeForwarding";
+            this.buttonOfficeForwarding.Size = new System.Drawing.Size(175, 31);
+            this.buttonOfficeForwarding.TabIndex = 14;
+            this.buttonOfficeForwarding.Text = "Accept";
+            this.buttonOfficeForwarding.UseVisualStyleBackColor = true;
+            this.buttonOfficeForwarding.Click += new System.EventHandler(this.buttonOfficeForwarding_Click);
+            // 
+            // comboBoxOfficeForward
+            // 
+            this.comboBoxOfficeForward.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeForward.FormattingEnabled = true;
+            this.comboBoxOfficeForward.Location = new System.Drawing.Point(280, 76);
+            this.comboBoxOfficeForward.Name = "comboBoxOfficeForward";
+            this.comboBoxOfficeForward.Size = new System.Drawing.Size(297, 27);
+            this.comboBoxOfficeForward.TabIndex = 12;
+            // 
+            // radioButtonOfficeForward
+            // 
+            this.radioButtonOfficeForward.AutoSize = true;
+            this.radioButtonOfficeForward.Location = new System.Drawing.Point(88, 77);
+            this.radioButtonOfficeForward.Name = "radioButtonOfficeForward";
+            this.radioButtonOfficeForward.Size = new System.Drawing.Size(104, 23);
+            this.radioButtonOfficeForward.TabIndex = 11;
+            this.radioButtonOfficeForward.TabStop = true;
+            this.radioButtonOfficeForward.Text = "Forward to";
+            this.radioButtonOfficeForward.UseVisualStyleBackColor = true;
+            // 
+            // comboBoxOfficeMailboxSettings
+            // 
+            this.comboBoxOfficeMailboxSettings.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeMailboxSettings.FormattingEnabled = true;
+            this.comboBoxOfficeMailboxSettings.Location = new System.Drawing.Point(88, 31);
+            this.comboBoxOfficeMailboxSettings.Name = "comboBoxOfficeMailboxSettings";
+            this.comboBoxOfficeMailboxSettings.Size = new System.Drawing.Size(296, 27);
+            this.comboBoxOfficeMailboxSettings.TabIndex = 9;
+            // 
+            // labelOfficeMailboxOwner
+            // 
+            this.labelOfficeMailboxOwner.AutoSize = true;
+            this.labelOfficeMailboxOwner.Location = new System.Drawing.Point(3, 34);
+            this.labelOfficeMailboxOwner.Name = "labelOfficeMailboxOwner";
+            this.labelOfficeMailboxOwner.Size = new System.Drawing.Size(66, 19);
+            this.labelOfficeMailboxOwner.TabIndex = 7;
+            this.labelOfficeMailboxOwner.Text = "Mailbox";
+            // 
+            // Alias
+            // 
+            this.Alias.Controls.Add(this.richTextBoxOfficeAliasOwner);
+            this.Alias.Controls.Add(this.textBoxOfficeAlias);
+            this.Alias.Controls.Add(this.labelOfficeAlias);
+            this.Alias.Controls.Add(this.buttonOfficeAlias);
+            this.Alias.Location = new System.Drawing.Point(4, 28);
+            this.Alias.Name = "Alias";
+            this.Alias.Size = new System.Drawing.Size(828, 482);
+            this.Alias.TabIndex = 4;
+            this.Alias.Text = "Alias Owner";
+            this.Alias.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxOfficeAliasOwner
+            // 
+            this.richTextBoxOfficeAliasOwner.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxOfficeAliasOwner.Location = new System.Drawing.Point(3, 114);
+            this.richTextBoxOfficeAliasOwner.Name = "richTextBoxOfficeAliasOwner";
+            this.richTextBoxOfficeAliasOwner.Size = new System.Drawing.Size(819, 380);
+            this.richTextBoxOfficeAliasOwner.TabIndex = 4;
+            this.richTextBoxOfficeAliasOwner.Text = "";
+            // 
+            // textBoxOfficeAlias
+            // 
+            this.textBoxOfficeAlias.Location = new System.Drawing.Point(3, 44);
+            this.textBoxOfficeAlias.Name = "textBoxOfficeAlias";
+            this.textBoxOfficeAlias.Size = new System.Drawing.Size(217, 27);
+            this.textBoxOfficeAlias.TabIndex = 3;
+            // 
+            // labelOfficeAlias
+            // 
+            this.labelOfficeAlias.AutoSize = true;
+            this.labelOfficeAlias.Location = new System.Drawing.Point(1, 22);
+            this.labelOfficeAlias.Name = "labelOfficeAlias";
+            this.labelOfficeAlias.Size = new System.Drawing.Size(217, 19);
+            this.labelOfficeAlias.TabIndex = 2;
+            this.labelOfficeAlias.Text = "Please type the E-mail address";
+            // 
+            // buttonOfficeAlias
+            // 
+            this.buttonOfficeAlias.Location = new System.Drawing.Point(3, 77);
+            this.buttonOfficeAlias.Name = "buttonOfficeAlias";
+            this.buttonOfficeAlias.Size = new System.Drawing.Size(217, 31);
+            this.buttonOfficeAlias.TabIndex = 1;
+            this.buttonOfficeAlias.Text = "Find the owner";
+            this.buttonOfficeAlias.UseVisualStyleBackColor = true;
+            this.buttonOfficeAlias.Click += new System.EventHandler(this.buttonOfficeAlias_Click);
+            // 
+            // Info
+            // 
+            this.Info.Controls.Add(this.tabControlOfficeInfo);
+            this.Info.Controls.Add(this.labelOfficeInformation);
+            this.Info.Controls.Add(this.comboBoxOfficeInformation);
+            this.Info.Controls.Add(this.buttonOfficeInfo);
+            this.Info.Location = new System.Drawing.Point(4, 28);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(828, 482);
+            this.Info.TabIndex = 6;
+            this.Info.Text = "Inbox Rules";
+            this.Info.UseVisualStyleBackColor = true;
+            // 
+            // tabControlOfficeInfo
+            // 
+            this.tabControlOfficeInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlOfficeInfo.Controls.Add(this.Information);
+            this.tabControlOfficeInfo.Controls.Add(this.RemoveRules);
+            this.tabControlOfficeInfo.Location = new System.Drawing.Point(7, 73);
+            this.tabControlOfficeInfo.Name = "tabControlOfficeInfo";
+            this.tabControlOfficeInfo.SelectedIndex = 0;
+            this.tabControlOfficeInfo.Size = new System.Drawing.Size(815, 421);
+            this.tabControlOfficeInfo.TabIndex = 20;
+            // 
+            // Information
+            // 
+            this.Information.Controls.Add(this.richTextBoxOfficeInformation);
+            this.Information.Location = new System.Drawing.Point(4, 28);
+            this.Information.Name = "Information";
+            this.Information.Padding = new System.Windows.Forms.Padding(3);
+            this.Information.Size = new System.Drawing.Size(807, 389);
+            this.Information.TabIndex = 0;
+            this.Information.Text = "Information";
+            this.Information.UseVisualStyleBackColor = true;
+            // 
+            // richTextBoxOfficeInformation
+            // 
+            this.richTextBoxOfficeInformation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxOfficeInformation.Location = new System.Drawing.Point(6, 6);
+            this.richTextBoxOfficeInformation.Name = "richTextBoxOfficeInformation";
+            this.richTextBoxOfficeInformation.Size = new System.Drawing.Size(795, 377);
+            this.richTextBoxOfficeInformation.TabIndex = 0;
+            this.richTextBoxOfficeInformation.Text = "";
+            // 
+            // RemoveRules
+            // 
+            this.RemoveRules.Controls.Add(this.labelOfficeOOOInboxRuleLog);
+            this.RemoveRules.Controls.Add(this.label7);
+            this.RemoveRules.Controls.Add(this.buttonOfficeRemoveRule);
+            this.RemoveRules.Controls.Add(this.checkedListBoxOfficeRuleToDelete);
+            this.RemoveRules.Location = new System.Drawing.Point(4, 28);
+            this.RemoveRules.Name = "RemoveRules";
+            this.RemoveRules.Padding = new System.Windows.Forms.Padding(3);
+            this.RemoveRules.Size = new System.Drawing.Size(807, 389);
+            this.RemoveRules.TabIndex = 1;
+            this.RemoveRules.Text = "Remove Inbox Rules";
+            this.RemoveRules.UseVisualStyleBackColor = true;
+            // 
+            // labelOfficeOOOInboxRuleLog
+            // 
+            this.labelOfficeOOOInboxRuleLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelOfficeOOOInboxRuleLog.AutoSize = true;
+            this.labelOfficeOOOInboxRuleLog.Location = new System.Drawing.Point(6, 351);
+            this.labelOfficeOOOInboxRuleLog.Name = "labelOfficeOOOInboxRuleLog";
+            this.labelOfficeOOOInboxRuleLog.Size = new System.Drawing.Size(211, 19);
+            this.labelOfficeOOOInboxRuleLog.TabIndex = 22;
+            this.labelOfficeOOOInboxRuleLog.Text = "Please click \'Get Info\' to start";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(235, 19);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Please select the rules to remove";
+            // 
+            // buttonOfficeRemoveRule
+            // 
+            this.buttonOfficeRemoveRule.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeRemoveRule.Location = new System.Drawing.Point(674, 339);
+            this.buttonOfficeRemoveRule.Name = "buttonOfficeRemoveRule";
+            this.buttonOfficeRemoveRule.Size = new System.Drawing.Size(128, 31);
+            this.buttonOfficeRemoveRule.TabIndex = 9;
+            this.buttonOfficeRemoveRule.Text = "Remove";
+            this.buttonOfficeRemoveRule.UseVisualStyleBackColor = true;
+            this.buttonOfficeRemoveRule.Click += new System.EventHandler(this.buttonOfficeRemoveRule_Click);
+            // 
+            // checkedListBoxOfficeRuleToDelete
+            // 
+            this.checkedListBoxOfficeRuleToDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.checkedListBoxOfficeRuleToDelete.FormattingEnabled = true;
+            this.checkedListBoxOfficeRuleToDelete.Location = new System.Drawing.Point(6, 28);
+            this.checkedListBoxOfficeRuleToDelete.Name = "checkedListBoxOfficeRuleToDelete";
+            this.checkedListBoxOfficeRuleToDelete.Size = new System.Drawing.Size(795, 290);
+            this.checkedListBoxOfficeRuleToDelete.TabIndex = 0;
+            // 
+            // labelOfficeInformation
+            // 
+            this.labelOfficeInformation.AutoSize = true;
+            this.labelOfficeInformation.Location = new System.Drawing.Point(3, 17);
+            this.labelOfficeInformation.Name = "labelOfficeInformation";
+            this.labelOfficeInformation.Size = new System.Drawing.Size(221, 19);
+            this.labelOfficeInformation.TabIndex = 19;
+            this.labelOfficeInformation.Text = "Please select the email address";
+            // 
+            // comboBoxOfficeInformation
+            // 
+            this.comboBoxOfficeInformation.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeInformation.FormattingEnabled = true;
+            this.comboBoxOfficeInformation.Location = new System.Drawing.Point(7, 39);
+            this.comboBoxOfficeInformation.Name = "comboBoxOfficeInformation";
+            this.comboBoxOfficeInformation.Size = new System.Drawing.Size(320, 27);
+            this.comboBoxOfficeInformation.TabIndex = 18;
+            this.comboBoxOfficeInformation.SelectedIndexChanged += new System.EventHandler(this.comboBoxOfficeInformation_SelectedIndexChanged);
+            // 
+            // buttonOfficeInfo
+            // 
+            this.buttonOfficeInfo.Location = new System.Drawing.Point(368, 36);
+            this.buttonOfficeInfo.Name = "buttonOfficeInfo";
+            this.buttonOfficeInfo.Size = new System.Drawing.Size(128, 31);
+            this.buttonOfficeInfo.TabIndex = 8;
+            this.buttonOfficeInfo.Text = "Get Info";
+            this.buttonOfficeInfo.UseVisualStyleBackColor = true;
+            this.buttonOfficeInfo.Click += new System.EventHandler(this.buttonOfficeInfo_Click);
+            // 
+            // OOO
+            // 
+            this.OOO.Controls.Add(this.label6);
+            this.OOO.Controls.Add(this.richTextBoxOfficeOOOText);
+            this.OOO.Controls.Add(this.labelOfficeOOOLog);
+            this.OOO.Controls.Add(this.groupBoxOfficeOOOSchedule);
+            this.OOO.Controls.Add(this.radioButtonOfficeOOOSchedule);
+            this.OOO.Controls.Add(this.radioButtonOfficeOOOEnableNow);
+            this.OOO.Controls.Add(this.radioButtonOfficeOOODisable);
+            this.OOO.Controls.Add(this.labelOfficeOOOConf);
+            this.OOO.Controls.Add(this.labelOfficeOOOMailbox);
+            this.OOO.Controls.Add(this.comboBoxOfficeOOOMailbox);
+            this.OOO.Controls.Add(this.buttonOfficeOOO);
+            this.OOO.Location = new System.Drawing.Point(4, 28);
+            this.OOO.Name = "OOO";
+            this.OOO.Size = new System.Drawing.Size(828, 482);
+            this.OOO.TabIndex = 7;
+            this.OOO.Text = "Out Of Office";
+            this.OOO.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(3, 228);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 19);
+            this.label6.TabIndex = 31;
+            this.label6.Text = "Out Of Office text";
+            // 
+            // richTextBoxOfficeOOOText
+            // 
+            this.richTextBoxOfficeOOOText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxOfficeOOOText.Location = new System.Drawing.Point(7, 250);
+            this.richTextBoxOfficeOOOText.Name = "richTextBoxOfficeOOOText";
+            this.richTextBoxOfficeOOOText.Size = new System.Drawing.Size(818, 213);
+            this.richTextBoxOfficeOOOText.TabIndex = 30;
+            this.richTextBoxOfficeOOOText.Text = "";
+            // 
+            // labelOfficeOOOLog
+            // 
+            this.labelOfficeOOOLog.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.labelOfficeOOOLog.AutoSize = true;
+            this.labelOfficeOOOLog.Location = new System.Drawing.Point(3, 466);
+            this.labelOfficeOOOLog.Name = "labelOfficeOOOLog";
+            this.labelOfficeOOOLog.Size = new System.Drawing.Size(278, 19);
+            this.labelOfficeOOOLog.TabIndex = 29;
+            this.labelOfficeOOOLog.Text = "The message shouldn\'t contain quote (\")";
+            // 
+            // groupBoxOfficeOOOSchedule
+            // 
+            this.groupBoxOfficeOOOSchedule.Controls.Add(this.dateTimePickerOfficeOOOEndDate);
+            this.groupBoxOfficeOOOSchedule.Controls.Add(this.dateTimePickerOfficeOOOStartDate);
+            this.groupBoxOfficeOOOSchedule.Location = new System.Drawing.Point(210, 147);
+            this.groupBoxOfficeOOOSchedule.Name = "groupBoxOfficeOOOSchedule";
+            this.groupBoxOfficeOOOSchedule.Size = new System.Drawing.Size(220, 100);
+            this.groupBoxOfficeOOOSchedule.TabIndex = 28;
+            this.groupBoxOfficeOOOSchedule.TabStop = false;
+            this.groupBoxOfficeOOOSchedule.Text = "OOO Schedule";
+            this.groupBoxOfficeOOOSchedule.Visible = false;
+            // 
+            // dateTimePickerOfficeOOOEndDate
+            // 
+            this.dateTimePickerOfficeOOOEndDate.Location = new System.Drawing.Point(6, 58);
+            this.dateTimePickerOfficeOOOEndDate.Name = "dateTimePickerOfficeOOOEndDate";
+            this.dateTimePickerOfficeOOOEndDate.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePickerOfficeOOOEndDate.TabIndex = 29;
+            // 
+            // dateTimePickerOfficeOOOStartDate
+            // 
+            this.dateTimePickerOfficeOOOStartDate.Location = new System.Drawing.Point(6, 25);
+            this.dateTimePickerOfficeOOOStartDate.Name = "dateTimePickerOfficeOOOStartDate";
+            this.dateTimePickerOfficeOOOStartDate.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePickerOfficeOOOStartDate.TabIndex = 28;
+            // 
+            // radioButtonOfficeOOOSchedule
+            // 
+            this.radioButtonOfficeOOOSchedule.AutoSize = true;
+            this.radioButtonOfficeOOOSchedule.Location = new System.Drawing.Point(210, 123);
+            this.radioButtonOfficeOOOSchedule.Name = "radioButtonOfficeOOOSchedule";
+            this.radioButtonOfficeOOOSchedule.Size = new System.Drawing.Size(92, 23);
+            this.radioButtonOfficeOOOSchedule.TabIndex = 27;
+            this.radioButtonOfficeOOOSchedule.TabStop = true;
+            this.radioButtonOfficeOOOSchedule.Text = "Schedule";
+            this.radioButtonOfficeOOOSchedule.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeOOOSchedule.CheckedChanged += new System.EventHandler(this.radioButtonOfficeOOOSchedule_CheckedChanged);
+            // 
+            // radioButtonOfficeOOOEnableNow
+            // 
+            this.radioButtonOfficeOOOEnableNow.AutoSize = true;
+            this.radioButtonOfficeOOOEnableNow.Location = new System.Drawing.Point(7, 152);
+            this.radioButtonOfficeOOOEnableNow.Name = "radioButtonOfficeOOOEnableNow";
+            this.radioButtonOfficeOOOEnableNow.Size = new System.Drawing.Size(76, 23);
+            this.radioButtonOfficeOOOEnableNow.TabIndex = 26;
+            this.radioButtonOfficeOOOEnableNow.TabStop = true;
+            this.radioButtonOfficeOOOEnableNow.Text = "Enable";
+            this.radioButtonOfficeOOOEnableNow.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonOfficeOOODisable
+            // 
+            this.radioButtonOfficeOOODisable.AutoSize = true;
+            this.radioButtonOfficeOOODisable.Location = new System.Drawing.Point(7, 123);
+            this.radioButtonOfficeOOODisable.Name = "radioButtonOfficeOOODisable";
+            this.radioButtonOfficeOOODisable.Size = new System.Drawing.Size(82, 23);
+            this.radioButtonOfficeOOODisable.TabIndex = 25;
+            this.radioButtonOfficeOOODisable.TabStop = true;
+            this.radioButtonOfficeOOODisable.Text = "Disable";
+            this.radioButtonOfficeOOODisable.UseVisualStyleBackColor = true;
+            // 
+            // labelOfficeOOOConf
+            // 
+            this.labelOfficeOOOConf.AutoSize = true;
+            this.labelOfficeOOOConf.Location = new System.Drawing.Point(3, 85);
+            this.labelOfficeOOOConf.Name = "labelOfficeOOOConf";
+            this.labelOfficeOOOConf.Size = new System.Drawing.Size(178, 19);
+            this.labelOfficeOOOConf.TabIndex = 24;
+            this.labelOfficeOOOConf.Text = "Configure Out Of Office";
+            // 
+            // labelOfficeOOOMailbox
+            // 
+            this.labelOfficeOOOMailbox.AutoSize = true;
+            this.labelOfficeOOOMailbox.Location = new System.Drawing.Point(3, 12);
+            this.labelOfficeOOOMailbox.Name = "labelOfficeOOOMailbox";
+            this.labelOfficeOOOMailbox.Size = new System.Drawing.Size(221, 19);
+            this.labelOfficeOOOMailbox.TabIndex = 22;
+            this.labelOfficeOOOMailbox.Text = "Please select the email address";
+            // 
+            // comboBoxOfficeOOOMailbox
+            // 
+            this.comboBoxOfficeOOOMailbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeOOOMailbox.FormattingEnabled = true;
+            this.comboBoxOfficeOOOMailbox.Location = new System.Drawing.Point(7, 34);
+            this.comboBoxOfficeOOOMailbox.Name = "comboBoxOfficeOOOMailbox";
+            this.comboBoxOfficeOOOMailbox.Size = new System.Drawing.Size(320, 27);
+            this.comboBoxOfficeOOOMailbox.TabIndex = 21;
+            // 
+            // buttonOfficeOOO
+            // 
+            this.buttonOfficeOOO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeOOO.Location = new System.Drawing.Point(697, 213);
+            this.buttonOfficeOOO.Name = "buttonOfficeOOO";
+            this.buttonOfficeOOO.Size = new System.Drawing.Size(128, 31);
+            this.buttonOfficeOOO.TabIndex = 20;
+            this.buttonOfficeOOO.Text = "Save Settings";
+            this.buttonOfficeOOO.UseVisualStyleBackColor = true;
+            this.buttonOfficeOOO.Click += new System.EventHandler(this.buttonOfficeOOO_Click);
+            // 
+            // Logs
+            // 
+            this.Logs.Controls.Add(this.labelOfficeLogsAudit);
+            this.Logs.Controls.Add(this.comboBoxOfficeLogsAudit);
+            this.Logs.Controls.Add(this.radioButtonOfficeLogsStat);
+            this.Logs.Controls.Add(this.radioButton2);
+            this.Logs.Controls.Add(this.labelOfficeLogsFromIP);
+            this.Logs.Controls.Add(this.textBoxOfficeLogsIP);
+            this.Logs.Controls.Add(this.buttonOfficeLogStart);
+            this.Logs.Controls.Add(this.labelOfficeLogsRecipient);
+            this.Logs.Controls.Add(this.labelOfficeLogsSender);
+            this.Logs.Controls.Add(this.textBoxOfficeLogsSender);
+            this.Logs.Controls.Add(this.textBoxOfficeLogsRecipient);
+            this.Logs.Controls.Add(this.radioButtonOfficeLogsForwarding);
+            this.Logs.Controls.Add(this.radioButtonOfficeLogMailTrace);
+            this.Logs.Controls.Add(this.labelOfficeLogs);
+            this.Logs.Controls.Add(this.dataGridViewLogs);
+            this.Logs.Location = new System.Drawing.Point(4, 28);
+            this.Logs.Name = "Logs";
+            this.Logs.Size = new System.Drawing.Size(828, 482);
+            this.Logs.TabIndex = 3;
+            this.Logs.Text = "Logs";
+            this.Logs.UseVisualStyleBackColor = true;
+            // 
+            // labelOfficeLogsAudit
+            // 
+            this.labelOfficeLogsAudit.AutoSize = true;
+            this.labelOfficeLogsAudit.Location = new System.Drawing.Point(3, 105);
+            this.labelOfficeLogsAudit.Name = "labelOfficeLogsAudit";
+            this.labelOfficeLogsAudit.Size = new System.Drawing.Size(42, 19);
+            this.labelOfficeLogsAudit.TabIndex = 15;
+            this.labelOfficeLogsAudit.Text = "User";
+            this.labelOfficeLogsAudit.Visible = false;
+            // 
+            // comboBoxOfficeLogsAudit
+            // 
+            this.comboBoxOfficeLogsAudit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxOfficeLogsAudit.FormattingEnabled = true;
+            this.comboBoxOfficeLogsAudit.Location = new System.Drawing.Point(49, 102);
+            this.comboBoxOfficeLogsAudit.Name = "comboBoxOfficeLogsAudit";
+            this.comboBoxOfficeLogsAudit.Size = new System.Drawing.Size(201, 27);
+            this.comboBoxOfficeLogsAudit.TabIndex = 14;
+            this.comboBoxOfficeLogsAudit.Visible = false;
+            // 
+            // radioButtonOfficeLogsStat
+            // 
+            this.radioButtonOfficeLogsStat.AutoSize = true;
+            this.radioButtonOfficeLogsStat.Location = new System.Drawing.Point(7, 66);
+            this.radioButtonOfficeLogsStat.Name = "radioButtonOfficeLogsStat";
+            this.radioButtonOfficeLogsStat.Size = new System.Drawing.Size(100, 23);
+            this.radioButtonOfficeLogsStat.TabIndex = 13;
+            this.radioButtonOfficeLogsStat.Text = "Audit logs";
+            this.radioButtonOfficeLogsStat.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeLogsStat.CheckedChanged += new System.EventHandler(this.radioButtonOfficeLogsStat_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(199, 32);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(334, 23);
+            this.radioButton2.TabIndex = 11;
+            this.radioButton2.Text = "Accounts with Inbox rules (takes some time)";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // labelOfficeLogsFromIP
+            // 
+            this.labelOfficeLogsFromIP.AutoSize = true;
+            this.labelOfficeLogsFromIP.Location = new System.Drawing.Point(292, 105);
+            this.labelOfficeLogsFromIP.Name = "labelOfficeLogsFromIP";
+            this.labelOfficeLogsFromIP.Size = new System.Drawing.Size(61, 19);
+            this.labelOfficeLogsFromIP.TabIndex = 12;
+            this.labelOfficeLogsFromIP.Text = "FromIP";
+            // 
+            // textBoxOfficeLogsIP
+            // 
+            this.textBoxOfficeLogsIP.Location = new System.Drawing.Point(359, 102);
+            this.textBoxOfficeLogsIP.Name = "textBoxOfficeLogsIP";
+            this.textBoxOfficeLogsIP.Size = new System.Drawing.Size(166, 27);
+            this.textBoxOfficeLogsIP.TabIndex = 8;
+            // 
+            // buttonOfficeLogStart
+            // 
+            this.buttonOfficeLogStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonOfficeLogStart.Location = new System.Drawing.Point(613, 98);
+            this.buttonOfficeLogStart.Name = "buttonOfficeLogStart";
+            this.buttonOfficeLogStart.Size = new System.Drawing.Size(212, 31);
+            this.buttonOfficeLogStart.TabIndex = 12;
+            this.buttonOfficeLogStart.Text = "Start";
+            this.buttonOfficeLogStart.UseVisualStyleBackColor = true;
+            this.buttonOfficeLogStart.Click += new System.EventHandler(this.buttonOfficeLogStart_Click);
+            // 
+            // labelOfficeLogsRecipient
+            // 
+            this.labelOfficeLogsRecipient.AutoSize = true;
+            this.labelOfficeLogsRecipient.Location = new System.Drawing.Point(274, 68);
+            this.labelOfficeLogsRecipient.Name = "labelOfficeLogsRecipient";
+            this.labelOfficeLogsRecipient.Size = new System.Drawing.Size(78, 19);
+            this.labelOfficeLogsRecipient.TabIndex = 9;
+            this.labelOfficeLogsRecipient.Text = "Recepient";
+            // 
+            // labelOfficeLogsSender
+            // 
+            this.labelOfficeLogsSender.AutoSize = true;
+            this.labelOfficeLogsSender.Location = new System.Drawing.Point(550, 68);
+            this.labelOfficeLogsSender.Name = "labelOfficeLogsSender";
+            this.labelOfficeLogsSender.Size = new System.Drawing.Size(56, 19);
+            this.labelOfficeLogsSender.TabIndex = 8;
+            this.labelOfficeLogsSender.Text = "Sender";
+            // 
+            // textBoxOfficeLogsSender
+            // 
+            this.textBoxOfficeLogsSender.Location = new System.Drawing.Point(612, 65);
+            this.textBoxOfficeLogsSender.Name = "textBoxOfficeLogsSender";
+            this.textBoxOfficeLogsSender.Size = new System.Drawing.Size(209, 27);
+            this.textBoxOfficeLogsSender.TabIndex = 7;
+            // 
+            // textBoxOfficeLogsRecipient
+            // 
+            this.textBoxOfficeLogsRecipient.Location = new System.Drawing.Point(358, 65);
+            this.textBoxOfficeLogsRecipient.Name = "textBoxOfficeLogsRecipient";
+            this.textBoxOfficeLogsRecipient.Size = new System.Drawing.Size(167, 27);
+            this.textBoxOfficeLogsRecipient.TabIndex = 9;
+            // 
+            // radioButtonOfficeLogsForwarding
+            // 
+            this.radioButtonOfficeLogsForwarding.AutoSize = true;
+            this.radioButtonOfficeLogsForwarding.Location = new System.Drawing.Point(600, 32);
+            this.radioButtonOfficeLogsForwarding.Name = "radioButtonOfficeLogsForwarding";
+            this.radioButtonOfficeLogsForwarding.Size = new System.Drawing.Size(212, 23);
+            this.radioButtonOfficeLogsForwarding.TabIndex = 10;
+            this.radioButtonOfficeLogsForwarding.Text = "Accounts with forwardings";
+            this.radioButtonOfficeLogsForwarding.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeLogsForwarding.CheckedChanged += new System.EventHandler(this.radioButtonOfficeLogsForwarding_CheckedChanged);
+            // 
+            // radioButtonOfficeLogMailTrace
+            // 
+            this.radioButtonOfficeLogMailTrace.AutoSize = true;
+            this.radioButtonOfficeLogMailTrace.Checked = true;
+            this.radioButtonOfficeLogMailTrace.Location = new System.Drawing.Point(7, 32);
+            this.radioButtonOfficeLogMailTrace.Name = "radioButtonOfficeLogMailTrace";
+            this.radioButtonOfficeLogMailTrace.Size = new System.Drawing.Size(103, 23);
+            this.radioButtonOfficeLogMailTrace.TabIndex = 6;
+            this.radioButtonOfficeLogMailTrace.TabStop = true;
+            this.radioButtonOfficeLogMailTrace.Text = "Mail Trace";
+            this.radioButtonOfficeLogMailTrace.UseVisualStyleBackColor = true;
+            this.radioButtonOfficeLogMailTrace.CheckedChanged += new System.EventHandler(this.radioButtonOfficeLogMailTrace_CheckedChanged);
+            // 
+            // labelOfficeLogs
+            // 
+            this.labelOfficeLogs.AutoSize = true;
+            this.labelOfficeLogs.Location = new System.Drawing.Point(3, 10);
+            this.labelOfficeLogs.Name = "labelOfficeLogs";
+            this.labelOfficeLogs.Size = new System.Drawing.Size(391, 19);
+            this.labelOfficeLogs.TabIndex = 1;
+            this.labelOfficeLogs.Text = "Shows the mail trace (7 days) and user activity (30 days)";
+            // 
+            // dataGridViewLogs
+            // 
+            this.dataGridViewLogs.AllowUserToOrderColumns = true;
+            this.dataGridViewLogs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewLogs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridViewLogs.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridViewLogs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewLogs.Location = new System.Drawing.Point(2, 135);
+            this.dataGridViewLogs.Name = "dataGridViewLogs";
+            this.dataGridViewLogs.RowTemplate.Height = 24;
+            this.dataGridViewLogs.Size = new System.Drawing.Size(819, 344);
+            this.dataGridViewLogs.TabIndex = 0;
             // 
             // Settings
             // 
             this.Settings.Controls.Add(this.checkBoxAlwaysOnTop);
             this.Settings.Controls.Add(this.buttonChangeFont);
             this.Settings.Controls.Add(this.labelFontSize);
-            this.Settings.Location = new System.Drawing.Point(4, 28);
+            this.Settings.Location = new System.Drawing.Point(4, 52);
             this.Settings.Margin = new System.Windows.Forms.Padding(2);
             this.Settings.Name = "Settings";
             this.Settings.Padding = new System.Windows.Forms.Padding(2);
-            this.Settings.Size = new System.Drawing.Size(808, 544);
+            this.Settings.Size = new System.Drawing.Size(842, 520);
             this.Settings.TabIndex = 2;
             this.Settings.Text = "Settings";
             this.Settings.UseVisualStyleBackColor = true;
@@ -1622,10 +2836,10 @@
             this.Help.Controls.Add(this.groupBoxCopy);
             this.Help.Controls.Add(this.groupBoxTimer);
             this.Help.Controls.Add(this.groupBoxMXQuery);
-            this.Help.Location = new System.Drawing.Point(4, 28);
+            this.Help.Location = new System.Drawing.Point(4, 52);
             this.Help.Margin = new System.Windows.Forms.Padding(2);
             this.Help.Name = "Help";
-            this.Help.Size = new System.Drawing.Size(808, 544);
+            this.Help.Size = new System.Drawing.Size(842, 520);
             this.Help.TabIndex = 4;
             this.Help.Text = "Help";
             this.Help.UseVisualStyleBackColor = true;
@@ -1635,11 +2849,11 @@
             this.groupBoxCopy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxCopy.Controls.Add(this.richTextBoxHelpCopy);
-            this.groupBoxCopy.Location = new System.Drawing.Point(8, 174);
+            this.groupBoxCopy.Location = new System.Drawing.Point(8, 153);
             this.groupBoxCopy.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxCopy.Name = "groupBoxCopy";
             this.groupBoxCopy.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxCopy.Size = new System.Drawing.Size(780, 225);
+            this.groupBoxCopy.Size = new System.Drawing.Size(814, 225);
             this.groupBoxCopy.TabIndex = 2;
             this.groupBoxCopy.TabStop = false;
             this.groupBoxCopy.Text = "Copy-Paste";
@@ -1652,7 +2866,7 @@
             this.richTextBoxHelpCopy.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxHelpCopy.Name = "richTextBoxHelpCopy";
             this.richTextBoxHelpCopy.ReadOnly = true;
-            this.richTextBoxHelpCopy.Size = new System.Drawing.Size(768, 193);
+            this.richTextBoxHelpCopy.Size = new System.Drawing.Size(802, 193);
             this.richTextBoxHelpCopy.TabIndex = 0;
             this.richTextBoxHelpCopy.Text = resources.GetString("richTextBoxHelpCopy.Text");
             // 
@@ -1661,11 +2875,11 @@
             this.groupBoxTimer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxTimer.Controls.Add(this.richTextBoxHelpTimer);
-            this.groupBoxTimer.Location = new System.Drawing.Point(8, 410);
+            this.groupBoxTimer.Location = new System.Drawing.Point(8, 382);
             this.groupBoxTimer.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxTimer.Name = "groupBoxTimer";
             this.groupBoxTimer.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxTimer.Size = new System.Drawing.Size(780, 126);
+            this.groupBoxTimer.Size = new System.Drawing.Size(814, 126);
             this.groupBoxTimer.TabIndex = 1;
             this.groupBoxTimer.TabStop = false;
             this.groupBoxTimer.Text = "Timer";
@@ -1678,7 +2892,7 @@
             this.richTextBoxHelpTimer.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxHelpTimer.Name = "richTextBoxHelpTimer";
             this.richTextBoxHelpTimer.ReadOnly = true;
-            this.richTextBoxHelpTimer.Size = new System.Drawing.Size(768, 94);
+            this.richTextBoxHelpTimer.Size = new System.Drawing.Size(808, 94);
             this.richTextBoxHelpTimer.TabIndex = 0;
             this.richTextBoxHelpTimer.Text = resources.GetString("richTextBoxHelpTimer.Text");
             // 
@@ -1691,7 +2905,7 @@
             this.groupBoxMXQuery.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxMXQuery.Name = "groupBoxMXQuery";
             this.groupBoxMXQuery.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBoxMXQuery.Size = new System.Drawing.Size(780, 165);
+            this.groupBoxMXQuery.Size = new System.Drawing.Size(814, 147);
             this.groupBoxMXQuery.TabIndex = 0;
             this.groupBoxMXQuery.TabStop = false;
             this.groupBoxMXQuery.Text = "MX query";
@@ -1704,7 +2918,7 @@
             this.richTextBoxHelpMX.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxHelpMX.Name = "richTextBoxHelpMX";
             this.richTextBoxHelpMX.ReadOnly = true;
-            this.richTextBoxHelpMX.Size = new System.Drawing.Size(768, 133);
+            this.richTextBoxHelpMX.Size = new System.Drawing.Size(802, 111);
             this.richTextBoxHelpMX.TabIndex = 0;
             this.richTextBoxHelpMX.Text = resources.GetString("richTextBoxHelpMX.Text");
             // 
@@ -1713,14 +2927,14 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // contextMenuStrip1
+            // contextMenuStripInfo
             // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextMenuStripInfo.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripInfo.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testToolStripMenuItem,
             this.cancelToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(216, 52);
+            this.contextMenuStripInfo.Name = "contextMenuStrip1";
+            this.contextMenuStripInfo.Size = new System.Drawing.Size(216, 52);
             // 
             // testToolStripMenuItem
             // 
@@ -1743,20 +2957,24 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.CancelButton = this.buttonCopyTClose;
-            this.ClientSize = new System.Drawing.Size(816, 576);
+            this.ClientSize = new System.Drawing.Size(850, 576);
             this.Controls.Add(this.tabControlMain);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(832, 607);
+            this.MinimumSize = new System.Drawing.Size(868, 623);
             this.Name = "FormMain";
-            this.Text = "Archway Helper v2.5";
+            this.Text = "Archway Helper v2.6";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControlMain.ResumeLayout(false);
             this.MX.ResumeLayout(false);
             this.MX.PerformLayout();
             this.groupBoxUpcEvents.ResumeLayout(false);
             this.groupBoxUpcEvents.PerformLayout();
+            this.Whois.ResumeLayout(false);
+            this.Whois.PerformLayout();
+            this.GeoIpTab.ResumeLayout(false);
+            this.GeoIpTab.PerformLayout();
             this.Timer.ResumeLayout(false);
             this.Timer.PerformLayout();
             this.groupBoxTimeAndText.ResumeLayout(false);
@@ -1774,15 +2992,38 @@
             this.MailSender.PerformLayout();
             this.groupBoxSmtpEnableAuth.ResumeLayout(false);
             this.groupBoxSmtpEnableAuth.PerformLayout();
-            this.Whois.ResumeLayout(false);
-            this.Whois.PerformLayout();
+            this.Sort.ResumeLayout(false);
+            this.Office365.ResumeLayout(false);
+            this.tabControlOffice.ResumeLayout(false);
+            this.Config.ResumeLayout(false);
+            this.Config.PerformLayout();
+            this.Permissions.ResumeLayout(false);
+            this.Permissions.PerformLayout();
+            this.groupBoxOfficeAccessLvl.ResumeLayout(false);
+            this.groupBoxOfficeAccessLvl.PerformLayout();
+            this.Mailbox.ResumeLayout(false);
+            this.Mailbox.PerformLayout();
+            this.Alias.ResumeLayout(false);
+            this.Alias.PerformLayout();
+            this.Info.ResumeLayout(false);
+            this.Info.PerformLayout();
+            this.tabControlOfficeInfo.ResumeLayout(false);
+            this.Information.ResumeLayout(false);
+            this.RemoveRules.ResumeLayout(false);
+            this.RemoveRules.PerformLayout();
+            this.OOO.ResumeLayout(false);
+            this.OOO.PerformLayout();
+            this.groupBoxOfficeOOOSchedule.ResumeLayout(false);
+            this.Logs.ResumeLayout(false);
+            this.Logs.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewLogs)).EndInit();
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.Help.ResumeLayout(false);
             this.groupBoxCopy.ResumeLayout(false);
             this.groupBoxTimer.ResumeLayout(false);
             this.groupBoxMXQuery.ResumeLayout(false);
-            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStripInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1803,10 +3044,10 @@
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.Button buttonCopyTClose;
         private System.Windows.Forms.Button buttonCopyTPerm;
-        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTips;
         public System.Windows.Forms.RichTextBox richTextBoxResult;
         public System.Windows.Forms.ComboBox comboBoxDomainName;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripInfo;
         private System.Windows.Forms.ToolStripMenuItem testToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.TabPage Timer;
@@ -1917,6 +3158,105 @@
         private System.Windows.Forms.Button buttonWhoisGet;
         private System.Windows.Forms.Label labelWhois;
         private System.Windows.Forms.TextBox textBoxWhoisDomain;
+        private System.Windows.Forms.TabPage Sort;
+        private System.Windows.Forms.Button buttonSort;
+        private System.Windows.Forms.RichTextBox richTextBoxSort;
+        private System.Windows.Forms.Button buttonSortTabToEnter;
+        private System.Windows.Forms.Button buttonSortRemoveLines;
+        private System.Windows.Forms.TabPage GeoIpTab;
+        private System.Windows.Forms.Button buttonGeoQuery;
+        private System.Windows.Forms.TextBox textBoxGeoIp;
+        private System.Windows.Forms.RichTextBox richTextBoxGeoIp;
+        private System.Windows.Forms.Label labelGeoIp;
+        private System.Windows.Forms.LinkLabel linkLabelGeoIp;
+        private System.Windows.Forms.TabPage Office365;
+        private System.Windows.Forms.TabControl tabControlOffice;
+        private System.Windows.Forms.TabPage Config;
+        private System.Windows.Forms.Label labelOfficeConfig;
+        private System.Windows.Forms.TextBox textBoxOfficePass;
+        private System.Windows.Forms.Label labelOfficePassword;
+        private System.Windows.Forms.Label LabelOfficeLogin;
+        private System.Windows.Forms.TextBox textBoxOfficeLogin;
+        private System.Windows.Forms.Button buttonOfficeAccept;
+        private System.Windows.Forms.TabPage Permissions;
+        private System.Windows.Forms.TabPage Mailbox;
+        private System.Windows.Forms.TabPage Logs;
+        private System.Windows.Forms.RichTextBox richTextBoxOfficeResult;
+        private System.Windows.Forms.GroupBox groupBoxOfficeAccessLvl;
+        private System.Windows.Forms.ComboBox comboBoxAccessLevel;
+        private System.Windows.Forms.Label labelOfficeAccessLevel;
+        private System.Windows.Forms.CheckBox checkBoxOfficeRemovPermissions;
+        private System.Windows.Forms.RadioButton radioButtonOfficeContact;
+        private System.Windows.Forms.RadioButton radioButtonOfficeCalendar;
+        private System.Windows.Forms.RadioButton radioButtonOfficeSendAs;
+        private System.Windows.Forms.RadioButton radioButtonOfficeFullAccess;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonOfficeSetPermissions;
+        private System.Windows.Forms.Label labelOfficeMailboxOwner;
+        private System.Windows.Forms.Button buttonOfficeUpdate;
+        private System.Windows.Forms.Label labelOfficeBasicInfo;
+        private System.Windows.Forms.CheckBox checkBoxOfficeAutoMap;
+        private System.Windows.Forms.ComboBox comboBoxOfficeDelegates;
+        private System.Windows.Forms.ComboBox comboBoxOfficeOwners;
+        private System.Windows.Forms.Button buttonOfficeDispose;
+        private System.Windows.Forms.RadioButton radioButtonOfficeForward;
+        private System.Windows.Forms.ComboBox comboBoxOfficeMailboxSettings;
+        private System.Windows.Forms.ComboBox comboBoxOfficeForward;
+        private System.Windows.Forms.ComboBox comboBoxOfficeGroups;
+        private System.Windows.Forms.RadioButton radioButtonOfficeGroups;
+        private System.Windows.Forms.Button buttonOfficeForwarding;
+        private System.Windows.Forms.TabPage Alias;
+        private System.Windows.Forms.RichTextBox richTextBoxOfficeAliasOwner;
+        private System.Windows.Forms.TextBox textBoxOfficeAlias;
+        private System.Windows.Forms.Label labelOfficeAlias;
+        private System.Windows.Forms.Button buttonOfficeAlias;
+        private System.Windows.Forms.RadioButton radioButtonOfficeLogMailTrace;
+        private System.Windows.Forms.Label labelOfficeLogs;
+        private System.Windows.Forms.DataGridView dataGridViewLogs;
+        private System.Windows.Forms.RadioButton radioButtonOfficeLogsForwarding;
+        private System.Windows.Forms.Button buttonCopyTCall;
+        private System.Windows.Forms.TabPage Info;
+        private System.Windows.Forms.Label labelOfficeInformation;
+        private System.Windows.Forms.ComboBox comboBoxOfficeInformation;
+        private System.Windows.Forms.Button buttonOfficeInfo;
+        private System.Windows.Forms.CheckBox checkBoxOfficeForwardKeepCopy;
+        private System.Windows.Forms.RadioButton radioButtonOfficeRemoveForwarding;
+        private System.Windows.Forms.CheckBox checkBoxOfficeForwardingAddDG;
+        private System.Windows.Forms.Label labelOfficeMailboxSettingResult;
+        private System.Windows.Forms.Label labelOfficeLogsRecipient;
+        private System.Windows.Forms.Label labelOfficeLogsSender;
+        private System.Windows.Forms.TextBox textBoxOfficeLogsSender;
+        private System.Windows.Forms.TextBox textBoxOfficeLogsRecipient;
+        private System.Windows.Forms.Button buttonOfficeLogStart;
+        private System.Windows.Forms.TabControl tabControlOfficeInfo;
+        private System.Windows.Forms.TabPage Information;
+        private System.Windows.Forms.RichTextBox richTextBoxOfficeInformation;
+        private System.Windows.Forms.TabPage RemoveRules;
+        private System.Windows.Forms.Button buttonOfficeRemoveRule;
+        private System.Windows.Forms.CheckedListBox checkedListBoxOfficeRuleToDelete;
+        private System.Windows.Forms.TabPage OOO;
+        private System.Windows.Forms.Label labelOfficeOOOMailbox;
+        private System.Windows.Forms.ComboBox comboBoxOfficeOOOMailbox;
+        private System.Windows.Forms.Button buttonOfficeOOO;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOfficeOOOStartDate;
+        private System.Windows.Forms.Label labelOfficeOOOConf;
+        private System.Windows.Forms.GroupBox groupBoxOfficeOOOSchedule;
+        private System.Windows.Forms.DateTimePicker dateTimePickerOfficeOOOEndDate;
+        private System.Windows.Forms.RadioButton radioButtonOfficeOOOSchedule;
+        private System.Windows.Forms.RadioButton radioButtonOfficeOOOEnableNow;
+        private System.Windows.Forms.RadioButton radioButtonOfficeOOODisable;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.RichTextBox richTextBoxOfficeOOOText;
+        private System.Windows.Forms.Label labelOfficeOOOLog;
+        private System.Windows.Forms.Label labelOfficeOOOInboxRuleLog;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelOfficeLogsFromIP;
+        private System.Windows.Forms.TextBox textBoxOfficeLogsIP;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonOfficeLogsStat;
+        private System.Windows.Forms.Label labelOfficeLogsAudit;
+        private System.Windows.Forms.ComboBox comboBoxOfficeLogsAudit;
     }
 }
 

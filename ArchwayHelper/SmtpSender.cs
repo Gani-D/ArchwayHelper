@@ -9,6 +9,8 @@ namespace ArchwayHelper
 {
     class SmtpSender
     {
+
+        //bazinga1
         /// <summary>
         /// The method to send emails
         /// </summary>

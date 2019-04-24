@@ -39,25 +39,31 @@ namespace ArchwayHelper
             string whoisServer = HelperServerName(domainName);
             if (whoisServer == null) return "Cannot resolve the domain";
             StringBuilder result = new StringBuilder();
-            
-            using (TcpClient tcpClient = new TcpClient())
-
+            try
             {
-                //opening a connection to WHOIS server
-                tcpClient.Connect(whoisServer.Trim(), 43);
-                byte[] domainQueryBytes = Encoding.ASCII.GetBytes(domainName + "\n");
-                using (Stream stream = tcpClient.GetStream())
+                using (TcpClient tcpClient = new TcpClient())
+
                 {
-                    //sending request to WHOIS server
-                    stream.Write(domainQueryBytes, 0, domainQueryBytes.Length);
-                    
-                    using (StreamReader sr = new StreamReader(tcpClient.GetStream(), Encoding.UTF8))
+                    //opening a connection to WHOIS server
+                    tcpClient.Connect(whoisServer.Trim(), 43);
+                    byte[] domainQueryBytes = Encoding.ASCII.GetBytes(domainName + "\n");
+                    using (Stream stream = tcpClient.GetStream())
                     {
-                        string row;
-                        while ((row = sr.ReadLine()) != null)
-                            result.AppendLine(row);
+                        //sending request to WHOIS server
+                        stream.Write(domainQueryBytes, 0, domainQueryBytes.Length);
+
+                        using (StreamReader sr = new StreamReader(tcpClient.GetStream(), Encoding.UTF8))
+                        {
+                            string row;
+                            while ((row = sr.ReadLine()) != null)
+                                result.AppendLine(row);
+                        }
                     }
                 }
+            }
+            catch
+            {
+                return "Error";
             }
 
             return result.ToString();

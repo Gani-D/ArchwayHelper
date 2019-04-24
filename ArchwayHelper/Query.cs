@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+
 using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ArchwayHelper
 {
     class Query
     {
+
+        private const string NSLOOKUP = "nslookup";
         /// <summary>
         /// Gets string and pastes them to cmd.exe
         /// </summary>
@@ -46,26 +48,29 @@ namespace ArchwayHelper
         /// <param name="domainName"></param>
         /// <returns>A formatted text from cmd.exe</returns>
         public string GetMXQuery (string domainName)
-        {
+        { 
             StringBuilder result = new StringBuilder();
-            if (domainName.Contains("@")) { domainName = domainName.Split('@')[1]; } //removes the username part
+            if (domainName.Contains("@"))
+            {
+                domainName = domainName.Split('@')[1];
+            } //removes the username part
             
             result.Append( "***Autodiscover is: ***\n");
-            String[] temp = Cmd(new string[] { "nslookup", "autodiscover." + domainName });
+            String[] temp = Cmd(new string[] { NSLOOKUP, "autodiscover." + domainName });
             for (int i = 0; i < temp.Length - 2; i++)
             {
                 result.Append( temp[i] + "\n");
             }
             result.Append("***MX records are: ***\n");
 
-            temp = Cmd(new string[] { "nslookup", "set q=mx", domainName });
+            temp = Cmd(new string[] { NSLOOKUP, "set q=mx", domainName });
             for (int i = 0; i < temp.Length - 1; i++)
             {
                 result.Append( temp[i] + "\n");
             }
 
             result.Append( "***TXT records are: ***\n");
-            temp = Cmd(new string[] { "nslookup", "set q=txt", domainName });
+            temp = Cmd(new string[] { NSLOOKUP, "set q=txt", domainName });
             for (int i = 0; i < temp.Length - 2; i++)
             {
                 result.Append( temp[i] + "\n");

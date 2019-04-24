@@ -7,6 +7,8 @@ using System.Windows.Forms;
 
 using System.Threading;
 
+using System.Collections.Generic;
+
 namespace ArchwayHelper
 {
 
@@ -17,6 +19,48 @@ namespace ArchwayHelper
         {
             InitializeComponent();
             formMain = this;
+            ApiConnector.InitializeClient();
+            dateTimePickerOfficeOOOStartDate.Format = DateTimePickerFormat.Custom;
+            dateTimePickerOfficeOOOStartDate.CustomFormat = "MM/dd/yyyy HH:mm:ss";
+            dateTimePickerOfficeOOOEndDate.Format = DateTimePickerFormat.Custom;
+            dateTimePickerOfficeOOOEndDate.CustomFormat = "MM/dd/yyyy HH:mm:ss";
+        }
+
+        public string TypeCreds()
+        {
+            return "Please type credentials to enable functionality";
+        }
+
+        public void UpdateTheFormMailboxes()
+        {
+            OfficePS officePS = OfficePS.Instance;
+            comboBoxOfficeOwners.Items.Clear();
+            comboBoxOfficeDelegates.Items.Clear();
+            comboBoxOfficeMailboxSettings.Items.Clear();
+            comboBoxOfficeInformation.Items.Clear();
+            comboBoxOfficeOOOMailbox.Items.Clear();
+            comboBoxOfficeForward.Items.Clear();
+            comboBoxOfficeLogsAudit.Items.Clear();
+            if (officePS.CredsAreValid)
+            {
+                officePS.Get_Mailboxes();
+                string[] listOfMailboxes = officePS.ListOfMailboxes;
+                foreach (string mailAddress in officePS.ListOfMailboxes)
+                {
+                    comboBoxOfficeLogsAudit.Items.Add(mailAddress);
+                    comboBoxOfficeOwners.Items.Add(mailAddress);
+                    comboBoxOfficeDelegates.Items.Add(mailAddress);
+                    comboBoxOfficeMailboxSettings.Items.Add(mailAddress);
+                    comboBoxOfficeInformation.Items.Add(mailAddress);
+                    comboBoxOfficeOOOMailbox.Items.Add(mailAddress);
+                    comboBoxOfficeForward.Items.Add(mailAddress);
+                }
+                labelOfficeConfig.Text = "The mailbox list has been updated";
+            }
+            else
+            {
+                labelOfficeConfig.Text = TypeCreds();
+            }
         }
 
         public static string [] GetOwnTexts ()
@@ -43,7 +87,10 @@ namespace ArchwayHelper
 
         private void QueryResult ()
         {
-            if (comboBoxDomainName.Text.Contains('@')) { comboBoxDomainName.Text = comboBoxDomainName.Text.Split('@')[1]; }
+            if (comboBoxDomainName.Text.Contains('@'))
+            {
+                comboBoxDomainName.Text = comboBoxDomainName.Text.Split('@')[1];
+            }
             if (!comboBoxDomainName.Items.Contains(comboBoxDomainName.Text)) comboBoxDomainName.Items.Add(comboBoxDomainName.Text);
             richTextBoxResult.Text="Please wait...";
             Query temp = new Query();
@@ -425,16 +472,22 @@ namespace ArchwayHelper
            // bool exclCharsDot, bool exclSimilarChars, bool startWithUpper, string length)
             //
             PasswordGenerator passGen = new PasswordGenerator();
-            if (radioButtonPGStan.Checked) { richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text); }
-            else richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text, checkBoxPGUpperCase.Checked, checkBoxPGLowerCase.Checked, checkBoxPGNum.Checked,
+            if (radioButtonPGStan.Checked)
+            {
+                richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text);
+            }
+            else
+            {
+               richTextBoxPassGen.Text = passGen.PassGen(textBoxPGQuantity.Text, checkBoxPGUpperCase.Checked, checkBoxPGLowerCase.Checked, checkBoxPGNum.Checked,
                checkBoxPGSym.Checked, checkBoxPGExclChars.Checked, checkBoxPGExclO.Checked, checkBoxPGUpperCaseStart.Checked, comboBoxPGLen.Text);
+            }
         }
 
         private void buttonWhoisGet_Click(object sender, EventArgs e)
         {
-            Whois whois = new Whois();
-
-            richTextBoxWhoisResult.Text = whois.GetWhoisData(textBoxWhoisDomain.Text);
+            Whois whoisServerData = new Whois();
+            textBoxWhoisDomain.Text = textBoxWhoisDomain.Text.ToLower().Trim();
+            richTextBoxWhoisResult.Text = whoisServerData.GetWhoisData(textBoxWhoisDomain.Text);
         }
 
         private void buttonCopyToCopyPaste_Click_1(object sender, EventArgs e)
@@ -473,6 +526,326 @@ namespace ArchwayHelper
             richTextBoxResult.ForeColor = Color.Wheat;
 
             MX.BackColor = Color.DarkSlateGray;
+        }
+
+        private void buttonSort_Click(object sender, EventArgs e)
+        {
+            Sort tmp = new Sort();
+
+            richTextBoxSort.Text = tmp.SortText(richTextBoxSort.Text);
+        }
+
+        private void buttonTabToEnter_Click(object sender, EventArgs e)
+        {
+            TextCopy changeTab = new TextCopy();
+            richTextBoxSort.Text = changeTab.ChangeTabsToEnter(richTextBoxSort.Text);
+        }
+
+        private void buttonSortRemoveLines_Click(object sender, EventArgs e)
+        {
+            TextCopy removeLines = new TextCopy();
+            richTextBoxSort.Text = removeLines.RemoveEmptyLines(richTextBoxSort.Text);
+        }
+
+        private async void buttonGeoQuery_Click(object sender, EventArgs e)
+        {
+            textBoxGeoIp.Text = textBoxGeoIp.Text.Trim();
+            linkLabelGeoIp.Text = "https://mxtoolbox.com/SuperTool.aspx?action=arin%3a" + textBoxGeoIp.Text;
+            GeoIpQuery geoIpQuery = GeoIpQuery.Instance;
+            try
+            {
+                richTextBoxGeoIp.Text = await geoIpQuery.LoadIpInformation(textBoxGeoIp.Text);
+            }
+            catch
+            {
+                richTextBoxGeoIp.Text = "Cannot connect to the server";
+            }
+        }
+
+        private void linkLabelGeoIp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(linkLabelGeoIp.Text);
+        }
+
+        private void buttonOfficeSetPermissions_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+            
+            if (officePS.CredsAreValid)
+            {
+                richTextBoxOfficeResult.Text = officePS.SelectPermissionAction(comboBoxOfficeOwners.Text, comboBoxOfficeDelegates.Text, checkBoxOfficeRemovPermissions.Checked,
+                        radioButtonOfficeFullAccess.Checked, checkBoxOfficeAutoMap.Checked, radioButtonOfficeSendAs.Checked, radioButtonOfficeCalendar.Checked,
+                        radioButtonOfficeContact.Checked, comboBoxAccessLevel.Text);
+            }
+            else
+            {
+                richTextBoxOfficeResult.Text = TypeCreds();
+            }
+
+            
+        }
+
+        private void buttonOfficeUpdate_Click(object sender, EventArgs e)
+        {
+           
+                UpdateTheFormMailboxes();
+            
+        }
+
+        private void radioButtonOfficeFullAccess_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOfficeFullAccess.Checked)
+            {
+                if (checkBoxOfficeRemovPermissions.Checked)
+                {
+                    checkBoxOfficeAutoMap.Visible = true;
+                }
+            }
+            else
+            {
+                checkBoxOfficeAutoMap.Visible = false;
+                
+            }
+        }
+
+        private void checkBoxOfficeRemovPermissions_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!checkBoxOfficeRemovPermissions.Checked)
+            {
+                groupBoxOfficeAccessLvl.Visible = false;
+                checkBoxOfficeAutoMap.Visible = false;
+            }
+            else
+            {
+                if (radioButtonOfficeCalendar.Checked || radioButtonOfficeContact.Checked)
+                {
+                    groupBoxOfficeAccessLvl.Visible = true;
+                }
+                else if (radioButtonOfficeFullAccess.Checked)
+                {
+                    checkBoxOfficeAutoMap.Visible = true;
+                }
+            }
+        }
+
+        private void radioButtonOfficeCalendar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOfficeCalendar.Checked)
+            {
+                if (!checkBoxOfficeRemovPermissions.Checked)
+                {
+                    groupBoxOfficeAccessLvl.Visible = false;
+                }
+                else
+                {
+                    groupBoxOfficeAccessLvl.Visible = true;
+                }
+            }
+            else
+            {
+                groupBoxOfficeAccessLvl.Visible = false;
+            }
+        }
+
+        private void radioButtonContact_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOfficeContact.Checked)
+            {
+                if (!checkBoxOfficeRemovPermissions.Checked)
+                {
+                    groupBoxOfficeAccessLvl.Visible = false;
+                }
+                else
+                {
+                    groupBoxOfficeAccessLvl.Visible = true;
+                }
+            }
+            else
+            {
+                groupBoxOfficeAccessLvl.Visible = false;
+            }
+            OfficePS officePS = OfficePS.Instance;
+
+            /*
+            foreach(string smtpAddress in officePS.Get_MailboxFullAccessPermissions())
+            {
+                richTextBoxOfficeResult.Text += smtpAddress+'\n';
+            }
+            */
+            
+        }
+
+        private void buttonOfficeDispose_Click(object sender, EventArgs e)
+        {
+            labelOfficeConfig.Text = TypeCreds();
+            OfficePS officePS = OfficePS.Instance;
+            officePS.DisposeSession();
+        }
+
+        private void buttonOfficeAccept_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+
+            if (officePS.StartCode(textBoxOfficeLogin.Text.Trim(), textBoxOfficePass.Text.Trim()))
+            {
+                comboBoxOfficeOwners.Items.Clear();
+                labelOfficeConfig.Text = "You are logged in";
+                UpdateTheFormMailboxes();
+            }
+            else
+            {
+                labelOfficeConfig.Text = "Wrong credentials";
+            }
+
+        }
+
+
+        private void buttonOfficeAlias_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+            if (officePS.CredsAreValid)
+            {
+                richTextBoxOfficeAliasOwner.Text = officePS.AliasOwner(textBoxOfficeAlias.Text.Trim());
+            }
+            else
+            {
+                richTextBoxOfficeAliasOwner.Text = TypeCreds();
+            }
+        }
+
+        private void buttonCopyTCall_Click(object sender, EventArgs e)
+        {
+            //Clipboard.SetText("Please let me know when I could call you. Thank you!");
+            LoadingForm t = LoadingForm.Instance;
+            t.StartPosition = FormStartPosition.CenterParent;
+           // t.Left = 0;
+         //   t.Top = 300;
+            new Thread(() => t.ShowDialog(this)).Start();
+            
+            //t.Close();
+        }
+
+        private void buttonOfficeForwarding_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+            if (officePS.CredsAreValid)
+            {
+                labelOfficeMailboxSettingResult.Text = officePS.ForwardingAddingToGroupAction(comboBoxOfficeMailboxSettings.Text, comboBoxOfficeForward.Text, comboBoxOfficeGroups.Text,
+                    checkBoxOfficeForwardKeepCopy.Checked, radioButtonOfficeForward.Checked, radioButtonOfficeRemoveForwarding.Checked, 
+                    radioButtonOfficeGroups.Checked, checkBoxOfficeForwardingAddDG.Checked);
+            }
+        }
+        
+        private void radioButtonOfficeGroups_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonOfficeGroups.Checked)
+            {
+                
+                OfficePS officePS = OfficePS.Instance;
+                if (officePS.CredsAreValid)
+                {
+                    comboBoxOfficeGroups.Items.Clear();
+                    foreach (string group in officePS.GetDistributionGroups())
+                    comboBoxOfficeGroups.Items.Add(group);
+                }
+                else
+                {
+                    labelOfficeMailboxSettingResult.Text = TypeCreds();
+                }
+            }
+        }
+
+        private void buttonOfficeInfo_Click(object sender, EventArgs e)
+        {
+            
+            checkedListBoxOfficeRuleToDelete.Items.Clear();
+            OfficePS officePS = OfficePS.Instance;
+
+            richTextBoxOfficeInformation.Text = officePS.GetInboxRules(comboBoxOfficeInformation.Text);
+            foreach(string name in officePS.Rules)
+            {
+                checkedListBoxOfficeRuleToDelete.Items.Add(name);
+            }
+            
+        }
+
+        private void buttonOfficeRemoveRule_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+
+            foreach (int checkedIndices in checkedListBoxOfficeRuleToDelete.CheckedIndices)
+            {
+                labelOfficeOOOInboxRuleLog.Text = officePS.RemoveInboxRule(comboBoxOfficeInformation.Text, checkedListBoxOfficeRuleToDelete.Items[checkedIndices].ToString());
+            }
+            buttonOfficeInfo.PerformClick();
+        }
+
+        private void buttonOfficeLogStart_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+            if (radioButtonOfficeLogMailTrace.Checked)
+            {
+                dataGridViewLogs.DataSource = officePS.GetLogs(textBoxOfficeLogsSender.Text, textBoxOfficeLogsRecipient.Text, textBoxOfficeLogsIP.Text);
+            }
+            else if (radioButtonOfficeLogsForwarding.Checked)
+            {
+                dataGridViewLogs.DataSource = officePS.GetMailboxesWithForwarding();
+            }
+            else if (radioButtonOfficeLogsStat.Checked)
+            {
+                dataGridViewLogs.DataSource = officePS.GetLogInData(comboBoxOfficeLogsAudit.Text);
+            }
+            else
+            {
+                dataGridViewLogs.DataSource = officePS.GetInboxRulesCount();
+            }
+         }
+
+        
+
+        private void buttonOfficeOOO_Click(object sender, EventArgs e)
+        {
+            OfficePS officePS = OfficePS.Instance;
+            labelOfficeOOOLog.Text = officePS.SetOutOfOffice(comboBoxOfficeOOOMailbox.Text, radioButtonOfficeOOODisable.Checked, radioButtonOfficeOOOEnableNow.Checked,
+                radioButtonOfficeOOOSchedule.Checked, dateTimePickerOfficeOOOStartDate.Text, dateTimePickerOfficeOOOEndDate.Text, richTextBoxOfficeOOOText.Text);
+        }
+
+        private void radioButtonOfficeOOOSchedule_CheckedChanged(object sender, EventArgs e)
+        {
+            
+                groupBoxOfficeOOOSchedule.Visible = radioButtonOfficeOOOSchedule.Checked;
+            
+        }
+
+       
+
+        private void comboBoxOfficeInformation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            checkedListBoxOfficeRuleToDelete.Items.Clear();
+            richTextBoxOfficeInformation.Text = "";
+        }
+
+        private void radioButtonOfficeLogsStat_CheckedChanged(object sender, EventArgs e)
+        {
+            
+                labelOfficeLogsAudit.Visible = radioButtonOfficeLogsStat.Checked;
+                comboBoxOfficeLogsAudit.Visible = radioButtonOfficeLogsStat.Checked;
+            
+        }
+
+        private void radioButtonOfficeLogMailTrace_CheckedChanged(object sender, EventArgs e)
+        {
+            labelOfficeLogsRecipient.Visible = radioButtonOfficeLogMailTrace.Checked;
+            labelOfficeLogsSender.Visible = radioButtonOfficeLogMailTrace.Checked;
+            textBoxOfficeLogsRecipient.Visible = radioButtonOfficeLogMailTrace.Checked;
+            textBoxOfficeLogsSender.Visible = radioButtonOfficeLogMailTrace.Checked;
+            labelOfficeLogsFromIP.Visible = radioButtonOfficeLogMailTrace.Checked;
+            textBoxOfficeLogsIP.Visible = radioButtonOfficeLogMailTrace.Checked;
+        }
+
+        private void radioButtonOfficeLogsForwarding_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
