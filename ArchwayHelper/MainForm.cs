@@ -715,14 +715,8 @@ namespace ArchwayHelper
 
         private void buttonCopyTCall_Click(object sender, EventArgs e)
         {
-            //Clipboard.SetText("Please let me know when I could call you. Thank you!");
-            LoadingForm t = LoadingForm.Instance;
-            t.StartPosition = FormStartPosition.CenterParent;
-           // t.Left = 0;
-         //   t.Top = 300;
-            new Thread(() => t.ShowDialog(this)).Start();
-            
-            //t.Close();
+            Clipboard.SetText("Please let me know when I could call you. Thank you!");
+           
         }
 
         private void buttonOfficeForwarding_Click(object sender, EventArgs e)

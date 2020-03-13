@@ -66,12 +66,6 @@
     <Compile Include="GeoIpModel.cs" />
     <Compile Include="GeoIpQuery.cs" />
     <Compile Include="InboxRulesCount.cs" />
-    <Compile Include="LoadingForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoadingForm.Designer.cs">
-      <DependentUpon>LoadingForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MailboxForward.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -113,9 +107,6 @@
     <Compile Include="TextCopy.cs" />
     <Compile Include="TimeZones.cs" />
     <Compile Include="Whois.cs" />
-    <EmbeddedResource Include="LoadingForm.resx">
-      <DependentUpon>LoadingForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
